@@ -1,0 +1,39 @@
+.btn {
+	display: inline-block;
+	font-family: inherit;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	border: none;
+
+	border-radius: $border-radius;
+}
+
+.btn-primary {
+	padding: 16px 24px;
+	color: #fff;
+	background-color: $color-primary;
+	@include font-style(16px, 16px, 700);
+
+	&:hover {
+		background-color: $color-primary-button-hover;
+	}
+}
+
+.btn-secondary {
+	padding: 20px 32px;
+	color: $color-dark-text;
+	background-color: $color-secondary;
+	@include font-style(16px, 14px, 700);
+
+	&:hover {
+		background-color: $color-secondary-button-hover;
+	}
+
+	@media (max-width: $md) {
+		border-radius: 6px;
+		
+	}
+}

@@ -19,7 +19,10 @@
     <div class="container">
         <header class="header">
             <div class="wrapper">
-                <div class="header-logo">COMOON</div>
+                <div class="header-logo color-primary">
+                    <a href="/">COMOON</a>
+                </div>
+                <?php pll_the_languages(array('dropdown' => 1)); ?>
                 <div class="heder-action">
                     <?php
                     wp_nav_menu([
@@ -32,7 +35,7 @@
                         'depth'           => 0,
                     ]);
                     ?>
-                    <button class="btn btn-primary">Записаться на кемп</button>
+                    <button class="btn btn-primary"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></button>
                 </div>
             </div>
         </header>

@@ -1,1 +1,2 @@
-import './global/test';
+import './global/slick-slider'
+import './global/home-page-video'

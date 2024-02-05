@@ -1,0 +1,58 @@
+.home-what-is {
+	background-color: $color-light-background;
+	padding-bottom: 180px;
+
+	@media (max-width: $md) {
+		padding-bottom: 60px;
+	}
+
+	.title-md-uppercase {
+		padding-bottom: 16px;
+	}
+
+	.what-is-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 30px;
+		row-gap: 16px;
+
+		@media (max-width: $md) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.what-is-item {
+		padding: 32px 48px;
+		border-radius: $border-radius;
+		background-image: url(../../img/foot.png);
+		background-repeat: no-repeat;
+		background-position: right center;
+
+		&:first-child {
+			background-color: $color-primary;
+			div {
+				color: rgba(255, 255, 255, 0.7);
+			}
+		}
+
+		&:last-child {
+			background-color: $color-secondary;
+			div {
+				color: rgba(32, 32, 32, 0.7);
+			}
+		}
+
+		h3 {
+			margin-bottom: 24px;
+		}
+
+		@media (max-width: $md) {
+			padding: 32px 24px;
+
+			h3 {
+				margin-bottom: 16px;
+				text-align: center;
+			}
+		}
+	}
+}

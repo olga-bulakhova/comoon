@@ -7,6 +7,8 @@
 
 .container {
 	font-family: 'Manrope', sans-serif;
+	padding-top: 70px;
+	color: $color-light-text;
 }
 
 .wrapper {
@@ -15,8 +17,13 @@
 	margin: 0 auto;
 
 	@media (max-width: $md) {
-		padding: 0 20px;
+		padding: 0 15px;
 	}
+}
+
+.wrapper-md {
+	max-width: 950px;
+	margin: 0 auto;
 }
 
 .wrapper-sm {
@@ -33,6 +40,23 @@ a {
 	color: $color-primary;
 }
 
+.color-dark {
+	color: $color-dark-text;
+}
+
 .color-white {
 	color: #fff;
+}
+
+.center {
+	text-align: center;
+}
+
+video {
+	display: block;
+	width: 100%;
+}
+
+.light-background {
+	background-color: $color-light-background;
 }
