@@ -1,0 +1,16 @@
+.header {
+	padding: 12px 0;
+	background-color: $color-light-background;
+
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.navbar-nav,
+	.heder-action {
+		list-style: none;
+		display: flex;
+		justify-content: flex-end;
+	}
+}

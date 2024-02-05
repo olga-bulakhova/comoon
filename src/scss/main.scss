@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+}
+
+.container {
+	font-family: 'Manrope', sans-serif;
+}
+
+.wrapper {
+	max-width: 1340px;
+	padding: 0 50px;
+	margin: 0 auto;
+
+	@media (max-width: $md) {
+		padding: 0 20px;
+	}
+}
+
+.wrapper-sm {
+	max-width: 680px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.color-primary {
+	color: $color-primary;
+}
+
+.color-white {
+	color: #fff;
+}

@@ -1,0 +1,8 @@
+@mixin font-style($size-l, $size-s, $weight) {
+	font-size: $size-l;
+	font-weight: $weight;
+
+	@media (max-width: $md) {
+		font-size: $size-s;
+	}
+}
