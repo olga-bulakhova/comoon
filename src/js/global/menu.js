@@ -29,4 +29,11 @@ jQuery(document).ready(function ($) {
 
 		lastScrollTop = st
 	}
+
+	function toggleMobileMenu() {
+		$('.mobile-menu').slideToggle('fast')
+		$('body').toggleClass('overflow')
+	}
+
+	$('.toggle-menu').on('click', toggleMobileMenu)
 })

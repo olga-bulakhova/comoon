@@ -124,6 +124,20 @@ function comoon_attach_theme_options()
       Field::make('text', 'learn_about_the_next_btn' . carbon_lang_prefix(), 'Узнать о следующем кемпе')
         ->set_width(33),
       Field::make('separator', 'footer', 'Футер'),
-      Field::make('text', 'footer_text' . carbon_lang_prefix(), 'Политика конфидециальности')
+      Field::make('text', 'footer_text' . carbon_lang_prefix(), 'Политика конфидециальности'),
+
+      Field::make('separator', 'social', 'Соц сети'),
+      Field::make('text', 'instagram_url' . carbon_lang_prefix(), 'Instagram URL')
+        ->set_width(33),
+      Field::make('text', 'youtube_url' . carbon_lang_prefix(), 'Youtube URL')
+        ->set_width(33),
+      Field::make('text', 'email_url' . carbon_lang_prefix(), 'Email URL')
+        ->set_width(33),
+
+      Field::make('separator', 'titles', 'Заголовки'),
+      Field::make('text', 'upcoming_camps' . carbon_lang_prefix(), 'Предстоящие кемпы')
+        ->set_width(50),
+      Field::make('text', 'past_camps' . carbon_lang_prefix(), 'Прошедшие кемпы')
+        ->set_width(50),
     ]);
 }

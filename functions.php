@@ -18,3 +18,4 @@ require_once COMOON_DIR_PATH . '/inc/register-post-types.php';
 require_once COMOON_DIR_PATH . '/inc/setup-theme.php';
 require_once COMOON_DIR_PATH . '/inc/helper.php';
 require_once COMOON_DIR_PATH . '/inc/templates-carbon-fields/theme-options.php';
+require_once COMOON_DIR_PATH . '/inc/templates-carbon-fields/camps.php';

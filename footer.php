@@ -21,9 +21,15 @@
       ?>
 
       <div class="footer-social">
-        <a class="insta" href="" target="_blank"></a>
-        <a class="youtube" href="" target="_blank"></a>
-        <a class="email" href="" target="_blank"></a>
+        <?php if (!empty(carbon_get_theme_option('instagram_url' . carbon_lang_prefix()))) : ?>
+          <a class="insta" href="<?php echo carbon_get_theme_option('instagram_url' . carbon_lang_prefix()) ?>" target="_blank"></a>
+        <?php endif; ?>
+        <?php if (!empty(carbon_get_theme_option('youtube_url' . carbon_lang_prefix()))) : ?>
+          <a class="youtube" href="<?php echo carbon_get_theme_option('youtube_url' . carbon_lang_prefix()) ?>" target="_blank"></a>
+        <?php endif; ?>
+        <?php if (!empty(carbon_get_theme_option('email_url' . carbon_lang_prefix()))) : ?>
+          <a class="youtube" href="<?php echo carbon_get_theme_option('email_url' . carbon_lang_prefix()) ?>" target="_blank"></a>
+        <?php endif; ?>
       </div>
     </div>
 

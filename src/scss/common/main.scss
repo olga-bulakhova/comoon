@@ -6,6 +6,8 @@
 }
 
 .container {
+	max-width: 1920px;
+	margin: 0 auto;
 	font-family: 'Manrope', sans-serif;
 	padding-top: 70px;
 	color: $color-light-text;
@@ -64,3 +66,13 @@ video {
 .light-background {
 	background-color: $color-light-background;
 }
+
+.hidden {
+	display: none;
+}
+
+.overflow {
+	overflow: hidden;
+}
+
+

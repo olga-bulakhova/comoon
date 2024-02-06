@@ -49,6 +49,7 @@ if (!empty($front_page_heading_video)) {
   </div>
 </section>
 
+
 <?php get_template_part('template-parts/you-are-getting'); ?>
 
 <section class="home-video">
@@ -62,7 +63,7 @@ if (!empty($front_page_heading_video)) {
   <div class="wrapper">
     <div class="home-find-friends-content">
       <h2 class="color-white"><?php echo carbon_get_theme_option('find_friends_title' . carbon_lang_prefix()) ?></h2>
-      <a href="/" class="btn btn-secondary"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></a>
+      <a href="#contact-form" class="btn btn-secondary"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></a>
     </div>
   </div>
 </section>
@@ -73,6 +74,8 @@ if (!empty($front_page_heading_video)) {
   </div>
 </section>
 
+
+<a id="contact-form"></a>
 <section class="form-container light-background">
   <div class="wrapper">
     <?php get_template_part('template-parts/forms/form-container'); ?>
