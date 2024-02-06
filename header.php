@@ -22,7 +22,9 @@
                 <div class="header-logo color-primary">
                     <a href="/">COMOON</a>
                 </div>
-                <?php pll_the_languages(array('dropdown' => 1)); ?>
+                <div>
+                    <?php pll_the_languages(array('show_flags' => 1, 'show_names' => 0)); ?>
+                </div>
                 <div class="heder-action">
                     <?php
                     wp_nav_menu([
@@ -37,6 +39,26 @@
                     ?>
                     <button class="btn btn-primary"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></button>
                 </div>
+                <div class="header-burger">
+
+                </div>
             </div>
         </header>
+
+        <div class="mobile-menu">
+            <div class="mobile-menu-content">
+                <div class="mobile-menu-header">
+                    <div class="header-logo color-primary">
+                        <a href="/">COMOON</a>
+                    </div>
+                </div>
+
+                <div class="mobile-menu-body">
+
+                </div>
+            </div>
+        </div>
+
+
+
         <div id="content" class="site-content">

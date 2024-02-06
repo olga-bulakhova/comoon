@@ -1,0 +1,58 @@
+.founders-list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 30px;
+	row-gap: 30px;
+
+	@media (max-width: 1100px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.founders-item-photo {
+	height: 460px;
+	border-radius: $border-radius;
+	padding: 26px;
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 24px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.founders-item-info {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.founders-item-name {
+	color: $color-white-text;
+	@include font-style(32px, 32px, 600);
+}
+
+.founders-item-insta {
+	width: 28px;
+	height: 28px;
+	background-image: url(../../img/insta-white.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@media (max-width: $md) {
+	.founders-list {
+		display: block;
+	}
+
+	.founders-item {
+		padding: 0 5px;
+	}
+}
+
+@media (max-width: $sm) {
+	.founders-item {
+		padding: 0;
+	}
+}

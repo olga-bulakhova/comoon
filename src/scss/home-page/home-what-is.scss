@@ -46,6 +46,10 @@
 			margin-bottom: 24px;
 		}
 
+		div {
+			max-width: 460px;
+		}
+
 		@media (max-width: $md) {
 			padding: 32px 24px;
 

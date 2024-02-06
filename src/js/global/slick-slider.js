@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-	$('.you-are-getting-list').slick({
+	const options = {
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -8,6 +8,10 @@ jQuery(document).ready(function ($) {
 		lazyLoad: 'progressive',
 		mobileFirst: true,
 		adaptiveHeight: true,
+	}
+
+	$('.you-are-getting-list').slick({
+		...options,
 		responsive: [
 			{
 				breakpoint: 768,
@@ -15,4 +19,23 @@ jQuery(document).ready(function ($) {
 			},
 		],
 	})
+
+	$('.founders-list').slick({
+		...options,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: 'unslick',
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+				},
+			},
+		],
+	})
 })
+
+

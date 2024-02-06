@@ -49,7 +49,6 @@ if (!empty($front_page_heading_video)) {
   </div>
 </section>
 
-
 <?php get_template_part('template-parts/you-are-getting'); ?>
 
 <section class="home-video">
@@ -67,6 +66,26 @@ if (!empty($front_page_heading_video)) {
     </div>
   </div>
 </section>
+
+<section class="light-background pt-18 pb-18 pt-6-mobile pb-13-mobile">
+  <div class="wrapper">
+    <?php get_template_part('template-parts/founders'); ?>
+  </div>
+</section>
+
+<section class="form-container light-background">
+  <div class="wrapper">
+    <?php get_template_part('template-parts/forms/form-container'); ?>
+  </div>
+</section>
+
+<div class="light-background pt-18 pb-18 pt-6-mobile pb-6-mobile">
+  <div class="wrapper">
+    <div class="text-lg-bold color-dark center">
+      <?php echo carbon_get_theme_option('last_block_text' . carbon_lang_prefix()) ?>
+    </div>
+  </div>
+</div>
 
 <?php
 get_footer();

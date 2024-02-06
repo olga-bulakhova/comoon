@@ -39,7 +39,51 @@ function comoon_attach_theme_options()
         ->set_width(70),
 
       Field::make('separator', 'find_friends', 'Найти друзей'),
-      Field::make('text', 'find_friends_title' . carbon_lang_prefix(), 'Найти друзей - заголовок')
+      Field::make('text', 'find_friends_title' . carbon_lang_prefix(), 'Найти друзей - заголовок'),
+
+      Field::make('separator', 'founders', 'Фаундеры'),
+      Field::make('text', 'founders_title' . carbon_lang_prefix(), 'Заголовок')
+        ->set_width(30),
+      Field::make('rich_text', 'founders_text' . carbon_lang_prefix(), 'Жирный текст')
+        ->set_width(70)
+        ->set_help_text('Цвет выделения 657838'),
+
+      Field::make('image', 'founder_photo_1', 'Фото 1')
+        ->set_width(30),
+      Field::make('text', 'founder_name_1' . carbon_lang_prefix(), 'Имя 1')
+        ->set_width(35),
+      Field::make('text', 'founder_insta_url_1' . carbon_lang_prefix(), 'Instagram URL 1')
+        ->set_width(35),
+      Field::make('textarea', 'founder_text_1' . carbon_lang_prefix(), 'Текст 1'),
+
+      Field::make('image', 'founder_photo_2', 'Фото 2')
+        ->set_width(30),
+      Field::make('text', 'founder_name_2' . carbon_lang_prefix(), 'Имя 2')
+        ->set_width(35),
+      Field::make('text', 'founder_insta_url_2' . carbon_lang_prefix(), 'Instagram URL 2')
+        ->set_width(35),
+      Field::make('textarea', 'founder_text_2' . carbon_lang_prefix(), 'Текст 2'),
+
+
+      Field::make('image', 'founder_photo_3', 'Фото 3')
+        ->set_width(30),
+      Field::make('text', 'founder_name_3' . carbon_lang_prefix(), 'Имя 3')
+        ->set_width(35),
+      Field::make('text', 'founder_insta_url_3' . carbon_lang_prefix(), 'Instagram URL 3')
+        ->set_width(35),
+      Field::make('textarea', 'founder_text_3' . carbon_lang_prefix(), 'Текст 3'),
+
+      Field::make('image', 'founder_photo_4', 'Фото 4')
+        ->set_width(30),
+      Field::make('text', 'founder_name_4' . carbon_lang_prefix(), 'Имя 4')
+        ->set_width(35),
+      Field::make('text', 'founder_insta_url_4' . carbon_lang_prefix(), 'Instagram URL 4')
+        ->set_width(35),
+      Field::make('textarea', 'founder_text_4' . carbon_lang_prefix(), 'Текст 4'),
+
+      Field::make('separator', 'last_block', 'Блок перед футером'),
+      Field::make('rich_text', 'last_block_text' . carbon_lang_prefix(), 'Текст')
+        ->set_help_text('Цвет выделения 657838'),
 
     ])
 
@@ -79,7 +123,7 @@ function comoon_attach_theme_options()
         ->set_width(33),
       Field::make('text', 'learn_about_the_next_btn' . carbon_lang_prefix(), 'Узнать о следующем кемпе')
         ->set_width(33),
-
-
+      Field::make('separator', 'footer', 'Футер'),
+      Field::make('text', 'footer_text' . carbon_lang_prefix(), 'Политика конфидециальности')
     ]);
 }

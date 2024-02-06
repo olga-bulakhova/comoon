@@ -23,7 +23,7 @@
 }
 
 .btn-secondary {
-	padding: 20px 32px;
+	padding: 22px 32px;
 	color: $color-dark-text;
 	background-color: $color-secondary;
 	@include font-style(16px, 14px, 700);
@@ -34,6 +34,5 @@
 
 	@media (max-width: $md) {
 		border-radius: 6px;
-		
 	}
 }

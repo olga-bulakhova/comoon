@@ -1,14 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 @import 'variables';
-@import 'typography';
-@import 'margins';
-@import 'buttons';
-@import 'main';
-@import 'header';
-@import 'home-heading';
-@import 'home-what-is';
-@import 'you-are-getting';
-@import 'slick-slider';
-@import 'home-video';
-@import 'home-find-friends';
+
+@import 'common/typography';
+@import 'common/margins';
+@import 'common/buttons';
+@import 'common/main';
+@import 'common/form';
+
+@import 'lib-elements/slick-slider';
+
+@import 'blocks/header';
+@import 'blocks/footer';
+@import 'blocks/you-are-getting';
+@import 'blocks/founders-list';
+@import 'blocks/form-container';
+@import 'blocks/mobile-menu';
+
+@import 'home-page/home-heading';
+@import 'home-page/home-what-is';
+@import 'home-page/home-video';
+@import 'home-page/home-find-friends';

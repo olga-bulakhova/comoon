@@ -1,0 +1,40 @@
+.form-container {
+	.form-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 30px;
+	}
+
+	.form-content,
+	.form-image {
+		border-radius: $border-radius;
+	}
+
+	.form-content {
+		padding: 48px;
+		background-image: url(../../img/green-bg.jpg);
+	}
+
+	.form-image {
+		background-image: url(../../img/form-bg.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	h2 {
+		@include font-style(40px, 24px, 600);
+		line-height: 1.15;
+	}
+
+	@media (max-width: 1100px) {
+		.form-grid {
+			display: block;
+		}
+
+		.form-image {
+			display: none;
+			background: none;
+		}
+	}
+}

@@ -9,6 +9,10 @@
 	font-family: 'Manrope', sans-serif;
 	padding-top: 70px;
 	color: $color-light-text;
+
+	@media (max-width: $menu-point) {
+		padding-top: 57px;
+	}
 }
 
 .wrapper {
