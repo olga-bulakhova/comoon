@@ -1,0 +1,56 @@
+.camp-info-banner {
+	border-radius: $border-radius;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(../../img/info-banner.jpg);
+	padding: 153px 0 143px;
+
+	h2 {
+		text-transform: uppercase;
+		@include font-style(48px, 32px, 800);
+		line-height: 0.9;
+		max-width: 360px;
+		margin: 0 auto;
+	}
+
+	.camp-info-logo {
+		@include font-style(24px, 20px, 600);
+		text-transform: uppercase;
+		color: $color-secondary;
+		margin-bottom: 40px;
+	}
+
+	@media (max-width: $md) {
+		padding: 67px 0 66px;
+		.camp-info-logo {
+			margin-bottom: 16px;
+		}
+
+		h2 {
+			line-height: 1;
+			max-width: 235px;
+		}
+	}
+}
+
+.camp-info-text {
+	margin-top: 48px;
+	h5,
+	h6 {
+		font-size: inherit;
+		font-weight: inherit;
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.camp-info-title {
+	margin-top: 90px;
+	line-height: 1;
+}
+
+.camp-info-photo {
+	margin-top: 56px;
+}

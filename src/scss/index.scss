@@ -16,8 +16,15 @@
 @import 'blocks/founders-list';
 @import 'blocks/form-container';
 @import 'blocks/mobile-menu';
+@import 'blocks/camps';
+
+@import 'elements/badge.scss';
+@import 'elements/breadcrumbs.scss';
 
 @import 'home-page/home-heading';
 @import 'home-page/home-what-is';
 @import 'home-page/home-video';
 @import 'home-page/home-find-friends';
+
+@import 'camp-single/camp-heading.scss';
+@import 'camp-single/camp-info.scss';

@@ -7,8 +7,14 @@
 	vertical-align: middle;
 	cursor: pointer;
 	border: none;
-
 	border-radius: $border-radius;
+}
+
+.btn-large {
+	min-width: 320px;
+	@media (max-width: $md) {
+		min-width: 240px;
+	}
 }
 
 .btn-primary {

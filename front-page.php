@@ -49,8 +49,9 @@ if (!empty($front_page_heading_video)) {
   </div>
 </section>
 
-
-<?php get_template_part('template-parts/you-are-getting'); ?>
+<div class="mt-18 pb-18 mt-6-mobile pb-8-mobile">
+  <?php get_template_part('template-parts/you-are-getting'); ?>
+</div>
 
 <section class="home-video">
   <video src="<?php echo $front_page_heading_video_url ?>"></video>

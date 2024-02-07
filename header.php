@@ -20,10 +20,12 @@
         <header class="header">
             <div class="wrapper">
                 <div class="header-logo color-primary">
-                    <a href="/">COMOON</a>
+                    <a href="<?php echo get_url_path(); ?>">COMOON</a>
                 </div>
                 <div>
                     <?php pll_the_languages(array('show_flags' => 1, 'show_names' => 0)); ?>
+
+                    <!-- <?php pll_the_languages(array('display_names_as' =>  'slug')); ?> -->
                 </div>
                 <div class="heder-action">
                     <?php
@@ -49,7 +51,7 @@
             <div class="mobile-menu-content light-background">
                 <div class="mobile-menu-header">
                     <div class="header-logo color-primary">
-                        <a href="/">COMOON</a>
+                        <a href="<?php echo get_url_path(); ?>">COMOON</a>
                     </div>
                     <div class="mobile-menu-close toggle-menu"></div>
                 </div>

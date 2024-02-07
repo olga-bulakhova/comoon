@@ -2,6 +2,18 @@
 	margin-top: 16px;
 }
 
+.mb-4 {
+	margin-bottom: 40px;
+}
+
+.mt-5_6 {
+	margin-top: 56px;
+}
+
+.mb-5_6 {
+	margin-bottom: 56px;
+}
+
 .mt-8 {
 	margin-top: 80px;
 }
@@ -14,6 +26,10 @@
 	margin-top: 180px;
 }
 
+.mb-18 {
+	margin-bottom: 180px;
+}
+
 .pt-18 {
 	padding-top: 180px;
 }
@@ -23,8 +39,22 @@
 }
 
 @media (max-width: $md) {
+	.mt-4-mobile {
+		margin-top: 40px;
+	}
+	.mb-4-mobile {
+		margin-bottom: 40px;
+	}
 	.mt-6-mobile {
 		margin-top: 60px;
+	}
+
+	.mb-8-mobile {
+		margin-bottom: 80px;
+	}
+
+	.mb-6-mobile {
+		margin-bottom: 60px;
 	}
 
 	.pt-6-mobile {
@@ -33,6 +63,10 @@
 
 	.pb-6-mobile {
 		padding-bottom: 60px;
+	}
+
+	.pb-8-mobile {
+		padding-bottom: 80px;
 	}
 
 	.pb-13-mobile {

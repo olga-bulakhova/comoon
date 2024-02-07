@@ -1,0 +1,22 @@
+.breadcrumbs {
+	padding: 2px 0 16px;
+	@include font-style(14px, 14px, 500);
+
+	@media (max-width: $md) {
+		display: none;
+	}
+
+	a,
+	span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.home-page-link {
+		width: 16px;
+		height: 16px;
+		background-image: url(../../img/home.svg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+}

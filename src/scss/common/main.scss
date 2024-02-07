@@ -54,8 +54,18 @@ a {
 	color: #fff;
 }
 
+.color-white-opacity {
+	color: $color-white-text-opacity;
+}
+
 .center {
 	text-align: center;
+}
+
+.center-mobile {
+	@media (max-width: $md) {
+		text-align: center;
+	}
 }
 
 video {
@@ -67,6 +77,11 @@ video {
 	background-color: $color-light-background;
 }
 
+.light-bg-overlay {
+	padding-top: 80px;
+	margin-top: -78px;
+}
+
 .hidden {
 	display: none;
 }
@@ -74,5 +89,3 @@ video {
 .overflow {
 	overflow: hidden;
 }
-
-

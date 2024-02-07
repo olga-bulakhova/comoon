@@ -1,5 +1,5 @@
 .you-are-getting {
-	padding: 180px 0;
+	// padding: 180px 0;
 
 	.you-are-getting-list {
 		margin-top: 56px;
@@ -9,7 +9,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		column-gap: 30px;
-		row-gap: 32px;
+		row-gap: 56px;
 	}
 
 	.you-are-getting-item {
@@ -20,10 +20,14 @@
 		div {
 			@include font-style(18px, 16px, 400);
 		}
+
+		img {
+			border-radius: $border-radius;
+		}
 	}
 
 	@media (max-width: $md) {
-		padding: 60px 0 80px;
+		// padding: 60px 0 80px;
 
 		h2 {
 			text-align: center;
