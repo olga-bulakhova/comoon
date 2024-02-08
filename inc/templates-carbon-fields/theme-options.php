@@ -138,6 +138,18 @@ function comoon_attach_theme_options()
       Field::make('text', 'reviews_title' . carbon_lang_prefix(), 'Отзывы')
         ->set_width(20),
 
+      Field::make('separator', 'faq_titles', 'Заголовки для FAQ'),
+      Field::make('text', 'faq_accommodation' . carbon_lang_prefix(), 'Проживание')
+        ->set_width(20),
+      Field::make('text', 'faq_entertainment' . carbon_lang_prefix(), 'Развлечения')
+        ->set_width(20),
+      Field::make('text', 'faq_job' . carbon_lang_prefix(), 'Работа')
+        ->set_width(20),
+      Field::make('text', 'faq_nutrition' . carbon_lang_prefix(), 'Питание')
+        ->set_width(20),
+      Field::make('text', 'faq_how_to_get' . carbon_lang_prefix(), 'Как добраться')
+        ->set_width(20),
+
       Field::make('separator', 'buttons', 'Кнопки'),
       Field::make('text', 'sign_up_btn' . carbon_lang_prefix(), 'Записаться на кемп')
         ->set_width(33),

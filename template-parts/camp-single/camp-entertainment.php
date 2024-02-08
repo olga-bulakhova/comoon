@@ -3,7 +3,7 @@ $camp_entertainment = carbon_get_the_post_meta('camp_entertainment');
 
 if (!empty($camp_entertainment)) : ?>
 
-  <div class="camp-entertainment pb-18 pb-9-mobile">
+  <section class="camp-entertainment pb-18 pb-9-mobile">
     <div class="wrapper">
       <h2 class="title-48-600 color-dark mb-5_6 mb-4-mobile center-mobile"><?php echo carbon_get_theme_option('entertainment_title' . carbon_lang_prefix()) ?></h2>
       <div class="entertainments-list">
@@ -27,6 +27,6 @@ if (!empty($camp_entertainment)) : ?>
 
       </div>
     </div>
-  </div>
+  </section>
 
 <?php endif; ?>

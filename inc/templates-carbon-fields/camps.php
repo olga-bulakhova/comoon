@@ -103,5 +103,51 @@ function crb_attach_post_meta()
             ->set_width(30),
         ]),
 
+      Field::make('separator', 'faq_separator', 'FAQ'),
+      Field::make('complex', 'faq_accommodation_complex', 'Проживание')
+        ->set_collapsed(true)
+        ->add_fields([
+          Field::make('text', 'faq_accommodation_question', 'Вопрос')
+            ->set_width(40),
+          Field::make('textarea', 'faq_accommodation_answer', 'Ответ')
+            ->set_width(60),
+        ]),
+
+      Field::make('complex', 'faq_entertainment_complex', 'Развлечения')
+        ->set_collapsed(true)
+        ->add_fields([
+          Field::make('text', 'faq_entertainment_question', 'Вопрос')
+            ->set_width(40),
+          Field::make('textarea', 'faq_entertainment_answer', 'Ответ')
+            ->set_width(60),
+        ]),
+
+      Field::make('complex', 'faq_job_complex', 'Работа')
+        ->set_collapsed(true)
+        ->add_fields([
+          Field::make('text', 'faq_job_question', 'Вопрос')
+            ->set_width(40),
+          Field::make('textarea', 'faq_job_answer', 'Ответ')
+            ->set_width(60),
+        ]),
+
+      Field::make('complex', 'faq_nutrition_complex', 'Питание')
+        ->set_collapsed(true)
+        ->add_fields([
+          Field::make('text', 'faq_nutrition_question', 'Вопрос')
+            ->set_width(40),
+          Field::make('textarea', 'faq_nutrition_answer', 'Ответ')
+            ->set_width(60),
+        ]),
+
+      Field::make('complex', 'faq_how_to_get_complex', 'Как добраться')
+        ->set_collapsed(true)
+        ->add_fields([
+          Field::make('text', 'faq_how_to_get_question', 'Вопрос')
+            ->set_width(40),
+          Field::make('textarea', 'faq_how_to_get_answer', 'Ответ')
+            ->set_width(60),
+        ]),
+
     ));
 }
