@@ -54,3 +54,17 @@
 .camp-info-photo {
 	margin-top: 56px;
 }
+
+@media (max-width: $md) {
+	.camp-info-text {
+		margin-top: 24px;
+	}
+
+	.camp-info-title {
+		margin-top: 60px;
+	}
+
+	.camp-info-photo {
+		margin-top: 32px;
+	}
+}

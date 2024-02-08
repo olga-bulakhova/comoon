@@ -113,7 +113,6 @@ function comoon_attach_theme_options()
       Field::make('text', 'you_are_getting_title_4' . carbon_lang_prefix(), 'Заголовок_4')
         ->set_width(50),
       Field::make('textarea', 'you_are_getting_text_4' . carbon_lang_prefix(), 'Текст 4'),
-
     ])
 
 
@@ -128,6 +127,17 @@ function comoon_attach_theme_options()
       Field::make('text', 'camps_info' . carbon_lang_prefix(), 'Информация о кемпе')
         ->set_width(25),
 
+      Field::make('text', 'entertainment_title' . carbon_lang_prefix(), 'Развлечения')
+        ->set_width(20),
+      Field::make('text', 'available_at_camp_title' . carbon_lang_prefix(), 'В кемпе доступны')
+        ->set_width(20),
+      Field::make('text', 'faq_title' . carbon_lang_prefix(), 'FAQ')
+        ->set_width(20),
+      Field::make('text', 'price_title' . carbon_lang_prefix(), 'Стоимость и размещение')
+        ->set_width(20),
+      Field::make('text', 'reviews_title' . carbon_lang_prefix(), 'Отзывы')
+        ->set_width(20),
+
       Field::make('separator', 'buttons', 'Кнопки'),
       Field::make('text', 'sign_up_btn' . carbon_lang_prefix(), 'Записаться на кемп')
         ->set_width(33),
@@ -136,9 +146,8 @@ function comoon_attach_theme_options()
       Field::make('text', 'book_btn' . carbon_lang_prefix(), 'Забронировать')
         ->set_width(33),
 
-
       Field::make('separator', 'footer', 'Футер'),
-      Field::make('text', 'footer_text' . carbon_lang_prefix(), 'Политика конфидециальности'),
+      Field::make('text', 'footer_text' . carbon_lang_prefix(), 'Политика конфиденциальности'),
 
       Field::make('separator', 'social', 'Соц сети'),
       Field::make('text', 'instagram_url' . carbon_lang_prefix(), 'Instagram URL')

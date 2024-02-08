@@ -4,8 +4,6 @@ $is_future_date = is_future_date(carbon_get_the_post_meta('event_start'));
 
 ?>
 
-
-
 <div class="<?php echo $is_future_date ? 'light-background light-bg-overlay' : ''; ?>">
   <div class="wrapper">
     <div class="breadcrumbs">
@@ -31,6 +29,16 @@ $is_future_date = is_future_date(carbon_get_the_post_meta('event_start'));
 
 <div class="<?php echo $is_future_date ? 'mt-18 mt-6-mobile' : ''; ?> mb-18 mb-6-mobile">
   <?php get_template_part('template-parts/camp-single/camp-info'); ?>
+</div>
+
+<div class="light-background">
+  <?php if ($is_future_date) {
+    get_template_part('template-parts/camp-single/camp-gallery');
+    get_template_part('template-parts/camp-single/camp-advantages');
+    get_template_part('template-parts/camp-single/camp-entertainment');
+    get_template_part('template-parts/camp-single/camp-available');
+  } else {
+  } ?>
 </div>
 
 

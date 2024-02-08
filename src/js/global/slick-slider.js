@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
 		adaptiveHeight: true,
 	}
 
-	$('.you-are-getting-list').slick({
+	$('.you-are-getting-list, .entertainments-list').slick({
 		...options,
 		responsive: [
 			{
@@ -37,5 +37,3 @@ jQuery(document).ready(function ($) {
 		],
 	})
 })
-
-

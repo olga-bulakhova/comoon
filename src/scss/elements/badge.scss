@@ -5,18 +5,26 @@
 
 	@media (max-width: $md) {
 		gap: 8px;
+
+		&.justify-center-mobile {
+			justify-content: center;
+		}
 	}
 }
 
-.badge {
-	background-color: #fff;
+@mixin badge {
 	border-radius: 30px;
-	@include font-style(16px, 14px, 500);
 	color: $color-dark-text;
 	line-height: 1;
-	padding: 12px 16px 12px 38px;
 	background-repeat: no-repeat;
 	background-position: 14px center;
+}
+
+.badge {
+	@include badge;
+	background-color: #fff;
+	@include font-style(16px, 14px, 500);
+	padding: 12px 16px 12px 38px;
 
 	@media (max-width: $md) {
 		padding: 10px 16px 10px 38px;
@@ -32,5 +40,17 @@
 
 	&.badge-place {
 		background-image: url(../../img/badge-place.svg);
+	}
+}
+
+.badge-green-border {
+	@include badge;
+	padding: 12px 16px 12px 48px;
+	border: 1px solid $color-primary;
+	@include font-style(18px, 16px, 400);
+
+	@media (max-width: $md) {
+		background-size: 20px;
+		padding: 10px 16px 10px 44px;
 	}
 }

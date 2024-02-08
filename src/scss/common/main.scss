@@ -11,6 +11,8 @@
 	font-family: 'Manrope', sans-serif;
 	padding-top: 70px;
 	color: $color-light-text;
+	overflow: hidden;
+	@include font-style(18px, 16px, 400);
 
 	@media (max-width: $menu-point) {
 		padding-top: 57px;
@@ -88,4 +90,8 @@ video {
 
 .overflow {
 	overflow: hidden;
+}
+
+.border-radius {
+	border-radius: $border-radius;
 }

@@ -1,0 +1,50 @@
+.camp-gallery {
+	.camp-gallery-item {
+		height: 720px;
+		position: relative;
+
+		img {
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+
+	.slick-dots {
+		bottom: -30px;
+	}
+}
+
+.camp-gallery-wrapper {
+	position: relative;
+}
+
+.gallery__prev-arr,
+.gallery__next-arr {
+	position: absolute;
+	top: 50%;
+	z-index: 4;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+
+	@media (max-width: $md) {
+		display: none;
+	}
+}
+
+.gallery__prev-arr {
+	left: 40px;
+	background-image: url(../../img/gallery-arr-left.svg);
+}
+
+.gallery__next-arr {
+	right: 40px;
+	background-image: url(../../img/gallery-arr-right.svg);
+}

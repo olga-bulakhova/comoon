@@ -16,7 +16,7 @@
             <div class="text-18-400 camp-info-text"><?php echo $info['camp_info_text'] ?></div>
           </div>
           <?php if (!empty($info['camp_info_photo'])) : ?>
-            <img class="camp-info-photo" src="<?php echo wp_get_attachment_image_url($info['camp_info_photo'], size: wp_is_mobile() ? 'medium' : 'large')  ?>" alt="" width="100%">
+            <img class="camp-info-photo border-radius" src="<?php echo wp_get_attachment_image_url($info['camp_info_photo'], size: wp_is_mobile() ? 'medium' : 'large')  ?>" alt="" width="100%">
           <?php endif; ?>
 
         <?php endforeach; ?>

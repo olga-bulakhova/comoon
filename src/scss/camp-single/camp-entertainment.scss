@@ -1,0 +1,78 @@
+.camp-entertainment {
+	.entertainments-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+
+		@media (max-width: $md) {
+			display: block;
+		}
+	}
+
+	.entertainment-item-wrapper {
+		position: relative;
+		&::before {
+			content: '';
+			display: block;
+			padding-top: 76%;
+
+			@media (max-width: $md) {
+				padding-top: 105%;
+			}
+		}
+	}
+
+	.entertainment-item {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.entertainment-item-bg {
+		height: 100%;
+		width: 100%;
+		padding: 24px;
+		@media (max-width: $md) {
+			padding: 24px 16px;
+		}
+		display: flex;
+		align-items: flex-end;
+		background: linear-gradient(
+				0deg,
+				rgba(36, 38, 28, 0.1) 0%,
+				rgba(36, 38, 28, 0.1) 100%
+			),
+			linear-gradient(
+				355deg,
+				rgba(0, 0, 0, 0.8) 1.89%,
+				rgba(0, 0, 0, 0.79) 13.08%,
+				rgba(0, 0, 0, 0.77) 22.18%,
+				rgba(0, 0, 0, 0.74) 29.52%,
+				rgba(0, 0, 0, 0.7) 35.42%,
+				rgba(0, 0, 0, 0.65) 40.2%,
+				rgba(0, 0, 0, 0.6) 44.17%,
+				rgba(0, 0, 0, 0.54) 47.67%,
+				rgba(0, 0, 0, 0.47) 51%,
+				rgba(0, 0, 0, 0.4) 54.5%,
+				rgba(0, 0, 0, 0.33) 58.47%,
+				rgba(0, 0, 0, 0.26) 63.25%,
+				rgba(0, 0, 0, 0.19) 69.15%,
+				rgba(0, 0, 0, 0.12) 76.49%,
+				rgba(0, 0, 0, 0.06) 85.59%,
+				rgba(0, 0, 0, 0) 96.78%
+			);
+	}
+
+	.entertainment-item-content {
+		h3 {
+			@include font-style(24px, 20px, 500);
+		}
+		div {
+			color: rgba(255, 255, 255, 0.7);
+		}
+	}
+}
