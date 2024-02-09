@@ -8,7 +8,11 @@
       <?php foreach ([1, 2, 3, 4] as $item) : ?>
         <?php $img = carbon_get_theme_option('you_are_getting_photo_' . $item); ?>
         <div class="you-are-getting-item">
-          <img src="<?php echo wp_get_attachment_image_url($img, size: 'medium')  ?>" alt="" width="100%">
+          <div class="you-are-getting-img-wrapper">
+            <div class="you-are-getting-img">
+              <img src="<?php echo wp_get_attachment_image_url($img, size: 'medium')  ?>" alt="" width="100%" class="border-radius">
+            </div>
+          </div>
           <h3 class="color-dark title-24-600"><?php echo carbon_get_theme_option('you_are_getting_title_' . $item . carbon_lang_prefix()) ?></h3>
           <div><?php echo carbon_get_theme_option('you_are_getting_text_' . $item . carbon_lang_prefix())  ?></div>
         </div>

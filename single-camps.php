@@ -19,26 +19,36 @@ $is_future_date = is_future_date(carbon_get_the_post_meta('event_start'));
 <?php if ($is_future_date) : ?>
   <div class="light-background">
     <?php get_template_part('template-parts/camp-single/camp-heading'); ?>
-
     <div class="mt-12 pb-18 mt-6-mobile pb-8-mobile">
       <?php get_template_part('template-parts/you-are-getting'); ?>
     </div>
-
   </div>
 <?php endif; ?>
 
 <?php get_template_part('template-parts/camp-single/camp-info'); ?>
 
-<div class="light-background">
-  <?php if ($is_future_date) {
+<?php if ($is_future_date) : ?>
+  <div class="light-background">
+    <?php
     get_template_part('template-parts/camp-single/camp-gallery');
     get_template_part('template-parts/camp-single/camp-advantages');
     get_template_part('template-parts/camp-single/camp-entertainment');
     get_template_part('template-parts/camp-single/camp-available');
     get_template_part('template-parts/camp-single/camp-faq');
-  } else {
-  } ?>
-</div>
+    ?>
+  </div>
+  <?php
+  get_template_part('template-parts/camp-single/camp-room');
+  get_template_part('template-parts/camp-single/camp-admin');
+  get_template_part('template-parts/camp-single/camp-review');
+  ?>
+
+<?php else : ?>
+
+<?php endif; ?>
+
+
+
 
 
 <?php get_footer(); ?>

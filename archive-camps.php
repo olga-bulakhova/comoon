@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-
-
 <div class="wrapper">
   <div class="breadcrumbs">
     <a class="home-page-link" href="<?php echo get_url_path(); ?>"></a>

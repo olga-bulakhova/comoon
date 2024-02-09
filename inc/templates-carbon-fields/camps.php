@@ -149,5 +149,27 @@ function crb_attach_post_meta()
             ->set_width(60),
         ]),
 
+      Field::make('separator', 'room_separator', 'Стоимость и размещение'),
+      Field::make('complex', 'room_complex', 'Блоки - стоимость и размещение')
+        ->set_collapsed(true)
+        ->add_fields([
+          Field::make('image', 'room_photo', 'Фото')
+            ->set_width(20),
+          Field::make('text', 'room_title', 'Тип номера')
+            ->set_width(30),
+          Field::make('text', 'room_price', 'Цена')
+            ->set_width(10),
+          Field::make('textarea', 'room_text', 'Описание')
+            ->set_width(40),
+
+        ]),
+
+      Field::make('separator', 'admin_separator', 'Админ'),
+      Field::make('image', 'camp_admin_photo', 'Фото')
+        ->set_width(20),
+      Field::make('text', 'camp_admin_title', 'Заголовок')
+        ->set_width(30),
+      Field::make('textarea', 'camp_admin_text', 'Текст')
+        ->set_width(50),
     ));
 }
