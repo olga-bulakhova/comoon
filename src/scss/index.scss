@@ -15,9 +15,11 @@
 @import 'blocks/you-are-getting';
 @import 'blocks/founders-list';
 @import 'blocks/form-container';
+@import 'blocks/form-modal';
 @import 'blocks/mobile-menu';
 @import 'blocks/camps';
 @import 'blocks/accordion';
+@import 'blocks/review';
 
 @import 'elements/badge.scss';
 @import 'elements/breadcrumbs';
@@ -34,3 +36,4 @@
 @import 'camp-single/camp-entertainment';
 @import 'camp-single/camp-room';
 @import 'camp-single/camp-admin';
+@import 'camp-single/camp-report';

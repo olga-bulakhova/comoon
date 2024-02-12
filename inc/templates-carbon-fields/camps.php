@@ -171,5 +171,11 @@ function crb_attach_post_meta()
         ->set_width(30),
       Field::make('textarea', 'camp_admin_text', 'Текст')
         ->set_width(50),
+
+      Field::make('separator', 'camp_report_separator', 'Фотоотчет'),
+      Field::make('media_gallery', 'camp_photo')
+        ->set_type(array('image')),
+      Field::make('media_gallery', 'camp_video')
+        ->set_type(array('video')),
     ));
 }

@@ -38,6 +38,12 @@ function comoon_attach_theme_options()
       Field::make('text', 'for_what_text' . carbon_lang_prefix(), 'Для чего - текст')
         ->set_width(70),
 
+      Field::make('separator', 'front_page_video_separator', 'Видео для главной страницы'),
+      Field::make('media_gallery', 'front_page_video')
+        ->set_type(array('video')),
+
+
+
       Field::make('separator', 'find_friends', 'Найти друзей'),
       Field::make('text', 'find_friends_title' . carbon_lang_prefix(), 'Найти друзей - заголовок'),
 
@@ -128,15 +134,17 @@ function comoon_attach_theme_options()
         ->set_width(25),
 
       Field::make('text', 'entertainment_title' . carbon_lang_prefix(), 'Развлечения')
-        ->set_width(20),
+        ->set_width(25),
       Field::make('text', 'available_at_camp_title' . carbon_lang_prefix(), 'В кемпе доступны')
-        ->set_width(20),
+        ->set_width(25),
       Field::make('text', 'faq_title' . carbon_lang_prefix(), 'FAQ')
-        ->set_width(20),
+        ->set_width(25),
       Field::make('text', 'price_title' . carbon_lang_prefix(), 'Стоимость и размещение')
-        ->set_width(20),
+        ->set_width(25),
       Field::make('text', 'reviews_title' . carbon_lang_prefix(), 'Отзывы')
-        ->set_width(20),
+        ->set_width(25),
+      Field::make('text', 'report_title' . carbon_lang_prefix(), 'Фотоотчет')
+        ->set_width(25),
 
       Field::make('separator', 'faq_titles', 'Заголовки для FAQ'),
       Field::make('text', 'faq_accommodation' . carbon_lang_prefix(), 'Проживание')
@@ -168,7 +176,6 @@ function comoon_attach_theme_options()
         ->set_width(33),
       Field::make('text', 'email_url' . carbon_lang_prefix(), 'Email URL')
         ->set_width(33),
-
 
     ]);
 }

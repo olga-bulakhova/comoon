@@ -10,7 +10,9 @@ jQuery(document).ready(function ($) {
 		adaptiveHeight: true,
 	}
 
-	$('.you-are-getting-list, .entertainments-list').slick({
+	$(
+		'.you-are-getting-list, .entertainments-list, .review-list, .camp-report .img-list'
+	).slick({
 		...options,
 		responsive: [
 			{

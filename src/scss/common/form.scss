@@ -9,3 +9,9 @@ select {
 select {
 	border: none;
 }
+
+.hs-form {
+	.hs-input {
+		background-color: transparent !important;
+	}
+}

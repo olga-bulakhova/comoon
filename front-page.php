@@ -14,6 +14,8 @@ if (!empty($front_page_heading_video)) {
 }
 ?>
 
+<div class="light-bg-overlay light-background"></div>
+
 <section class="home-heading">
   <div class="wrapper">
     <div class="heading-wrapper">
@@ -54,9 +56,24 @@ if (!empty($front_page_heading_video)) {
 </div>
 
 <section class="home-video">
-  <video src="<?php echo $front_page_heading_video_url ?>"></video>
+  <?php
+  $front_page_video =  carbon_get_theme_option('front_page_video');
+  $front_page_video_url = '';
+  if (!empty($front_page_video)) {
+    $front_page_video_url = wp_get_attachment_url($front_page_video[0]);
+  }
+
+  ?>
+  <video src="<?php echo $front_page_video_url; ?>"></video>
   <div class="overlay">
     <div class="video-play"></div>
+  </div>
+</section>
+
+<section class="camps-list-container mt-18 mt-6-mobile">
+  <div class="wrapper">
+    <h2 class="title-48-600 color-dark mb-5_6 mb-4-mobile center-mobile"><?php echo carbon_get_theme_option('upcoming_camps' . carbon_lang_prefix()) ?></h2>
+    <?php get_template_part('template-parts/camps/upcoming-camps-list'); ?>
   </div>
 </section>
 

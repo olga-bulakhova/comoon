@@ -40,15 +40,14 @@ $is_future_date = is_future_date(carbon_get_the_post_meta('event_start'));
   <?php
   get_template_part('template-parts/camp-single/camp-room');
   get_template_part('template-parts/camp-single/camp-admin');
-  get_template_part('template-parts/camp-single/camp-review');
+
   ?>
-
 <?php else : ?>
-
+  <?php get_template_part('template-parts/camp-single/camp-report'); ?>
 <?php endif; ?>
 
 
-
+<?php get_template_part('template-parts/camp-single/camp-review'); ?>
 
 
 <?php get_footer(); ?>

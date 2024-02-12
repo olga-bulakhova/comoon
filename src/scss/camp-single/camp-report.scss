@@ -1,0 +1,51 @@
+.camp-report {
+	.img-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+
+		@media (max-width: $md) {
+			display: block;
+			padding-bottom: 4dvh;
+		}
+
+		.slick-dots {
+			bottom: -8px;
+			z-index: 30;
+		}
+	}
+
+	.img-item-wrapper {
+		position: relative;
+		&::before {
+			content: '';
+			display: block;
+			padding-top: 76%;
+			@media (max-width: $md) {
+				padding-top: 105%;
+			}
+		}
+	}
+
+	.img-item {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	.home-video {
+		margin-top: 30px;
+		border-radius: $border-radius;
+		overflow: hidden;
+	}
+}

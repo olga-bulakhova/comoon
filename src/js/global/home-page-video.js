@@ -3,13 +3,15 @@ jQuery(document).ready(function ($) {
 
 	if (!videoContainer.length) return
 
-	const video = videoContainer.find('video')
-	const button = videoContainer.find('.video-play')
-	const overlay = videoContainer.find('.overlay')
+	videoContainer.each(function (i, v) {
+		const vk = $(v)
+		const video = vk.find('video')
+		const overlay = vk.find('.overlay')
 
-	button.on('click', function () {
-		video.prop('controls', true)
-		video.trigger('play')
-		overlay.css('display', 'none')
+		overlay.on('click', function () {
+			video.prop('controls', true)
+			video.trigger('play')
+			overlay.css('display', 'none')
+		})
 	})
 })

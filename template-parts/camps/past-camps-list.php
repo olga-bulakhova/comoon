@@ -4,6 +4,7 @@
 
   $query = new WP_Query([
     'post_type' => 'camps',
+    'post_status' => 'publish'
   ]);
 
   if ($query->have_posts()) {
