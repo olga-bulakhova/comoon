@@ -30,3 +30,14 @@ function get_url_path()
     return '/' . ICL_LANGUAGE_CODE . '/';
   }
 }
+
+function get_form_shortcode()
+{
+  if (ICL_LANGUAGE_CODE === 'ru') {
+    return '[contact-form-7 id="6b291bb" title="Контактная форма 1"]';
+  } else if (ICL_LANGUAGE_CODE === 'pl') {
+    return '[contact-form-7 id="6b291bb" title="Контактная форма 1"]';
+  } else {
+    return '[contact-form-7 id="6b291bb" title="Контактная форма 1"]';
+  }
+}

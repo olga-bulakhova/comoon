@@ -1,0 +1,47 @@
+.thank-heading {
+	padding-top: 30px;
+
+	@media (max-width: $md) {
+		padding-top: 40px;
+	}
+
+	h1 {
+		@include font-style(48px, 20px, 600);
+	}
+}
+
+.thank-text {
+	margin: 48px 0;
+
+	@media (max-width: $md) {
+		margin: 40px 0;
+	}
+}
+
+.thank-image {
+	height: 354px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-image: url(../../img/thank-bg.jpg);
+}
+
+.thank-social {
+	display: flex;
+	justify-content: center;
+	column-gap: 16.5px;
+	a {
+		display: block;
+		width: 48px;
+		height: 48px;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		&.insta {
+			background-image: url(../../img/insta.svg);
+		}
+
+		&.youtube {
+			background-image: url(../../img/youtube.svg);
+		}
+	}
+}

@@ -30,10 +30,13 @@ jQuery(document).ready(function ($) {
 		lastScrollTop = st
 	}
 
-	function toggleMobileMenu() {
-		$('.mobile-menu').slideToggle('fast')
-		$('body').toggleClass('overflow')
-	}
+	$('.header-burger').on('click', function () {
+		$('.mobile-menu').slideDown('fast')
+		$('body').addClass('overflow')
+	})
 
-	$('.toggle-menu').on('click', toggleMobileMenu)
+	$('.mobile-menu-close').on('click', function () {
+		$('.mobile-menu').slideUp('fast')
+		$('body').removeClass('overflow')
+	})
 })

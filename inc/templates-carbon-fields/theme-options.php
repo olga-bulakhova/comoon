@@ -177,5 +177,10 @@ function comoon_attach_theme_options()
       Field::make('text', 'email_url' . carbon_lang_prefix(), 'Email URL')
         ->set_width(33),
 
+    ])
+    ->add_tab('Thank You', [
+      Field::make('text', 'thank_you_title' . carbon_lang_prefix(), 'Заголовок'),
+      Field::make('text', 'thank_you_text_1' . carbon_lang_prefix(), 'Текст после заголовка'),
+      Field::make('text', 'thank_you_text_2' . carbon_lang_prefix(), 'Текст после картинки'),
     ]);
 }

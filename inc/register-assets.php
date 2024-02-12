@@ -15,5 +15,4 @@ function register_scripts()
   wp_enqueue_script('jquery');
   wp_enqueue_script('slick', COMOON_DIR_URI . '/lib/slick.min.js', array('jquery'));
   wp_enqueue_script('global', COMOON_DIR_URI . '/dist/js/global.bundle.js', ['jquery'], filemtime(COMOON_DIR_PATH . '/dist/js/global.bundle.js'), true);
-  wp_enqueue_script('hsforms', '//js-eu1.hsforms.net/forms/embed/v2.js', [], '', false);
 }

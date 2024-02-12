@@ -6,12 +6,61 @@ select {
 	outline: none !important;
 }
 
+input[type='text'],
+input[type='email'] {
+	width: 100%;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #bfd292;
+	margin-bottom: 24px;
+	padding: 12px 0;
+	color: #fff;
+	@include font-style(16px, 16px, 400);
+
+	&:focus {
+		border-color: #fff;
+	}
+}
+
+input[type='submit'] {
+	@include btn;
+	@include btn-secondary;
+	margin-top: 30px;
+	min-width: 240px;
+
+	@media (max-width: $md) {
+		width: 100%;
+	}
+}
+
 select {
 	border: none;
 }
 
-.hs-form {
-	.hs-input {
-		background-color: transparent !important;
+form {
+	label,
+	span {
+		display: block;
 	}
+
+	label {
+		color: #bfd292;
+		@include font-style(14px, 14px, 400);
+	}
+}
+
+.wpcf7-form-control-wrap {
+	position: relative;
+}
+
+.wpcf7-not-valid-tip {
+	position: absolute;
+	bottom: 7px;
+	@include font-style(12px, 12px, 400);
+	color: #fff;
+}
+
+.wpcf7-response-output {
+	display: none;
 }

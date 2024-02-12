@@ -39,7 +39,7 @@
                         'depth'           => 0,
                     ]);
                     ?>
-                    <button class="btn btn-primary"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></button>
+                    <button class="btn btn-primary open-modal-form"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></button>
                 </div>
                 <div class="header-burger toggle-menu">
 
@@ -69,7 +69,7 @@
                     ]);
                     ?>
 
-                    <button class="btn btn-primary"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></button>
+                    <button class="btn btn-primary open-modal-form"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></button>
 
                     <div class="mobile-menu-social">
 
