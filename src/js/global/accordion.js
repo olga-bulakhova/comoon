@@ -24,5 +24,9 @@ jQuery(document).ready(function ($) {
 
 	if (!items.length) {
 		faqSection.remove()
+	} else {
+		const firstItem = $(items[0])
+		firstItem.addClass('active')
+		firstItem.find('.accordion__content').removeClass('hidden')
 	}
 })

@@ -177,5 +177,6 @@ function crb_attach_post_meta()
         ->set_type(array('image')),
       Field::make('media_gallery', 'camp_video')
         ->set_type(array('video')),
+
     ));
 }

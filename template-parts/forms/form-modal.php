@@ -1,6 +1,6 @@
 <div class="form-modal hidden">
 
-  <div class="form-modal-content border-radius">
+  <div class="form-modal-content border-radius hidden animate__fadeInDown">
     <h2 class="color-white center"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></h2>
     <div class="form-modal-close">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -12,6 +12,8 @@
     echo do_shortcode(get_form_shortcode());
 
     ?>
+
+    <div class="form-modal-cancel color-white"><?php echo carbon_get_theme_option('cancel_btn' . carbon_lang_prefix()) ?></div>
   </div>
 
 </div>

@@ -25,7 +25,7 @@ if (!empty($front_page_heading_video)) {
         <h1 class="color-white title-lg-uppercase">
           <?php echo carbon_get_theme_option('front_page_h1' . carbon_lang_prefix()) ?>
         </h1>
-        <a href="/" class="btn btn-secondary"><?php echo carbon_get_theme_option('learn_about_the_next_btn' . carbon_lang_prefix()) ?></a>
+        <a href="#camps-list" class="btn btn-secondary"><?php echo carbon_get_theme_option('learn_about_the_next_btn' . carbon_lang_prefix()) ?></a>
       </div>
     </div>
   </div>
@@ -71,6 +71,7 @@ if (!empty($front_page_heading_video)) {
 </section>
 
 <section class="camps-list-container mt-18 mt-6-mobile">
+  <a id="camps-list"></a>
   <div class="wrapper">
     <h2 class="title-48-600 color-dark mb-5_6 mb-4-mobile center-mobile"><?php echo carbon_get_theme_option('upcoming_camps' . carbon_lang_prefix()) ?></h2>
     <?php get_template_part('template-parts/camps/upcoming-camps-list'); ?>

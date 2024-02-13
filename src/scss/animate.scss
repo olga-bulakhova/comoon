@@ -1,0 +1,14 @@
+@keyframes fadeInDown {
+	from {
+		transform: translate3d(0, -15%, 0);
+	}
+
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+}
+.animate__fadeInDown {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+	animation-duration: 0.4s;
+}

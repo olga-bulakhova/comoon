@@ -160,11 +160,13 @@ function comoon_attach_theme_options()
 
       Field::make('separator', 'buttons', 'Кнопки'),
       Field::make('text', 'sign_up_btn' . carbon_lang_prefix(), 'Записаться на кемп')
-        ->set_width(33),
+        ->set_width(25),
       Field::make('text', 'learn_about_the_next_btn' . carbon_lang_prefix(), 'Узнать о следующем кемпе')
-        ->set_width(33),
+        ->set_width(25),
       Field::make('text', 'book_btn' . carbon_lang_prefix(), 'Забронировать')
-        ->set_width(33),
+        ->set_width(25),
+      Field::make('text', 'cancel_btn' . carbon_lang_prefix(), 'Отмена')
+        ->set_width(25),
 
       Field::make('separator', 'footer', 'Футер'),
       Field::make('text', 'footer_text' . carbon_lang_prefix(), 'Политика конфиденциальности'),
@@ -176,7 +178,6 @@ function comoon_attach_theme_options()
         ->set_width(33),
       Field::make('text', 'email_url' . carbon_lang_prefix(), 'Email URL')
         ->set_width(33),
-
     ])
     ->add_tab('Thank You', [
       Field::make('text', 'thank_you_title' . carbon_lang_prefix(), 'Заголовок'),
