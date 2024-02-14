@@ -15,7 +15,7 @@ function comoon_attach_theme_options()
 
   Container::make('theme_options', __('Theme Options'))
     ->add_tab('Главная страница', [
-      Field::make('media_gallery', 'front_page_heading_video')
+      Field::make('media_gallery', 'front_heading_video')
         ->set_type(array('image', 'video'))
         ->set_width(50),
       Field::make('text', 'front_page_h1' . carbon_lang_prefix(), 'Заголовок h1')

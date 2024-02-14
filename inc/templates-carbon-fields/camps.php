@@ -31,8 +31,8 @@ function crb_attach_post_meta()
       Field::make('textarea', 'description', 'Краткое описание'),
 
       Field::make('separator', 'camp_info', 'Информация о кемпе'),
+      Field::make('image', 'camp_info_banner', 'Баннер'),
       Field::make('complex', 'camp_info_list', 'Блоки - заголовок, текст, фото')
-        ->set_collapsed(true)
         ->add_fields([
           Field::make('image', 'camp_info_photo', 'Фото')
             ->set_width(40),
@@ -49,7 +49,6 @@ function crb_attach_post_meta()
       Field::make('separator', 'camp_advantages_separator', 'Преимущества'),
 
       Field::make('complex', 'camp_advantages', 'Блоки - Преимущества')
-        ->set_collapsed(true)
         ->add_fields([
           Field::make('radio_image', 'camp_advantages_icon', 'Иконка')
             ->set_width(50)
@@ -67,7 +66,6 @@ function crb_attach_post_meta()
 
       Field::make('separator', 'camp_entertainment_separator', 'Развлечения'),
       Field::make('complex', 'camp_entertainment', 'Блоки - Развлечения')
-        ->set_collapsed(true)
         ->add_fields([
           Field::make('image', 'camp_entertainment_photo', 'Фото')
             ->set_width(20),
@@ -80,7 +78,6 @@ function crb_attach_post_meta()
 
       Field::make('separator', 'camp_available_separator', 'В кемпе доступны'),
       Field::make('complex', 'camp_available', 'Блоки - Что доступно в кемпе')
-        ->set_collapsed(true)
         ->add_fields([
           Field::make('radio_image', 'camp_available_icon', 'Иконка')
             ->set_width(70)
@@ -105,7 +102,6 @@ function crb_attach_post_meta()
 
       Field::make('separator', 'faq_separator', 'FAQ'),
       Field::make('complex', 'faq_accommodation_complex', 'Проживание')
-        ->set_collapsed(true)
         ->add_fields([
           Field::make('text', 'faq_accommodation_question', 'Вопрос')
             ->set_width(40),
@@ -114,7 +110,6 @@ function crb_attach_post_meta()
         ]),
 
       Field::make('complex', 'faq_entertainment_complex', 'Развлечения')
-        ->set_collapsed(true)
         ->add_fields([
           Field::make('text', 'faq_entertainment_question', 'Вопрос')
             ->set_width(40),
@@ -123,7 +118,6 @@ function crb_attach_post_meta()
         ]),
 
       Field::make('complex', 'faq_job_complex', 'Работа')
-        ->set_collapsed(true)
         ->add_fields([
           Field::make('text', 'faq_job_question', 'Вопрос')
             ->set_width(40),
@@ -132,7 +126,6 @@ function crb_attach_post_meta()
         ]),
 
       Field::make('complex', 'faq_nutrition_complex', 'Питание')
-        ->set_collapsed(true)
         ->add_fields([
           Field::make('text', 'faq_nutrition_question', 'Вопрос')
             ->set_width(40),
@@ -141,7 +134,6 @@ function crb_attach_post_meta()
         ]),
 
       Field::make('complex', 'faq_how_to_get_complex', 'Как добраться')
-        ->set_collapsed(true)
         ->add_fields([
           Field::make('text', 'faq_how_to_get_question', 'Вопрос')
             ->set_width(40),
@@ -151,7 +143,6 @@ function crb_attach_post_meta()
 
       Field::make('separator', 'room_separator', 'Стоимость и размещение'),
       Field::make('complex', 'room_complex', 'Блоки - стоимость и размещение')
-        ->set_collapsed(true)
         ->add_fields([
           Field::make('image', 'room_photo', 'Фото')
             ->set_width(20),

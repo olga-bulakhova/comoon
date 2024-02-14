@@ -34,10 +34,10 @@ function get_url_path()
 function get_form_shortcode()
 {
   if (ICL_LANGUAGE_CODE === 'ru') {
-    return '[contact-form-7 id="6b291bb" title="Контактная форма 1"]';
+    return '[contact-form-7 id="372ad42" title="Contact Form  ru"]';
   } else if (ICL_LANGUAGE_CODE === 'pl') {
-    return '[contact-form-7 id="6b291bb" title="Контактная форма 1"]';
+    return '[contact-form-7 id="1a89f33" title="Contact Form pl"]';
   } else {
-    return '[contact-form-7 id="6b291bb" title="Контактная форма 1"]';
+    return '[contact-form-7 id="b20e59f" title="Contact Form en"]';
   }
 }

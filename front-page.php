@@ -7,7 +7,7 @@
 
 get_header();
 
-$front_page_heading_video =  carbon_get_theme_option('front_page_heading_video');
+$front_page_heading_video =  carbon_get_theme_option('front_heading_video');
 $front_page_heading_video_url = '';
 if (!empty($front_page_heading_video)) {
   $front_page_heading_video_url = wp_get_attachment_url($front_page_heading_video[0]);

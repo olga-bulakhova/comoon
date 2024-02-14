@@ -1,17 +1,26 @@
 .camp-gallery {
-	.camp-gallery-item {
+	.camp-gallery-item-wrapper {
 		height: 720px;
-		position: relative;
 
-		img {
-			top: 0;
-			left: 0;
-			display: block;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: center center;
+		@media (max-width: $md) {
+			height: 460px;
 		}
+	}
+	.camp-gallery-item {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		// position: relative;
+
+		// img {
+		// 	top: 0;
+		// 	left: 0;
+		// 	display: block;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	object-fit: cover;
+		// 	object-position: center center;
+		// }
 	}
 
 	.slick-dots {

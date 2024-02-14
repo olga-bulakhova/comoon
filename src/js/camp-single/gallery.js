@@ -8,6 +8,8 @@ jQuery(document).ready(function ($) {
 		lazyLoad: 'progressive',
 		prevArrow: $('.gallery__prev-arr'),
 		nextArrow: $('.gallery__next-arr'),
+		adaptiveHeight: true,
+
 		responsive: [
 			{
 				breakpoint: 768,

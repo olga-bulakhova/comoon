@@ -9,8 +9,10 @@ if (!empty($gal_ids)) : ?>
       <div class="gallery__next-arr"></div>
       <div class="camp-gallery">
         <?php foreach ($gal_ids as $id) :  ?>
-          <div class="camp-gallery-item">
-            <img src="<?php echo wp_get_attachment_image_url($id, size: wp_is_mobile() ? 'medium' : 'large')  ?>" alt="">
+          <div class="camp-gallery-item" style="background-image: url(<?php echo wp_get_attachment_image_url($id, size: wp_is_mobile() ? 'large' : 'large')  ?>)">
+
+            <div class="camp-gallery-item-wrapper"></div>
+            <!-- <img src="<?php echo wp_get_attachment_image_url($id, size: wp_is_mobile() ? 'medium' : 'large')  ?>" alt=""> -->
           </div>
         <?php endforeach; ?>
       </div>
