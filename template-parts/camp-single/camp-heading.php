@@ -8,7 +8,7 @@
         <div class="badge badge-user"><?php echo carbon_get_the_post_meta('number_of_persons') ?></div>
       </div>
 
-      <button class="btn btn-secondary btn-large open-modal-form"><?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?></button>
+      <a href="#camp-rooms" class="btn btn-secondary btn-large"><?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?></a>
     </div>
   </div>
 </div>
