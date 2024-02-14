@@ -145,6 +145,8 @@ function comoon_attach_theme_options()
         ->set_width(25),
       Field::make('text', 'report_title' . carbon_lang_prefix(), 'Фотоотчет')
         ->set_width(25),
+      Field::make('text', 'admin_title' . carbon_lang_prefix(), 'Админ кемпа')
+        ->set_width(25),
 
       Field::make('separator', 'faq_titles', 'Заголовки для FAQ'),
       Field::make('text', 'faq_accommodation' . carbon_lang_prefix(), 'Проживание')
