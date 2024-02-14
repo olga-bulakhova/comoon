@@ -23,12 +23,12 @@ function register_post_types()
     'description'            => '',
     'public'                 => true,
     'show_in_menu'           => null, // показывать ли в меню админки
-    'show_in_rest'        => null, // добавить в REST API. C WP 4.7
+    'show_in_rest'        => true, // добавить в REST API. C WP 4.7
     'rest_base'           => null, // $post_type. C WP 4.7
     'menu_position'       => 5,
     'menu_icon'           => 'dashicons-admin-multisite',
     'hierarchical'        => false,
-    'supports'            => ['title', 'thumbnail'],
+    'supports'            => ['title', 'thumbnail', 'editor'],
     'has_archive'         => true,
     'rewrite'             => true,
     'query_var'           => true,

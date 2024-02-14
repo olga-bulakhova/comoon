@@ -32,14 +32,15 @@ function crb_attach_post_meta()
 
       Field::make('separator', 'camp_info', 'Информация о кемпе'),
       Field::make('image', 'camp_info_banner', 'Баннер'),
-      Field::make('complex', 'camp_info_list', 'Блоки - заголовок, текст, фото')
-        ->add_fields([
-          Field::make('image', 'camp_info_photo', 'Фото')
-            ->set_width(40),
-          Field::make('text', 'camp_info_title', 'Заголовок')
-            ->set_width(60),
-          Field::make('rich_text', 'camp_info_text', 'text')
-        ]),
+
+      // Field::make('complex', 'camp_info_list', 'Блоки - заголовок, текст, фото')
+      //   ->add_fields([
+      //     Field::make('image', 'camp_info_photo', 'Фото')
+      //       ->set_width(40),
+      //     Field::make('text', 'camp_info_title', 'Заголовок')
+      //       ->set_width(60),
+      //     Field::make('rich_text', 'camp_info_text', 'text')
+      //   ]),
 
       Field::make('separator', 'camp_media_gallery_separator', 'Фотогалерея'),
       Field::make('media_gallery', 'camp_media_gallery')
@@ -152,16 +153,7 @@ function crb_attach_post_meta()
             ->set_width(10),
           Field::make('textarea', 'room_text', 'Описание')
             ->set_width(40),
-
         ]),
-
-      Field::make('separator', 'admin_separator', 'Админ'),
-      Field::make('image', 'camp_admin_photo', 'Фото')
-        ->set_width(20),
-      Field::make('text', 'camp_admin_title', 'Заголовок')
-        ->set_width(30),
-      Field::make('textarea', 'camp_admin_text', 'Текст')
-        ->set_width(50),
 
       Field::make('separator', 'camp_report_separator', 'Фотоотчет'),
       Field::make('media_gallery', 'camp_photo')

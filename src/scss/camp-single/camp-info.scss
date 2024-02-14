@@ -4,6 +4,7 @@
 	background-size: cover;
 	background-image: url(../../img/info-banner.jpg);
 	padding: 153px 0 143px;
+	margin-bottom: 90px;
 
 	h2 {
 		text-transform: uppercase;
@@ -22,6 +23,7 @@
 
 	@media (max-width: $md) {
 		padding: 67px 0 66px;
+		margin-bottom: 60px;
 		.camp-info-logo {
 			margin-bottom: 16px;
 		}
@@ -33,38 +35,92 @@
 	}
 }
 
-.camp-info-text {
-	margin-top: 48px;
-	h5,
-	h6 {
-		font-size: inherit;
-		font-weight: inherit;
+.camp-info-content {
+	h1,
+	h2,
+	h3 {
+		color: $color-dark-text;
+	}
 
-		&:not(:last-child) {
-			margin-bottom: 10px;
+	h1,
+	h2,
+	h3 {
+		@include font-style(32px, 20px, 600);
+		margin-top: 90px;
+		margin-bottom: 48px;
+	}
+
+	img {
+		border-radius: $border-radius;
+		width: 100%;
+	}
+
+	.wp-block-image {
+		margin-top: 56px;
+		margin-bottom: 90px;
+		display: block;
+	}
+
+	p {
+		margin-top: 10px;
+	}
+
+	h1,
+	h2,
+	h3,
+	p {
+		max-width: 680px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@media (max-width: $md) {
+		.wp-block-image {
+			margin-top: 32px;
+			margin-bottom: 60px;
+		}
+
+		h1,
+		h2,
+		h3 {
+			margin-top: 60px;
+			margin-bottom: 24px;
 		}
 	}
 }
 
-.camp-info-title {
-	margin-top: 90px;
-	line-height: 1;
-}
+// .camp-info-text {
+// 	margin-top: 48px;
+// 	h5,
+// 	h6 {
+// 		font-size: inherit;
+// 		font-weight: inherit;
 
-.camp-info-photo {
-	margin-top: 56px;
-}
+// 		&:not(:last-child) {
+// 			margin-bottom: 10px;
+// 		}
+// 	}
+// }
 
-@media (max-width: $md) {
-	.camp-info-text {
-		margin-top: 24px;
-	}
+// .camp-info-title {
+// 	margin-top: 90px;
+// 	line-height: 1;
+// }
 
-	.camp-info-title {
-		margin-top: 60px;
-	}
+// .camp-info-photo {
+// 	margin-top: 56px;
+// }
 
-	.camp-info-photo {
-		margin-top: 32px;
-	}
-}
+// @media (max-width: $md) {
+// 	.camp-info-text {
+// 		margin-top: 24px;
+// 	}
+
+// 	.camp-info-title {
+// 		margin-top: 60px;
+// 	}
+
+// 	.camp-info-photo {
+// 		margin-top: 32px;
+// 	}
+// }
