@@ -157,9 +157,12 @@ function crb_attach_post_meta()
 
       Field::make('separator', 'camp_report_separator', 'Фотоотчет'),
       Field::make('media_gallery', 'camp_photo')
-        ->set_type(array('image')),
-      Field::make('media_gallery', 'camp_video')
-        ->set_type(array('video')),
+        ->set_type(array('image', 'video'))
+
+
+      // Field::make('media_gallery', 'camp_video')
+      //   ->set_type(array('video'))
+      //   ->set_help_text('Вертикальные видео'),
 
     ));
 }

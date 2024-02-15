@@ -6,8 +6,8 @@
 }
 
 .container {
-	max-width: 1920px;
-	margin: 0 auto;
+	// max-width: 1920px;
+	// margin: 0 auto;
 	font-family: 'Manrope', sans-serif;
 	padding-top: 70px;
 	color: $color-light-text;
@@ -27,6 +27,12 @@
 	@media (max-width: $md) {
 		padding: 0 15px;
 	}
+}
+
+.wrapper-lg {
+	max-width: 1920px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .wrapper-md {

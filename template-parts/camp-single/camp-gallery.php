@@ -3,7 +3,7 @@
 $gal_ids = carbon_get_the_post_meta('camp_media_gallery');
 
 if (!empty($gal_ids)) : ?>
-  <div class="camp-gallery-container pb-18 pb-6-mobile">
+  <div class="camp-gallery-container pb-18 pb-6-mobile wrapper-lg">
     <div class=" camp-gallery-wrapper">
       <div class="gallery__prev-arr"></div>
       <div class="gallery__next-arr"></div>

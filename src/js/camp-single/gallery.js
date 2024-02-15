@@ -21,3 +21,19 @@ jQuery(document).ready(function ($) {
 		],
 	})
 })
+
+jQuery(document).ready(function ($) {
+	if ($(window).width() > 768) {
+		setTimeout(() => {
+			var container = $('.grid')
+			container.imagesLoaded(function () {
+				container.masonry({
+					itemSelector: '.grid-item',
+					columnWidth: '.grid-item',
+					percentPosition: true,
+				})
+				container.addClass('loaded')
+			})
+		}, 1000)
+	}
+})

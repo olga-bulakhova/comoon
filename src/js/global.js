@@ -5,4 +5,4 @@ import './global/anchor-link-scroll'
 import './global/accordion'
 import './global/hide-empty'
 import './global/form'
-import './camp-single/gallery'
+
