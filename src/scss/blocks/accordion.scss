@@ -13,7 +13,7 @@
 }
 
 .accordion__item {
-	background-color: #fff;
+	background-color: $color-white-background;
 	&:not(:last-child) {
 		margin-bottom: 16px;
 	}

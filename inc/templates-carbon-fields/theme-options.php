@@ -40,8 +40,10 @@ function comoon_attach_theme_options()
 
       Field::make('separator', 'front_page_video_separator', 'Видео для главной страницы'),
       Field::make('media_gallery', 'front_page_video')
-        ->set_type(array('video')),
-
+        ->set_type(array('video'))
+        ->set_width(30),
+      Field::make('image', 'front_page_video_poster', 'Превью')
+        ->set_width(30),
 
 
       Field::make('separator', 'find_friends', 'Найти друзей'),

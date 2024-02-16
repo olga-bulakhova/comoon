@@ -20,7 +20,7 @@ if (!empty($front_page_heading_video)) {
   <div class="wrapper">
     <div class="heading-wrapper">
       <div class="overlay"></div>
-      <video src="<?php echo $front_page_heading_video_url ?>" autoplay loop muted></video>
+      <video src="<?php echo $front_page_heading_video_url ?>" autoplay loop muted playsinline></video>
       <div class="heading-content">
         <h1 class="color-white title-lg-uppercase">
           <?php echo carbon_get_theme_option('front_page_h1' . carbon_lang_prefix()) ?>
@@ -55,7 +55,7 @@ if (!empty($front_page_heading_video)) {
   <?php get_template_part('template-parts/you-are-getting'); ?>
 </div>
 
-<section class="home-video wrapper-lg">
+<section class="home-video wrapper-lg front-page-video">
   <?php
   $front_page_video =  carbon_get_theme_option('front_page_video');
   $front_page_video_url = '';
@@ -64,7 +64,7 @@ if (!empty($front_page_heading_video)) {
   }
 
   ?>
-  <video src="<?php echo $front_page_video_url; ?>"></video>
+  <video src="<?php echo $front_page_video_url; ?>" poster="<?php echo wp_get_attachment_url(carbon_get_theme_option('front_page_video_poster')) ?>"></video>
   <div class="overlay">
     <div class="video-play"></div>
   </div>
