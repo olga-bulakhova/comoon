@@ -9,7 +9,7 @@
       <span><?php echo carbon_get_theme_option('reviews_title' . carbon_lang_prefix()) ?></span>
     </div>
 
-    <section class="pb-18 pb-6-mobile">
+    <section class="pb-18 pb-6-mobile pt-4-mobile">
       <h1 class="title-48-600 color-dark mb-5_6 mb-4-mobile center-mobile"><?php echo carbon_get_theme_option('reviews_title' . carbon_lang_prefix()) ?></h1>
 
       <?php

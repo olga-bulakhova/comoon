@@ -78,7 +78,7 @@ if (!empty($front_page_heading_video)) {
   </div>
 </section>
 
-<section class="home-find-friends mt-18 mt-6-mobile wrapper-lg">
+<section class="home-find-friends mt-18 mt-6-mobile">
   <div class="wrapper">
     <div class="home-find-friends-content">
       <h2 class="color-white"><?php echo carbon_get_theme_option('find_friends_title' . carbon_lang_prefix()) ?></h2>

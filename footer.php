@@ -28,7 +28,7 @@
           <a class="youtube" href="<?php echo carbon_get_theme_option('youtube_url' . carbon_lang_prefix()) ?>" target="_blank"></a>
         <?php endif; ?>
         <?php if (!empty(carbon_get_theme_option('email_url' . carbon_lang_prefix()))) : ?>
-          <a class="email" href="<?php echo carbon_get_theme_option('email_url' . carbon_lang_prefix()) ?>" target="_blank"></a>
+          <a class="email" href="mailto:<?php echo carbon_get_theme_option('email_url' . carbon_lang_prefix()) ?>" target="_blank"></a>
         <?php endif; ?>
       </div>
     </div>

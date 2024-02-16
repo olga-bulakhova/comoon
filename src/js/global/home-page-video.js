@@ -8,7 +8,9 @@ jQuery(document).ready(function ($) {
 		const video = vk.find('video')
 		const overlay = vk.find('.overlay')
 
-		overlay.on('click', function () {
+		overlay.on('click', function (e) {
+			e.preventDefault()
+			e.stopPropagation()
 			video.prop('controls', true)
 			video.trigger('play')
 			overlay.css('display', 'none')

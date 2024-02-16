@@ -6,6 +6,11 @@
         <div class="badge badge-calendar"><?php echo convert_date_format(carbon_get_the_post_meta('event_start'))  . '-' . convert_date_format(carbon_get_the_post_meta('event_end'))  ?></div>
         <div class="badge badge-place"><?php echo carbon_get_the_post_meta('event_place') ?></div>
         <div class="badge badge-user"><?php echo carbon_get_the_post_meta('number_of_persons') ?></div>
+
+        <?php if (!empty(carbon_get_the_post_meta('event_places_left'))) : ?>
+          <div class="badge badge-user"><?php echo carbon_get_theme_option('places_left' . carbon_lang_prefix()) . ' - ' . carbon_get_the_post_meta('event_places_left') ?></div>
+        <?php endif; ?>
+
       </div>
 
       <a href="#camp-rooms" class="btn btn-secondary btn-large"><?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?></a>

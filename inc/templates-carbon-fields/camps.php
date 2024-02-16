@@ -16,31 +16,25 @@ function crb_attach_post_meta()
     ->add_fields(array(
       Field::make('date', 'event_start', 'Дата начала события')
         ->set_required(true)
-        ->set_width(25)
+        ->set_width(20)
         ->set_storage_format('Y/m/d'),
       Field::make('date', 'event_end', 'Дата окончания события')
         ->set_required(true)
-        ->set_width(25)
+        ->set_width(20)
         ->set_storage_format('Y/m/d'),
       Field::make('text', 'number_of_persons', 'Количество человек')
         ->set_required(true)
-        ->set_width(25),
+        ->set_width(20),
       Field::make('text', 'event_place', 'Место проведения')
         ->set_required(true)
-        ->set_width(25),
+        ->set_width(20),
+      Field::make('text', 'event_places_left', 'Осталось мест')
+        ->set_attribute('type', 'number')
+        ->set_width(20),
       Field::make('textarea', 'description', 'Краткое описание'),
 
       Field::make('separator', 'camp_info', 'Информация о кемпе'),
       Field::make('image', 'camp_info_banner', 'Баннер'),
-
-      // Field::make('complex', 'camp_info_list', 'Блоки - заголовок, текст, фото')
-      //   ->add_fields([
-      //     Field::make('image', 'camp_info_photo', 'Фото')
-      //       ->set_width(40),
-      //     Field::make('text', 'camp_info_title', 'Заголовок')
-      //       ->set_width(60),
-      //     Field::make('rich_text', 'camp_info_text', 'text')
-      //   ]),
 
       Field::make('separator', 'camp_media_gallery_separator', 'Фотогалерея'),
       Field::make('media_gallery', 'camp_media_gallery')

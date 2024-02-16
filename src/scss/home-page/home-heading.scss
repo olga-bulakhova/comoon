@@ -37,20 +37,20 @@
 	}
 
 	.heading-content {
-		padding: 240px 0 184px;
+		padding: 240px 0 154px;
 		position: relative;
 		z-index: 2;
 		text-align: center;
 
 		@media (max-width: $md) {
-			padding: 222px 0 184px;
+			padding: 222px 0 154px;
 		}
 	}
 
 	h1 {
-		margin-bottom: 96px;
+		margin-bottom: 126px;
 		@media (max-width: $md) {
-			margin-bottom: 52px;
+			margin-bottom: 82px;
 		}
 	}
 }

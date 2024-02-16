@@ -12,10 +12,11 @@
 
 	.form-content {
 		padding: 48px;
-		background-image: url(../../img/green-bg.jpg);
+		background-color: $color-primary;
 
 		@media (max-width: $md) {
 			padding: 48px 24px;
+			background-image: url(../../img/green-bg.jpg);
 		}
 	}
 

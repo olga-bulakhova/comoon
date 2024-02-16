@@ -14,6 +14,7 @@
 
 .review-item {
 	background-color: #fff;
+	height: 100%;
 	padding: 24px 16px;
 	display: flex;
 	flex-direction: column;
@@ -80,6 +81,7 @@
 		margin-right: 8px;
 	}
 	span {
-		text-decoration-line: underline;
+		line-height: 1;
+		vertical-align: middle;
 	}
 }

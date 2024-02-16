@@ -9,9 +9,22 @@
 		height: 10px;
 		background-color: $color-primary;
 	}
+}
 
+@media (max-width: $md) {
+	.you-are-getting-list,
+	.founders-list,
+	.entertainments-list,
+	.review-list {
+		position: relative;
+		width: calc(100% + 24px);
+		left: -8px;
+		.slick-list {
+			padding: 0 36px 0 0;
+		}
 
-	// .slick-list {
-	// 	padding: 0 10% 0 0;
-	// }
+		.slick-slide {
+			padding: 0 8px;
+		}
+	}
 }

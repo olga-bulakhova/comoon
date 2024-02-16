@@ -18,7 +18,7 @@
         <a class="camps-item" href="<?php echo get_the_permalink() ?>" style="background-image:url(<?php echo get_the_post_thumbnail_url() ?>)">
           <div class="camps-content">
             <div class="camps-header badges-list">
-              <div class="badge badge-user"><?php echo carbon_get_the_post_meta('number_of_persons') ?></div>
+              <div class="badge badge-user"><?php echo carbon_get_the_post_meta('event_place') ?></div>
             </div>
             <div class="camps-footer">
               <h3 class="title-24-600 color-white"><?php the_title() ?></h3>
