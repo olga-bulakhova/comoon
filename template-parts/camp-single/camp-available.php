@@ -3,7 +3,7 @@ $camp_available = carbon_get_the_post_meta('camp_available');
 
 if (!empty($camp_available)) : ?>
 
-  <section class="camp-available pb-18 pb-6-mobile">
+  <section class="camp-available mt-18 mt-6-mobile mb-18 mb-6-mobile">
     <div class="wrapper">
       <h2 class="title-48-600 color-dark mb-5_6 mb-4-mobile center-mobile"><?php echo carbon_get_theme_option('available_at_camp_title' . carbon_lang_prefix()) ?></h2>
       <div class="available-list badges-list justify-center-mobile">

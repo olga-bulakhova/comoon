@@ -28,7 +28,7 @@ $is_future_date = is_future_date(carbon_get_the_post_meta('event_start'));
 <?php get_template_part('template-parts/camp-single/camp-info'); ?>
 
 <?php if ($is_future_date) : ?>
-  <div class="light-background">
+  <div class="light-background" style="border: 1px solid transparent">
     <?php
     get_template_part('template-parts/camp-single/camp-gallery');
     get_template_part('template-parts/camp-single/camp-advantages');

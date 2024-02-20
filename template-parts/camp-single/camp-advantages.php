@@ -3,7 +3,7 @@ $camp_advantages = carbon_get_the_post_meta('camp_advantages');
 
 if (!empty($camp_advantages)) : ?>
 
-  <div class="camp-advantages pb-18 pb-6-mobile">
+  <div class="camp-advantages mt-18 mt-6-mobile mb-18 mb-6-mobile">
     <div class="wrapper">
       <div class="advantages-list center">
 

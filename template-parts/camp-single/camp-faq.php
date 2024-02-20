@@ -27,7 +27,7 @@ function taq_template($name)
 }
 ?>
 
-<section class="camp-faq pb-18 pb-6-mobile">
+<section class="camp-faq mt-18 mt-6-mobile mb-18 mb-6-mobile">
   <div class="wrapper">
     <h2 class="title-48-600 color-dark mb-4-mobile center-mobile"><?php echo carbon_get_theme_option('faq_title' . carbon_lang_prefix()) ?></h2>
     <div class="accordion">
