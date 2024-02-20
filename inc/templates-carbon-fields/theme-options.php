@@ -151,6 +151,8 @@ function comoon_attach_theme_options()
         ->set_width(25),
       Field::make('text', 'places_left' . carbon_lang_prefix(), 'Осталось мест')
         ->set_width(25),
+      Field::make('text', 'blog_title' . carbon_lang_prefix(), 'Блог')
+        ->set_width(25),
 
 
       Field::make('separator', 'faq_titles', 'Заголовки для FAQ'),

@@ -1,0 +1,249 @@
+.post-single {
+	.post-info {
+		margin-top: 24px;
+		@include font-style(16px, 16px, 400);
+	}
+
+	.post-category {
+		text-transform: lowercase;
+	}
+
+	.post-image {
+		margin-top: 56px;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.post-content {
+	max-width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+	color: $color-dark-text;
+	margin-bottom: 90px;
+
+	a {
+		color: $color-primary;
+		text-decoration: underline;
+		font-weight: 600;
+	}
+
+	p {
+		margin: 10px 0;
+		line-height: 1.3;
+	}
+
+	.has-medium-font-size {
+		font-size: 24px !important;
+		font-weight: 600;
+		color: $color-dark-text;
+		margin: 24px 0;
+	}
+
+	.remark {
+		padding: 24px;
+		background-color: $color-light-background;
+		font-family: 500;
+		margin: 24px 0;
+	}
+
+	.home-video {
+		border-radius: $border-radius;
+		overflow: hidden;
+	}
+
+	.sign-up-for-camp {
+		background-image: url(../../img/friends.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		padding: 102px 82px;
+		margin: 56px 0;
+		h2 {
+			@include font-style(48px, 24px, 600);
+			line-height: 1.1;
+			margin: 0 0 64px;
+		}
+
+		.btn {
+			text-decoration: none;
+			color: $color-dark-text;
+		}
+	}
+
+	.wp-block-image,
+	.wp-block-video,
+	.home-video {
+		display: block;
+		margin: 56px 0;
+	}
+
+	.wp-block-quote {
+		padding: 16px 32px;
+		margin: 24px 0;
+		border-left: 3px solid $color-primary;
+		p {
+			margin: 0;
+		}
+		cite {
+			font-style: normal;
+			@include font-style(24px, 20px, 600);
+
+			br {
+				display: none;
+			}
+		}
+	}
+
+	.wp-block-columns {
+		margin: 90px 0;
+	}
+
+	.wp-block-table {
+		border-radius: $border-radius;
+
+		table {
+			td,
+			th {
+				padding: 14px 16px;
+			}
+			td {
+				border: none;
+				font-size: 14px;
+			}
+
+			tr {
+				&:nth-child(even) {
+					td {
+						background-color: $color-light-background;
+					}
+				}
+			}
+
+			th {
+				background-color: $color-primary;
+				color: $color-white-text;
+				font-weight: 700;
+			}
+		}
+	}
+
+	.custom-block-quote {
+		margin: 56px 0;
+		.text {
+			@include font-style(32px, 20px, 600);
+		}
+
+		.photo {
+			margin: 32px auto 16px;
+			width: 64px;
+			height: 64px;
+			border-radius: 100%;
+			overflow: hidden;
+
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+
+		.name {
+			font-weight: 500;
+		}
+	}
+
+	img,
+	video {
+		width: 100%;
+		border-radius: $border-radius;
+	}
+
+	h2 {
+		@include font-style(32px, 20px, 600);
+		margin: 90px 0 32px;
+	}
+
+	h3 {
+		@include font-style(24px, 20px, 600);
+		margin: 90px 0 32px;
+	}
+}
+
+@media (max-width: $md) {
+	.post-single {
+		.post-info {
+			font-size: 14px;
+		}
+
+		.post-image {
+			margin-top: 32px;
+			margin-bottom: 60px;
+		}
+	}
+
+	.post-content {
+		margin-bottom: 60px;
+
+		.has-medium-font-size {
+			font-size: 20px !important;
+			margin: 20px 0;
+		}
+
+		.remark {
+			padding: 20px;
+			margin: 20px 0;
+		}
+
+		.sign-up-for-camp {
+			padding: 60px 30px;
+			margin: 56px 0;
+			h2 {
+				margin: 0 0 44px;
+			}
+		}
+
+		.wp-block-image,
+		.wp-block-video,
+		.home-video {
+			margin: 32px 0;
+		}
+
+		.wp-block-quote {
+			padding: 10px 24px;
+			margin: 24px 0;
+		}
+
+		.wp-block-columns {
+			margin: 60px 0;
+		}
+
+		.wp-block-table {
+			table {
+				td,
+				th {
+					padding: 12px 14px;
+				}
+			}
+		}
+
+		.custom-block-quote {
+			margin: 32px 0;
+
+			.photo {
+				margin: 24px auto 12px;
+			}
+		}
+
+		h2 {
+			margin: 60px 0 28px;
+		}
+
+		h3 {
+			margin: 60px 0 26px;
+		}
+	}
+}

@@ -23,7 +23,7 @@
                     <a href="<?php echo get_url_path(); ?>">COMOON</a>
                 </div>
                 <div>
-                    <!-- <?php pll_the_languages(array('show_flags' => 1, 'show_names' => 0)); ?> -->
+                    <?php pll_the_languages(array('show_flags' => 1, 'show_names' => 0)); ?>
 
                 </div>
                 <div class="heder-action">

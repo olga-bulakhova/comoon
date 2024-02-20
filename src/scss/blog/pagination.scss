@@ -1,0 +1,13 @@
+.pagination {
+	a,
+	span {
+		display: inline-block;
+		margin: 50px 10px 0;
+	}
+
+	a {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
