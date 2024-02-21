@@ -35,7 +35,7 @@
 
     <div class="footer-copyright">
       <div>© Copyright <?php echo date("Y"); ?>, Comoon</div>
-      <div><?php echo carbon_get_theme_option('footer_text' . carbon_lang_prefix()) ?></div>
+      <a href="<?php echo carbon_get_theme_option('footer_url' . carbon_lang_prefix()) ?>"><?php echo carbon_get_theme_option('footer_text' . carbon_lang_prefix()) ?></a>
     </div>
   </div>
 </footer>

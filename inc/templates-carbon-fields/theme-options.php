@@ -178,7 +178,10 @@ function comoon_attach_theme_options()
         ->set_width(25),
 
       Field::make('separator', 'footer', 'Футер'),
-      Field::make('text', 'footer_text' . carbon_lang_prefix(), 'Политика конфиденциальности'),
+      Field::make('text', 'footer_text' . carbon_lang_prefix(), 'Политика конфиденциальности текст')
+        ->set_width(50),
+      Field::make('text', 'footer_url' . carbon_lang_prefix(), 'Политика конфиденциальности урл')
+        ->set_width(50),
 
       Field::make('separator', 'social', 'Соц сети'),
       Field::make('text', 'instagram_url' . carbon_lang_prefix(), 'Instagram URL')

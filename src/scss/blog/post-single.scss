@@ -123,6 +123,7 @@
 
 	.wp-block-table {
 		border-radius: $border-radius;
+		margin: 90px 0;
 
 		table {
 			td,
@@ -135,17 +136,18 @@
 			}
 
 			tr {
-				&:nth-child(even) {
+				&:nth-child(odd) {
 					td {
 						background-color: $color-light-background;
 					}
 				}
-			}
-
-			th {
-				background-color: $color-primary;
-				color: $color-white-text;
-				font-weight: 700;
+				&:first-child {
+					td {
+						background-color: $color-primary;
+						color: $color-white-text;
+						font-weight: 700;
+					}
+				}
 			}
 		}
 	}
@@ -248,10 +250,12 @@
 		}
 
 		.wp-block-columns {
-			margin: 32px 0;
+			margin: 0;
 		}
 
 		.wp-block-table {
+			margin: 90px 0;
+
 			table {
 				td,
 				th {
