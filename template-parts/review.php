@@ -17,7 +17,11 @@
         </div>
       </div>
       <?php $camp_id = $post->post_parent; ?>
-      <div class="review-link"> <span><?php echo get_the_title($camp_id) ?></span> </div>
+
+      <?php if (!is_singular('camps')) : ?>
+        <a href="<?php echo get_the_permalink($camp_id) ?>" class="review-link"> <span><?php echo get_the_title($camp_id) ?></span> </a>
+      <?php endif; ?>
+
     </div>
   </div>
 </div>
