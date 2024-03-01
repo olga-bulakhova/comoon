@@ -4,7 +4,7 @@ if (!empty($post->post_parent)) :
   $admin = get_post($post->post_parent);
 ?>
 
-  <section class="camp-admin wrapper-lg">
+  <section class="camp-admin wrapper-lg mt-18 mt-6-mobile mb-18 mb-6-mobile">
     <div class="wrapper">
       <div class="wrapper-md">
         <div class="camp-admin-container">

@@ -10,6 +10,7 @@
 	justify-content: center;
 	align-items: center;
 	padding: 0 15px;
+	overflow: auto;
 
 	&.hidden {
 		display: none;
