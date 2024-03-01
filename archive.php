@@ -10,7 +10,7 @@ $category = get_queried_object();
     <span>/</span>
     <span><?php echo $category->name ?></span>
   </div>
-  <h1 class="color-dark title-48-600"><?php echo carbon_get_theme_option('blog_title' . carbon_lang_prefix()) ?></h1>
+  <h1 class="color-dark title-48-600 mt-4-mobile center-mobile"><?php echo carbon_get_theme_option('blog_title' . carbon_lang_prefix()) ?></h1>
   <?php get_template_part('template-parts/blog/categories'); ?>
 
   <div class="mb-18 mb-6-mobile">
