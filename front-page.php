@@ -7,11 +7,9 @@
 
 get_header();
 
-$front_page_heading_video =  carbon_get_theme_option('front_heading_video');
-$front_page_heading_video_url = '';
-if (!empty($front_page_heading_video)) {
-  $front_page_heading_video_url = wp_get_attachment_url($front_page_heading_video[0]);
-}
+$front_page_heading_video_id = carbon_get_theme_option('front_heading_video' . carbon_lang_prefix());
+$front_page_heading_video_url = wp_get_attachment_url($front_page_heading_video_id);
+
 ?>
 
 <div class="light-bg-overlay light-background"></div>
@@ -19,7 +17,6 @@ if (!empty($front_page_heading_video)) {
 <section class="home-heading">
   <div class="wrapper">
     <div class="heading-wrapper">
-      <div class="overlay"></div>
       <video src="<?php echo $front_page_heading_video_url ?>" autoplay loop muted playsinline></video>
       <div class="heading-content">
         <h1 class="color-white title-lg-uppercase">
@@ -57,12 +54,9 @@ if (!empty($front_page_heading_video)) {
 
 <section class="home-video wrapper-lg front-page-video">
   <?php
-  $front_page_video =  carbon_get_theme_option('front_page_video');
-  $front_page_video_url = '';
-  if (!empty($front_page_video)) {
-    $front_page_video_url = wp_get_attachment_url($front_page_video[0]);
-  }
 
+  $front_page_video_id = carbon_get_theme_option('front_page_video' . carbon_lang_prefix());
+  $front_page_video_url = wp_get_attachment_url($front_page_video_id);
   ?>
   <video src="<?php echo $front_page_video_url; ?>" poster="<?php echo wp_get_attachment_url(carbon_get_theme_option('front_page_video_poster')) ?>"></video>
   <div class="overlay">

@@ -15,9 +15,10 @@ function comoon_attach_theme_options()
 
   Container::make('theme_options', __('Theme Options'))
     ->add_tab('Главная страница', [
-      Field::make('media_gallery', 'front_heading_video')
-        ->set_type(array('image', 'video'))
+      Field::make('file', 'front_heading_video' . carbon_lang_prefix(), 'Видео в шапке')
+        ->set_type(['video'])
         ->set_width(50),
+
       Field::make('text', 'front_page_h1' . carbon_lang_prefix(), 'Заголовок h1')
         ->set_width(50),
       Field::make('separator', 'what_is_block', 'Что такое Comoon'),
@@ -39,12 +40,11 @@ function comoon_attach_theme_options()
         ->set_width(70),
 
       Field::make('separator', 'front_page_video_separator', 'Видео для главной страницы'),
-      Field::make('media_gallery', 'front_page_video')
-        ->set_type(array('video'))
+      Field::make('file', 'front_page_video' . carbon_lang_prefix(), 'Видео')
+        ->set_type(['video'])
         ->set_width(30),
       Field::make('image', 'front_page_video_poster', 'Превью')
         ->set_width(30),
-
 
       Field::make('separator', 'find_friends', 'Найти друзей'),
       Field::make('text', 'find_friends_title' . carbon_lang_prefix(), 'Найти друзей - заголовок'),

@@ -38,7 +38,7 @@ function get_form_shortcode()
   } else if (ICL_LANGUAGE_CODE === 'pl') {
     return '[contact-form-7 id="1a89f33" title="Contact Form pl"]';
   } else {
-    return '[contact-form-7 id="b20e59f" title="Contact Form en"]';
+    return '[contact-form-7 id="6b291bb" title="Контактная форма 1"]';
   }
 }
 

@@ -10,7 +10,7 @@
       <span>/</span>
     </div>
 
-    <div class="center thank-heading">
+    <div class="center thank-heading pb-8 pb-12-mobile">
       <h1 class="color-dark"><?php echo carbon_get_theme_option('thank_you_title' . carbon_lang_prefix()) ?></h1>
 
       <div class="text-18-400 thank-text">
@@ -42,7 +42,7 @@
     ]);
 
     if ($query->have_posts()) : ?>
-      <section class="camp-review light-background pt-8 pt-12-mobile pb-18 pb-6-mobile">
+      <section class="camp-review light-background  pb-18 pb-6-mobile">
 
         <h2 class="title-48-600 color-dark mb-5_6 mb-4-mobile center-mobile"><?php echo carbon_get_theme_option('reviews_title' . carbon_lang_prefix()) ?></h2>
         <div class="review-list">
