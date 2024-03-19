@@ -71,10 +71,20 @@
 	h1,
 	h2,
 	h3,
-	p {
+	p,
+	ol,
+	ul {
 		max-width: 680px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	ul,
+	ol {
+		padding-left: 20px;
+		li {
+			margin: 5px 0;
+		}
 	}
 
 	.wp-block-embed__wrapper {

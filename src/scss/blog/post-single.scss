@@ -119,6 +119,11 @@
 
 	.wp-block-columns {
 		margin: 56px 0;
+
+		h2,
+		h3 {
+			margin: 32px 0;
+		}
 	}
 
 	.wp-block-table {
@@ -251,6 +256,11 @@
 
 		.wp-block-columns {
 			margin: 0;
+			gap: 0 !important;
+			h2,
+			h3 {
+				margin: 26px 0 22px;
+			}
 		}
 
 		.wp-block-table {

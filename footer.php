@@ -9,7 +9,7 @@
 
       <?php
       wp_nav_menu([
-        'theme_location'  => 'header',
+        'theme_location'  => 'footer',
         'container'       => false,
         'menu_class'      => 'navbar-nav',
         'menu_id'         => false,

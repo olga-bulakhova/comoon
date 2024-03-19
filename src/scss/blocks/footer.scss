@@ -36,6 +36,9 @@
 
 		a {
 			@include font-style(16px, 16px, 400);
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 
