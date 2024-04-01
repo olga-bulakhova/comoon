@@ -64,6 +64,30 @@
 		display: block;
 	}
 
+	.wp-block-columns {
+		margin: 56px 0;
+
+		.wp-block-image,
+		.wp-block-embed,
+		.wp-block-video {
+			margin: 0;
+		}
+
+		h2,
+		h3 {
+			margin: 32px 0;
+		}
+
+		@media (max-width: $md) {
+			margin: 32px 0;
+
+			h2,
+			h3 {
+				margin: 20px 0;
+			}
+		}
+	}
+
 	p {
 		margin-top: 10px;
 	}
