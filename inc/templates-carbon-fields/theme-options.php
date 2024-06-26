@@ -190,6 +190,8 @@ function comoon_attach_theme_options()
         ->set_width(33),
       Field::make('text', 'email_url' . carbon_lang_prefix(), 'Email URL')
         ->set_width(33),
+      Field::make('image', 'social_cemps_photo' . carbon_lang_prefix(), 'Фотка для соцсетей страницы кемпов')
+
     ])
     ->add_tab('Thank You', [
       Field::make('text', 'thank_you_title' . carbon_lang_prefix(), 'Заголовок'),

@@ -81,3 +81,19 @@ function true_move_admin_bar()
 }
 
 add_action('wp_head', 'true_move_admin_bar'); // на сайте
+
+
+add_action('wp_head', 'add_social_cemps_image');
+
+function add_social_cemps_image()
+{
+
+
+  if (is_archive()) {
+
+    echo '<meta property="og:image" content="' . wp_get_attachment_url(carbon_get_theme_option('social_cemps_photo' . carbon_lang_prefix()))   . '"
+    href="' . wp_get_attachment_url(carbon_get_theme_option('social_cemps_photo' . carbon_lang_prefix()))  . '"
+    
+    />';
+  }
+}
