@@ -20,6 +20,27 @@ jQuery(document).ready(function ($) {
 			},
 		],
 	})
+
+	$('.admins-gallery').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: true,
+		lazyLoad: 'progressive',
+		prevArrow: $('.gallery__prev-arr'),
+		nextArrow: $('.gallery__next-arr'),
+		adaptiveHeight: true,
+
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+				},
+			},
+		],
+	})
 })
 
 jQuery(document).ready(function ($) {

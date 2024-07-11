@@ -7,7 +7,24 @@ if (!defined('ABSPATH')) {
   exit;
 }
 
+
+function get_admins()
+{
+
+  $admins = get_posts(array('post_type' => 'admins', 'posts_per_page' => -1,  'orderby' => 'post_title', 'order' => 'ASC'));
+
+  $x = [];
+
+  foreach ($admins as $admin) {
+    $x[$admin->ID] = $admin->post_title;
+  }
+
+  return $x;
+}
+
 add_action('carbon_fields_register_fields', 'crb_attach_post_meta');
+
+
 
 function crb_attach_post_meta()
 {
@@ -100,7 +117,7 @@ function crb_attach_post_meta()
         ->add_fields([
           Field::make('text', 'faq_accommodation_question', 'Вопрос')
             ->set_width(40),
-          Field::make('textarea', 'faq_accommodation_answer', 'Ответ')
+          Field::make('rich_text', 'faq_accommodation_answer', 'Ответ')
             ->set_width(60),
         ]),
 
@@ -108,7 +125,7 @@ function crb_attach_post_meta()
         ->add_fields([
           Field::make('text', 'faq_entertainment_question', 'Вопрос')
             ->set_width(40),
-          Field::make('textarea', 'faq_entertainment_answer', 'Ответ')
+          Field::make('rich_text', 'faq_entertainment_answer', 'Ответ')
             ->set_width(60),
         ]),
 
@@ -116,7 +133,7 @@ function crb_attach_post_meta()
         ->add_fields([
           Field::make('text', 'faq_job_question', 'Вопрос')
             ->set_width(40),
-          Field::make('textarea', 'faq_job_answer', 'Ответ')
+          Field::make('rich_text', 'faq_job_answer', 'Ответ')
             ->set_width(60),
         ]),
 
@@ -124,7 +141,7 @@ function crb_attach_post_meta()
         ->add_fields([
           Field::make('text', 'faq_nutrition_question', 'Вопрос')
             ->set_width(40),
-          Field::make('textarea', 'faq_nutrition_answer', 'Ответ')
+          Field::make('rich_text', 'faq_nutrition_answer', 'Ответ')
             ->set_width(60),
         ]),
 
@@ -132,7 +149,7 @@ function crb_attach_post_meta()
         ->add_fields([
           Field::make('text', 'faq_how_to_get_question', 'Вопрос')
             ->set_width(40),
-          Field::make('textarea', 'faq_how_to_get_answer', 'Ответ')
+          Field::make('rich_text', 'faq_how_to_get_answer', 'Ответ')
             ->set_width(60),
         ]),
 
@@ -149,14 +166,14 @@ function crb_attach_post_meta()
             ->set_width(40),
         ]),
 
+      Field::make('separator', 'admins_separator', 'Админы'),
+
+      Field::make("multiselect", "camp_admins", "Админы кемпа")
+        ->add_options(get_admins()),
+
       Field::make('separator', 'camp_report_separator', 'Фотоотчет'),
       Field::make('media_gallery', 'camp_photo')
         ->set_type(array('image', 'video'))
-
-
-      // Field::make('media_gallery', 'camp_video')
-      //   ->set_type(array('video'))
-      //   ->set_help_text('Вертикальные видео'),
 
     ));
 }

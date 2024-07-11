@@ -9,13 +9,31 @@
 		height: 10px;
 		background-color: $color-primary;
 	}
+
+	&.dots-top-large {
+		.slick-dots li button {
+			width: 56px;
+			height: 6px;
+			border-radius: 4px;
+
+			@media (max-width: $md) {
+				width: 44px;
+				height: 3px;
+			}
+		}
+
+		.slick-dots li.slick-active button {
+			background-color: #fff;
+		}
+	}
 }
 
 @media (max-width: $md) {
 	.you-are-getting-list,
 	.founders-list,
 	.entertainments-list,
-	.review-list {
+	.review-list,
+	.admins-gallery {
 		position: relative;
 		width: calc(100% + 24px);
 		left: -8px;

@@ -3,7 +3,11 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	background-image: url(../../img/admin-bg.jpg);
+	background-image: url(../../img/admin-bg-desktop.jpg);
+
+	&.camp-admin-slider {
+		padding: 140px 0;
+	}
 
 	.camp-admin-container {
 		display: flex;
@@ -27,22 +31,50 @@
 		}
 	}
 
+	.admins-gallery {
+		.slick-dots {
+			bottom: auto;
+			top: -115px;
+		}
+	}
+
 	@media (max-width: $md) {
 		padding: 60px 0;
+		background-image: url(../../img/admin-bg-mobile.jpg);
+
+		&.camp-admin-slider {
+			padding: 80px 0 40px;
+
+			.camp-admin-content {
+				h2 {
+					text-align: left;
+				}
+			}
+		}
+
+		.admins-gallery {
+			.slick-dots {
+				top: -76px;
+			}
+		}
+
 		.camp-admin-container {
 			flex-direction: column;
 		}
 
 		.camp-admin-photo {
-			height: 360px;
-			margin-bottom: 40px;
+			width: 100%;
+			height: 400px;
+			margin-bottom: 24px;
 		}
 
-    .camp-admin-content {
-		h2 {
-			text-transform: none;
-			text-align: center;
+		.camp-admin-content {
+			width: 100%;
+			h2 {
+				text-transform: none;
+				text-align: center;
+				margin-bottom: 16px;
+			}
 		}
-	}
 	}
 }
