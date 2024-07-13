@@ -60,6 +60,23 @@ jQuery(document).ready(function ($) {
 			},
 		],
 	})
+
+	$('.camp-info .advantages-list').slick({
+		infinite: true,
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		dots: false,
+		arrows: false,
+		lazyLoad: 'progressive',
+		mobileFirst: true,
+		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: 'unslick',
+			},
+		],
+	})
 })
 
 jQuery(document).ready(function ($) {

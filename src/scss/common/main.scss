@@ -5,6 +5,12 @@
 	text-rendering: optimizeLegibility;
 }
 
+body {
+	&.single-camps {
+		background-color: #faf5f0;
+	}
+}
+
 .container {
 	font-family: 'Manrope', sans-serif;
 	padding-top: 70px;

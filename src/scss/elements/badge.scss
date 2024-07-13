@@ -15,7 +15,7 @@
 @mixin badge {
 	border-radius: 30px;
 	color: $color-dark-text;
-	line-height: 1;
+	line-height: 1.1;
 	background-repeat: no-repeat;
 	background-position: 14px center;
 }
@@ -44,6 +44,11 @@
 
 	&.badge-place {
 		background-image: url(../../img/badge-place.svg);
+	}
+
+	&.badge-lightning {
+		background-image: url(../../img/badge-lightning.svg);
+		padding-left: 44px;
 	}
 }
 

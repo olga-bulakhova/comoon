@@ -3,7 +3,7 @@ $room_complex = carbon_get_the_post_meta('room_complex');
 
 if (!empty($room_complex)) : ?>
 
-  <section class="camp-rooms mt-18 mt-6-mobile mb-18 mb-6-mobile">
+  <section class="camp-rooms mt-14 mt-6-mobile mb-14 mb-6-mobile">
     <a id="camp-rooms"></a>
     <div class="wrapper">
       <h2 class="title-48-600 color-dark mb-5_6 mb-4-mobile center-mobile"><?php echo carbon_get_theme_option('price_title' . carbon_lang_prefix()) ?></h2>
