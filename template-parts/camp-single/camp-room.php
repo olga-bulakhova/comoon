@@ -15,7 +15,6 @@ if (!empty($room_complex)) : ?>
 
           <div class="rooms-item">
             <div>
-
               <div class="rooms-media <?php if ($item['room_is_sold']) echo 'room_is_sold'  ?>">
 
                 <?php if (sizeof($room_gallery_ids)) : ?>
@@ -80,19 +79,17 @@ if (!empty($room_complex)) : ?>
 
               </div>
 
-              <h3 class="color-dark title-32-600"><?php echo $item['room_title']; ?></h3>
+              <h3 class="color-dark title-32-600 camp__info"><?php echo $item['room_title']; ?></h3>
               <?php if (!$item['room_is_sold']) : ?>
-                <div class="text-18-40 mt-1_6"><?php echo $item['room_text']; ?></div>
+                <div class="text-18-40 mt-1_6 camp__info"><?php echo $item['room_text']; ?></div>
               <?php endif; ?>
             </div>
 
             <?php if (!$item['room_is_sold']) : ?>
               <div class="rooms-action">
-
                 <div class="rooms-price-list">
-
                   <div class="rooms-price-item">
-                    <div class="rooms-price color-dark"><?php echo $item['room_price']; ?></div>
+                    <div class="rooms-price color-dark camp__info"><?php echo $item['room_price']; ?></div>
 
                     <?php if ($item['room_price_text']) : ?>
                       <div class="rooms-price-text"><?php echo $item['room_price_text'] ?></div>
@@ -102,8 +99,7 @@ if (!empty($room_complex)) : ?>
 
                   <?php if ($item['room_price_2']) : ?>
                     <div class="rooms-price-item">
-
-                      <div class="rooms-price color-dark"><?php echo $item['room_price_2']; ?></div>
+                      <div class="rooms-price color-dark camp__info"><?php echo $item['room_price_2']; ?></div>
 
                       <?php if ($item['room_price_text_2']) : ?>
                         <div class="rooms-price-text"><?php echo $item['room_price_text_2'] ?></div>
@@ -113,9 +109,6 @@ if (!empty($room_complex)) : ?>
                   <?php endif; ?>
 
                 </div>
-
-
-
 
                 <div class="rooms-button">
                   <button class="btn btn-secondary open-modal-form"><?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?></button>

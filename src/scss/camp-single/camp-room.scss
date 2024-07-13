@@ -21,6 +21,23 @@
 	margin-bottom: 32px;
 	position: relative;
 
+	.slick-prev,
+	.slick-next {
+		height: 100%;
+		width: 96px;
+		background-size: 48px !important;
+		background-position: center;
+		cursor: initial;
+	}
+
+	.slick-prev {
+		left: 0;
+	}
+
+	.slick-next {
+		right: 0;
+	}
+
 	&.room_is_sold {
 		.slick-prev,
 		.slick-next,

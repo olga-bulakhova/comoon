@@ -3,17 +3,43 @@ jQuery(document).ready(function ($) {
 	const closeModal = $('.form-modal-close, .form-modal-cancel')
 	const modal = $('.form-modal')
 	const modalContent = $('.form-modal-content')
+	const campInfoField = $('.wpcf7-form input[name=camp_info]')
 
-	openModal.on('click', function () {
+	function addCampInfo(e) {
+		const campInfoElements = $(e.target)
+			.closest('.rooms-item')
+			.find('.camp__info')
+
+		if (campInfoElements.length) {
+			const campInfo = campInfoElements
+				.toArray()
+				.reduce((acc, el) => {
+					const text = $(el).text().trim()
+					if (text) acc.push(text)
+					return acc
+				}, [])
+				.join(' | ')
+
+			campInfoField.val(campInfo)
+		}
+	}
+
+	function removeCampInfo() {
+		campInfoField.val('')
+	}
+
+	openModal.on('click', function (e) {
 		modal.removeClass('hidden')
 		$('body').addClass('overflow')
 		modalContent.removeClass('hidden')
+		addCampInfo(e)
 	})
 
 	closeModal.on('click', function () {
 		modal.addClass('hidden')
 		$('body').removeClass('overflow')
 		modalContent.addClass('hidden')
+		removeCampInfo()
 	})
 
 	const utmz = readCookie('_deco_utmz')

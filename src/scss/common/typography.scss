@@ -27,6 +27,7 @@
 
 .title-32-600 {
 	@include font-style(32px, 20px, 600);
+	line-height: 1.2;
 }
 
 .title-48-600 {
