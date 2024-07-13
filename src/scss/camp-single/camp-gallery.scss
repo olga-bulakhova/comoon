@@ -22,7 +22,11 @@
 }
 
 .gallery__prev-arr,
-.gallery__next-arr {
+.gallery__next-arr,
+.gallery__prev-arr-admin,
+.gallery__next-arr-admin,
+.slick-next,
+.slick-prev {
 	position: absolute;
 	top: 50%;
 	z-index: 4;
@@ -37,12 +41,14 @@
 	}
 }
 
-.gallery__prev-arr {
+.gallery__prev-arr,
+.gallery__prev-arr-admin, .slick-prev{
 	left: 40px;
 	background-image: url(../../img/gallery-arr-left.svg);
 }
 
-.gallery__next-arr {
+.gallery__next-arr,
+.gallery__next-arr-admin, .slick-next {
 	right: 40px;
 	background-image: url(../../img/gallery-arr-right.svg);
 }

@@ -156,14 +156,40 @@ function crb_attach_post_meta()
       Field::make('separator', 'room_separator', 'Стоимость и размещение'),
       Field::make('complex', 'room_complex', 'Блоки - стоимость и размещение')
         ->add_fields([
+          Field::make('media_gallery', 'room_gallery')
+            ->set_type(array('image', 'video')),
           Field::make('image', 'room_photo', 'Фото')
             ->set_width(20),
           Field::make('text', 'room_title', 'Тип номера')
-            ->set_width(30),
+            ->set_width(16),
           Field::make('text', 'room_price', 'Цена')
-            ->set_width(10),
+            ->set_width(16),
+          Field::make('text', 'room_price_text', 'Надпись под ценой')
+            ->set_width(16),
+
+          Field::make('text', 'room_price_2', 'Вторая цена')
+            ->set_width(16),
+          Field::make('text', 'room_price_text_2', 'Надпись под второй ценой')
+            ->set_width(16),
+
+
+          Field::make('checkbox', 'room_is_sold', 'Места проданы')
+            ->set_width(20),
           Field::make('textarea', 'room_text', 'Описание')
             ->set_width(40),
+          Field::make('text', 'room_additional_info', 'Дополнительная информация')
+            ->set_width(40),
+
+
+
+
+          Field::make('complex', 'room_mw_complex', 'Для кого')
+            ->add_fields([
+              Field::make('text', 'room_mw', 'Пол')
+            ]),
+
+
+
         ]),
 
       Field::make('separator', 'admins_separator', 'Админы'),

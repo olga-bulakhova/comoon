@@ -30,6 +30,10 @@
 		padding: 10px 16px 10px 38px;
 	}
 
+	&.badge-no-icon {
+		padding: 12px 16px;
+	}
+
 	&.badge-calendar {
 		background-image: url(../../img/badge-calendar.svg);
 	}
@@ -54,4 +58,10 @@
 		background-size: 20px;
 		padding: 10px 16px 10px 44px;
 	}
+}
+
+.badge-blue {
+	@include badge;
+	color: #fff;
+	background-color: $color-attention;
 }

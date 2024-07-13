@@ -28,8 +28,27 @@ jQuery(document).ready(function ($) {
 		dots: true,
 		arrows: true,
 		lazyLoad: 'progressive',
-		prevArrow: $('.gallery__prev-arr'),
-		nextArrow: $('.gallery__next-arr'),
+		prevArrow: $('.gallery__prev-arr-admin'),
+		nextArrow: $('.gallery__next-arr-admin'),
+		adaptiveHeight: true,
+
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+				},
+			},
+		],
+	})
+
+	$('.rooms-gallery').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: true,
+		lazyLoad: 'progressive',
 		adaptiveHeight: true,
 
 		responsive: [

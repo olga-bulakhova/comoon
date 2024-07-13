@@ -15,8 +15,8 @@
        <div class="wrapper" style="position:relative">
 
          <?php if (sizeof($admins) > 1) : ?>
-           <div class="gallery__prev-arr" style="left:0"></div>
-           <div class="gallery__next-arr" style="right:0"></div>
+           <div class="gallery__prev-arr-admin" style="left:0"></div>
+           <div class="gallery__next-arr-admin" style="right:0"></div>
          <?php endif; ?>
 
          <div class="wrapper-md">

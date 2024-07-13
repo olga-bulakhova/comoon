@@ -23,6 +23,14 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		cursor: pointer;
+
+		&.video-play-white {
+			background-image: url(../../img/video-play-white.svg);
+			@media (max-width: $md) {
+				width: 48px;
+				height: 48px;
+			}
+		}
 	}
 }
 
