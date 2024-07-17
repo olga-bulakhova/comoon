@@ -1,0 +1,40 @@
+.camp-magnet {
+	padding: 120px 0 100px;
+	background-image: url(../../img/magnet-bg.png);
+
+	.slick-dots {
+		bottom: auto;
+		top: -100px;
+	}
+
+	.slick-prev {
+		left: -72px;
+
+		@media (max-width: 1410px) {
+			left: 24px;
+		}
+	}
+
+	.slick-next {
+		right: -72px;
+		@media (max-width: 1410px) {
+			right: 24px;
+		}
+	}
+
+	h3 {
+		margin: 48px 0;
+		@include font-style(32px, 24px, 600);
+	}
+}
+
+@media (max-width: $md) {
+	.camp-magnet {
+		padding: 60px 0 58px;
+
+		h3 {
+			margin: 40px 0;
+		}
+	
+	}
+}

@@ -76,6 +76,12 @@ function crb_attach_post_meta()
             ->set_width(50),
         ]),
 
+      Field::make('separator', 'camp_magnet_separator', 'Лид магнит'),
+      Field::make('text', 'camp_magnet_title', 'Заголовок')
+        ->set_width(30),
+      Field::make('media_gallery', 'room_photos')
+        ->set_type(array('image')),
+
       Field::make('separator', 'camp_entertainment_separator', 'Развлечения'),
       Field::make('complex', 'camp_entertainment', 'Блоки - Развлечения')
         ->add_fields([

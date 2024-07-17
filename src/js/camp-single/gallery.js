@@ -61,6 +61,26 @@ jQuery(document).ready(function ($) {
 		],
 	})
 
+	$('.camp-magnet-slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: true,
+		lazyLoad: 'progressive',
+		adaptiveHeight: true,
+
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					dots: false,
+				},
+			},
+		],
+	})
+
 	$('.camp-info .advantages-list').slick({
 		infinite: true,
 		slidesToShow: 2,

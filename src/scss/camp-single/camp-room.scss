@@ -154,6 +154,23 @@
 	@include font-style(16px, 12px, 500);
 }
 
+@media (max-width: 1060px) {
+	.rooms-action {
+		.rooms-price {
+			font-size: 24px;
+		}
+
+		.rooms-price-text {
+			font-size: 12px;
+		}
+
+		.btn-secondary {
+			font-size: 14px;
+			min-width: 157px;
+		}
+	}
+}
+
 @media (max-width: $md) {
 	.rooms-list {
 		row-gap: 40px;

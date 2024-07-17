@@ -1,0 +1,8 @@
+.cf-multiselect__menu {
+	max-height: 160px;
+	overflow-y: auto;
+}
+
+.interface-interface-skeleton__content {
+	overflow-x: hidden;
+}

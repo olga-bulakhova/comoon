@@ -3,18 +3,24 @@
 
 <div class="founders-list mt-8 mt-6-mobile">
 
-  <?php foreach ([1, 2, 3, 4] as $item) : ?>
-    <?php $img = carbon_get_theme_option('founder_photo_' . $item); ?>
+  <?php foreach ([1, 2, 3, 4, 5] as $item) : ?>
+    <?php $img = carbon_get_theme_option('founder_photo_' . $item . carbon_lang_prefix()); ?>
 
-    <div class="founders-item">
-      <div class="founders-item-photo" style="background-image: url(<?php echo wp_get_attachment_image_url($img, size: 'medium'); ?>);">
-        <div class="founders-item-info">
-          <div class="founders-item-name"><?php echo carbon_get_theme_option('founder_name_' . $item . carbon_lang_prefix())  ?></div>
-          <a href="<?php echo carbon_get_theme_option('founder_insta_url_' . $item . carbon_lang_prefix())  ?>" class="founders-item-insta" target="_blank"></a>
+    <?php if (!empty($img)) : ?>
+      <div class="founders-item">
+        <div class="founders-item-photo" style="background-image: url(<?php echo wp_get_attachment_image_url($img, size: 'medium'); ?>);">
+          <div class="founders-item-info">
+            <div class="founders-item-name"><?php echo carbon_get_theme_option('founder_name_' . $item . carbon_lang_prefix())  ?></div>
+            <a href="<?php echo carbon_get_theme_option('founder_insta_url_' . $item . carbon_lang_prefix())  ?>" class="founders-item-insta" target="_blank"></a>
+          </div>
         </div>
+        <div class="founders-item-text text-18-400"><?php echo carbon_get_theme_option('founder_text_' . $item . carbon_lang_prefix())  ?></div>
       </div>
-      <div class="founders-item-text text-18-400"><?php echo carbon_get_theme_option('founder_text_' . $item . carbon_lang_prefix())  ?></div>
-    </div>
+
+    <?php endif; ?>
+
+
+
   <?php endforeach; ?>
 
 </div>

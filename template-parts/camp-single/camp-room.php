@@ -111,7 +111,7 @@ if (!empty($room_complex)) : ?>
                 </div>
 
                 <div class="rooms-button">
-                  <button class="btn btn-secondary open-modal-form"><?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?></button>
+                  <button class="btn btn-secondary open-modal-form"><?php echo carbon_get_theme_option('submit_btn' . carbon_lang_prefix()) ?></button>
                 </div>
               </div>
             <?php endif; ?>

@@ -22,20 +22,46 @@ jQuery(document).ready(function ($) {
 		],
 	})
 
-	$('.founders-list').slick({
-		...options,
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: 'unslick',
-			},
-			{
-				breakpoint: 576,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
+	const length = $('.founders-list .founders-item').length
+
+	if (length <= 4) {
+		$('.founders-list').slick({
+			...options,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: 'unslick',
 				},
-			},
-		],
-	})
+				{
+					breakpoint: 576,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2,
+					},
+				},
+			],
+		})
+	} else {
+		$('.founders-list').addClass('desktop-slider')
+
+		$('.founders-list').slick({
+			...options,
+			responsive: [
+				{
+					breakpoint: 1100,
+					settings: {
+						slidesToShow: 4,
+						slidesToScroll: 3,
+					},
+				},
+				{
+					breakpoint: 576,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2,
+					},
+				},
+			],
+		})
+	}
 })

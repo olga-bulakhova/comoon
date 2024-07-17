@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div class="camp-heading" style="background-image:url(<?php echo get_the_post_thumbnail_url() ?>)">
     <div class="camp-heading-content center">
-      <h1 class="color-white"><?php the_title(); ?></h1>
+      <h1 class="color-white camp__title"><?php the_title(); ?></h1>
       <div class="badges-list">
         <div class="badge badge-calendar"><?php echo convert_date_format(carbon_get_the_post_meta('event_start'))  . '-' . convert_date_format(carbon_get_the_post_meta('event_end'))  ?></div>
         <div class="badge badge-place"><?php echo carbon_get_the_post_meta('event_place') ?></div>

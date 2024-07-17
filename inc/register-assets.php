@@ -2,6 +2,7 @@
 
 add_action('wp_enqueue_scripts', 'register_styles');
 add_action('wp_enqueue_scripts', 'register_scripts');
+add_action('admin_enqueue_scripts', 'register_admin_style');
 
 function register_styles()
 {
@@ -22,4 +23,9 @@ function register_scripts()
   }
 
   wp_enqueue_script('global', COMOON_DIR_URI . '/dist/js/global.bundle.js', ['jquery'], filemtime(COMOON_DIR_PATH . '/dist/js/global.bundle.js'), true);
+}
+
+function register_admin_style()
+{
+  wp_enqueue_style('admin-styles', COMOON_DIR_URI . '/lib/admin.css', [], filemtime(COMOON_DIR_PATH . '/lib/admin.css'), 'all');
 }

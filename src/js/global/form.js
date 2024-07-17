@@ -6,22 +6,26 @@ jQuery(document).ready(function ($) {
 	const campInfoField = $('.wpcf7-form input[name=camp_info]')
 
 	function addCampInfo(e) {
+		let cempTitle = $('.camp__title').text() || ''
+
 		const campInfoElements = $(e.target)
 			.closest('.rooms-item')
 			.find('.camp__info')
 
 		if (campInfoElements.length) {
-			const campInfo = campInfoElements
-				.toArray()
-				.reduce((acc, el) => {
-					const text = $(el).text().trim()
-					if (text) acc.push(text)
-					return acc
-				}, [])
-				.join(' | ')
-
-			campInfoField.val(campInfo)
+			cempTitle =
+				`${cempTitle} | ` +
+				campInfoElements
+					.toArray()
+					.reduce((acc, el) => {
+						const text = $(el).text().trim()
+						if (text) acc.push(text)
+						return acc
+					}, [])
+					.join(' | ')
 		}
+
+		campInfoField.val(cempTitle)
 	}
 
 	function removeCampInfo() {
