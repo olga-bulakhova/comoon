@@ -2,7 +2,7 @@
 $is_future_date = is_future_date(carbon_get_the_post_meta('event_start'));
 ?>
 
-<section class="camp-info <?php echo $is_future_date ? 'pt-14 pt-6-mobile' : ''; ?> pt-8  pt-6-mobile">
+<section class="camp-info mb-6-mobile <?php echo $is_future_date ? 'pt-14 pt-6-mobile' : 'pt-8  pt-6-mobile'; ?> ">
   <div class="wrapper">
     <div class="camp-info-heading">
       <h2 class="center color-dark title-48-600"><?php echo carbon_get_theme_option('camps_info' . carbon_lang_prefix()) ?></h2>

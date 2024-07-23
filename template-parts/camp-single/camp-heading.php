@@ -7,13 +7,28 @@
         <div class="badge badge-place"><?php echo carbon_get_the_post_meta('event_place') ?></div>
         <div class="badge badge-user"><?php echo carbon_get_the_post_meta('number_of_persons') ?></div>
 
+        <?php if (!empty(carbon_get_the_post_meta('event_language'))) : ?>
+          <div class="badge badge-no-icon" style="text-transform: uppercase"><?php echo carbon_get_the_post_meta('event_language') ?></div>
+        <?php endif; ?>
+
         <?php if (!empty(carbon_get_the_post_meta('event_places_left'))) : ?>
           <div class="badge badge-blue badge-lightning"><?php echo carbon_get_theme_option('places_left' . carbon_lang_prefix()) . ' - ' . carbon_get_the_post_meta('event_places_left') ?></div>
         <?php endif; ?>
 
+        <?php if (carbon_get_the_post_meta('event_places_left') == 0) : ?>
+          <div class="badge badge-red badge-no-icon">SOLD OUT</div>
+        <?php endif; ?>
+
       </div>
 
-      <a href="#camp-rooms" class="btn btn-secondary btn-large"><?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?></a>
+      <?php if (carbon_get_the_post_meta('event_places_left') != 0) : ?>
+        <a href="#camp-rooms" class="btn btn-secondary btn-large"><?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?></a>
+
+      <?php else : ?>
+
+        <a href="<?php echo 'https://tg.pulse.is/comoonru_bot?start=6697fd594e23f5537701e37a|camp=' . $post->post_name . get_urm_to_tg() ?>" class="btn btn-secondary btn-large" target="_blank"> <?php echo carbon_get_theme_option('sign_up_for_the_list_btn' . carbon_lang_prefix()) ?></a>
+
+      <?php endif; ?>
     </div>
   </div>
 </div>

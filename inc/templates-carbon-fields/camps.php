@@ -47,7 +47,18 @@ function crb_attach_post_meta()
         ->set_width(20),
       Field::make('text', 'event_places_left', 'Осталось мест')
         ->set_attribute('type', 'number')
-        ->set_width(20),
+        ->set_width(10),
+
+      Field::make('select', 'event_language', 'Язык')
+        ->add_options(array(
+          '' => '',
+          'ru' => 'ru',
+          'pl' => 'pl',
+          'en' => 'en',
+        ))
+        ->set_width(10),
+
+
       Field::make('textarea', 'description', 'Краткое описание'),
 
       Field::make('separator', 'camp_info', 'Информация о кемпе'),
@@ -162,8 +173,11 @@ function crb_attach_post_meta()
       Field::make('separator', 'room_separator', 'Стоимость и размещение'),
       Field::make('complex', 'room_complex', 'Блоки - стоимость и размещение')
         ->add_fields([
-          Field::make('media_gallery', 'room_gallery')
-            ->set_type(array('image', 'video')),
+          Field::make('media_gallery', 'room_gallery', 'Галерея')
+            ->set_type(array('image', 'video'))
+            ->set_width(80),
+          Field::make('image', 'room_video_preview', 'Превью для видео')
+            ->set_width(20),
           Field::make('image', 'room_photo', 'Фото')
             ->set_width(20),
           Field::make('text', 'room_title', 'Тип номера')

@@ -22,6 +22,7 @@ if (!defined('AVAILABLE_ICON_URL')) {
 
 require_once COMOON_DIR_PATH . '/inc/register-assets.php';
 require_once COMOON_DIR_PATH . '/inc/register-menus.php';
+require_once COMOON_DIR_PATH . '/inc/register-taxonomy.php';
 require_once COMOON_DIR_PATH . '/inc/register-post-types.php';
 require_once COMOON_DIR_PATH . '/inc/setup-theme.php';
 require_once COMOON_DIR_PATH . '/inc/add-meta-boxes.php';

@@ -7,6 +7,11 @@
 		top: -100px;
 	}
 
+	.slick-prev,
+	.slick-next {
+		top: 42%;
+	}
+
 	.slick-prev {
 		left: -72px;
 
@@ -23,7 +28,7 @@
 	}
 
 	h3 {
-		margin: 48px 0;
+		margin: 48px 0 18px;
 		@include font-style(32px, 24px, 600);
 	}
 }
@@ -33,8 +38,7 @@
 		padding: 60px 0 58px;
 
 		h3 {
-			margin: 40px 0;
+			margin: 30px 0;
 		}
-	
 	}
 }

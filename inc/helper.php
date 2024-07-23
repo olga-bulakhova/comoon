@@ -97,3 +97,16 @@ function add_social_cemps_image()
     />';
   }
 }
+
+function get_urm_to_tg()
+{
+  $url = '';
+
+  if (isset($_COOKIE['_deco_utmz'])) {
+    $cookies = $_COOKIE['_deco_utmz'];
+    $all_utm = explode("|", $cookies);
+    $url = '|source=' . $all_utm[0] . '|medium=' . $all_utm[1] . '|campaign=' . $all_utm[3];
+  }
+
+  return $url;
+}

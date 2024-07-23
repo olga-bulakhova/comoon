@@ -190,6 +190,8 @@ function comoon_attach_theme_options()
         ->set_width(20),
       Field::make('text', 'find_price_btn' . carbon_lang_prefix(), 'Узнать цену')
         ->set_width(20),
+      Field::make('text', 'sign_up_for_the_list_btn' . carbon_lang_prefix(), 'Записаться в лист ожидания')
+        ->set_width(20),
 
       Field::make('separator', 'footer', 'Футер'),
       Field::make('text', 'footer_text' . carbon_lang_prefix(), 'Политика конфиденциальности текст')

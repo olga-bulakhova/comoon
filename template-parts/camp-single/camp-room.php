@@ -30,7 +30,7 @@ if (!empty($room_complex)) : ?>
                               <img class="border-radius" src="<?php echo wp_get_attachment_image_url($id, size: 'medium')  ?>" width="100%">
                             <?php else : ?>
                               <div class="home-video border-radius" style="margin: 0; height: 100%">
-                                <video src="<?php echo wp_get_attachment_url($id) ?>" class="border-radius"></video>
+                                <video src="<?php echo wp_get_attachment_url($id) ?>" class="border-radius" poster="<?php echo wp_get_attachment_url($item['room_video_preview']) ?>"></video>
                                 <div class="overlay border-radius">
                                   <div class="video-play video-play-white"></div>
                                 </div>
@@ -111,7 +111,7 @@ if (!empty($room_complex)) : ?>
                 </div>
 
                 <div class="rooms-button">
-                  <button class="btn btn-secondary open-modal-form"><?php echo carbon_get_theme_option('submit_btn' . carbon_lang_prefix()) ?></button>
+                  <button class="btn btn-secondary open-modal-form"><?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?></button>
                 </div>
               </div>
             <?php endif; ?>

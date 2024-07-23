@@ -62,8 +62,24 @@
                         'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
                         'depth'           => 0,
                     ]);
+
+                    $slug = '';
+
+
+                    if (is_front_page()) {
+                        $slug = 'front_page';
+                    } elseif (is_page() || is_single()) {
+                        $slug = get_queried_object()->post_name . '_page';
+                    } elseif (is_archive()) {
+                        $post_type = get_queried_object();
+                        $slug = $post_type->rewrite['slug'] . '_list';
+                    } else {
+                        $slug = 'posts_list';
+                    }
+
+
                     ?>
-                    <button class="btn btn-primary open-modal-form"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></button>
+                    <a href="" data-slug="<?php echo $slug ?>" class="btn btn-primary tg-link" target="_blank"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></a>
                 </div>
                 <div class="header-burger toggle-menu">
 
@@ -93,7 +109,7 @@
                     ]);
                     ?>
 
-                    <button class="btn btn-primary open-modal-form"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></button>
+                    <a href="" data-slug="<?php echo $slug ?>" class="btn btn-primary tg-link" target="_blank"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></a>
 
                     <div class="mobile-menu-social">
 
