@@ -135,6 +135,12 @@ function comoon_attach_theme_options()
 
 
     ->add_tab('Общие', [
+      Field::make('separator', 'links_to_bots', 'Ссылки на боты'),
+      Field::make('text', 'book_link' . carbon_lang_prefix(), 'Забронировать')
+        ->set_width(50),
+      Field::make('text', 'wait_list_link' . carbon_lang_prefix(), 'Записаться в лист ожидания')
+        ->set_width(50),
+
       Field::make('separator', 'titles', 'Заголовки'),
       Field::make('text', 'camps' . carbon_lang_prefix(), 'Kемпы')
         ->set_width(25),

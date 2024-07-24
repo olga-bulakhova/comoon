@@ -76,7 +76,9 @@ $front_page_heading_video_url = wp_get_attachment_url($front_page_heading_video_
   <div class="wrapper">
     <div class="home-find-friends-content">
       <h2 class="color-white"><?php echo carbon_get_theme_option('find_friends_title' . carbon_lang_prefix()) ?></h2>
-      <a href="#contact-form" class="btn btn-secondary"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></a>
+      <a href="<?php echo carbon_get_theme_option('book_link' . carbon_lang_prefix()) ?>" data-slug="<?php echo get_slug() ?>" class="btn btn-secondary tg-link" target="_blank">
+        <?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?>
+      </a>
     </div>
   </div>
 </section>
@@ -87,15 +89,7 @@ $front_page_heading_video_url = wp_get_attachment_url($front_page_heading_video_
   </div>
 </section>
 
-
-<a id="contact-form"></a>
-<section class="form-container light-background">
-  <div class="wrapper">
-    <?php get_template_part('template-parts/forms/form-container'); ?>
-  </div>
-</section>
-
-<div class="light-background pt-18 pb-18 pt-6-mobile pb-6-mobile">
+<div class="light-background pb-18 pb-6-mobile">
   <div class="wrapper">
     <div class="text-lg-bold color-dark center">
       <?php echo carbon_get_theme_option('last_block_text' . carbon_lang_prefix()) ?>

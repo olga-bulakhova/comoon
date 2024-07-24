@@ -110,3 +110,21 @@ function get_urm_to_tg()
 
   return $url;
 }
+
+function get_slug()
+{
+  $slug = '';
+
+  if (is_front_page()) {
+    $slug = 'front_page';
+  } elseif (is_page() || is_single()) {
+    $slug = get_queried_object()->post_name . '_page';
+  } elseif (is_archive()) {
+    $post_type = get_queried_object();
+    $slug = $post_type->rewrite['slug'] . '_list';
+  } else {
+    $slug = 'posts_list';
+  }
+
+  return $slug;
+}

@@ -15,13 +15,6 @@
       </div>
 
    </div>
-
-   <a id="contact-form"></a>
-   <section class="form-container mb-9">
-      <div class="wrapper">
-         <?php get_template_part('template-parts/forms/form-container'); ?>
-      </div>
-   </section>
 </article>
 
 

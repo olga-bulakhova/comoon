@@ -26,7 +26,7 @@
 
       <?php else : ?>
 
-        <a href="<?php echo 'https://tg.pulse.is/comoonru_bot?start=6697fd594e23f5537701e37a|camp=' . $post->post_name . get_urm_to_tg() ?>" class="btn btn-secondary btn-large" target="_blank"> <?php echo carbon_get_theme_option('sign_up_for_the_list_btn' . carbon_lang_prefix()) ?></a>
+        <a href="<?php echo  carbon_get_theme_option('wait_list_link' . carbon_lang_prefix()) . '|camp=' . $post->post_name . get_urm_to_tg() ?>" class="btn btn-secondary btn-large" target="_blank"> <?php echo carbon_get_theme_option('sign_up_for_the_list_btn' . carbon_lang_prefix()) ?></a>
 
       <?php endif; ?>
     </div>

@@ -63,23 +63,8 @@
                         'depth'           => 0,
                     ]);
 
-                    $slug = '';
-
-
-                    if (is_front_page()) {
-                        $slug = 'front_page';
-                    } elseif (is_page() || is_single()) {
-                        $slug = get_queried_object()->post_name . '_page';
-                    } elseif (is_archive()) {
-                        $post_type = get_queried_object();
-                        $slug = $post_type->rewrite['slug'] . '_list';
-                    } else {
-                        $slug = 'posts_list';
-                    }
-
-
                     ?>
-                    <a href="" data-slug="<?php echo $slug ?>" class="btn btn-primary tg-link" target="_blank"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></a>
+                    <a href="<?php echo carbon_get_theme_option('book_link' . carbon_lang_prefix()) ?>" data-slug="<?php echo get_slug() ?>" class="btn btn-primary tg-link" target="_blank"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></a>
                 </div>
                 <div class="header-burger toggle-menu">
 
@@ -109,7 +94,7 @@
                     ]);
                     ?>
 
-                    <a href="" data-slug="<?php echo $slug ?>" class="btn btn-primary tg-link" target="_blank"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></a>
+                    <a href="<?php echo carbon_get_theme_option('book_link' . carbon_lang_prefix()) ?>" data-slug="<?php echo get_slug() ?>" class="btn btn-primary tg-link" target="_blank"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></a>
 
                     <div class="mobile-menu-social">
 

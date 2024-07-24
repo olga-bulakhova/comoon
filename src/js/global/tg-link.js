@@ -1,23 +1,36 @@
 jQuery(document).ready(function ($) {
 	const tgLinkButton = $('.tg-link')
-	let tgLinkUrl =
-		'https://tg.pulse.is/comoonru_bot?start=6696bb71b4a84db37e090163'
 
 	if (!tgLinkButton.length) return
 
-	const slug = tgLinkButton.data('slug')
-	if (slug) {
-		tgLinkUrl += `|camp_name=${slug}`
-	}
+	tgLinkButton.each(function (i, e) {
+		const link = $(e)
+		let tgLinkUrl = link.attr('href')
+		const slug = link.data('slug')
+		if (slug) {
+			tgLinkUrl += `|camp_name=${slug}`
+		}
 
-	const cookie = readCookie('_deco_utmz')
+		const roomItem = link.closest('.rooms-item')
 
-	if (cookie) {
-		const arr = cookie.split('|')
-		tgLinkUrl = `${tgLinkUrl}|utm_source=${arr[0]}|utm_medium=${arr[1]}|utm_campaign=${arr[3]}`
-	}
+		if (roomItem.length) {
+			const price = roomItem.find('.room_price').text().trim()
+			tgLinkUrl += `|cost=${parseInt(price)}`
 
-	tgLinkButton.attr('href', tgLinkUrl)
+			const roomTitle = roomItem.find('.room_title').text().trim()
+			const latRoomText = rusToLat(roomTitle).split(' ').join('-').toLowerCase()
+			tgLinkUrl += `|room_name=${latRoomText}`
+		}
+
+		const cookie = readCookie('_deco_utmz')
+
+		if (cookie) {
+			const arr = cookie.split('|')
+			tgLinkUrl = `${tgLinkUrl}|utm_source=${arr[0]}|utm_medium=${arr[1]}|utm_campaign=${arr[3]}`
+		}
+
+		link.attr('href', tgLinkUrl)
+	})
 })
 
 function readCookie(name) {
@@ -29,4 +42,57 @@ function readCookie(name) {
 		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
 	}
 	return null
+}
+
+function rusToLat(str) {
+	let ru = {
+		а: 'a',
+		б: 'b',
+		в: 'v',
+		г: 'g',
+		д: 'd',
+		е: 'e',
+		ё: 'e',
+		ж: 'j',
+		з: 'z',
+		и: 'i',
+		к: 'k',
+		л: 'l',
+		м: 'm',
+		н: 'n',
+		о: 'o',
+		п: 'p',
+		р: 'r',
+		с: 's',
+		т: 't',
+		у: 'u',
+		ф: 'f',
+		х: 'h',
+		ц: 'c',
+		ч: 'ch',
+		ш: 'sh',
+		щ: 'shch',
+		ы: 'y',
+		э: 'e',
+		ю: 'u',
+		я: 'ya',
+		ъ: 'ie',
+		ь: '',
+		й: 'i',
+	}
+	let newString = []
+
+	return [...str]
+		.map(l => {
+			let latL = ru[l.toLocaleLowerCase()]
+
+			if (l !== l.toLocaleLowerCase()) {
+				latL = latL.charAt(0).toLocaleUpperCase() + latL.slice(1)
+			} else if (latL === undefined) {
+				latL = l
+			}
+
+			return latL
+		})
+		.join('')
 }

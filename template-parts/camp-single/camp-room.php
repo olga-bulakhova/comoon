@@ -79,7 +79,7 @@ if (!empty($room_complex)) : ?>
 
               </div>
 
-              <h3 class="color-dark title-32-600 camp__info"><?php echo $item['room_title']; ?></h3>
+              <h3 class="color-dark title-32-600 camp__info room_title"><?php echo $item['room_title']; ?></h3>
               <?php if (!$item['room_is_sold']) : ?>
                 <div class="text-18-40 mt-1_6 camp__info"><?php echo $item['room_text']; ?></div>
               <?php endif; ?>
@@ -89,7 +89,7 @@ if (!empty($room_complex)) : ?>
               <div class="rooms-action">
                 <div class="rooms-price-list">
                   <div class="rooms-price-item">
-                    <div class="rooms-price color-dark camp__info"><?php echo $item['room_price']; ?></div>
+                    <div class="rooms-price color-dark camp__info room_price"><?php echo $item['room_price']; ?></div>
 
                     <?php if ($item['room_price_text']) : ?>
                       <div class="rooms-price-text"><?php echo $item['room_price_text'] ?></div>
@@ -111,7 +111,9 @@ if (!empty($room_complex)) : ?>
                 </div>
 
                 <div class="rooms-button">
-                  <button class="btn btn-secondary open-modal-form"><?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?></button>
+                  <a href="<?php echo carbon_get_theme_option('book_link' . carbon_lang_prefix()) ?>" data-slug="<?php echo get_slug() ?>" class="btn btn-secondary tg-link" target="_blank">
+                    <?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?>
+                  </a>
                 </div>
               </div>
             <?php endif; ?>

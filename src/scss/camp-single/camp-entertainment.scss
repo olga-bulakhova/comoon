@@ -1,4 +1,8 @@
 .camp-entertainment {
+	.slick-dots {
+		bottom: -35px;
+	}
+
 	.entertainments-list {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
