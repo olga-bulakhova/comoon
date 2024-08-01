@@ -3,30 +3,36 @@ jQuery(document).ready(function ($) {
 
 	if (!tgLinkButton.length) return
 
+	const lang = readCookie('pll_language')
+
+	const separator = lang === 'pl' ? '_' : '|'
+
+	
+
 	tgLinkButton.each(function (i, e) {
 		const link = $(e)
 		let tgLinkUrl = link.attr('href')
 		const slug = link.data('slug')
 		if (slug) {
-			tgLinkUrl += `|camp_name=${slug}`
+			tgLinkUrl += `${separator}camp_name=${slug}`
 		}
 
 		const roomItem = link.closest('.rooms-item')
 
 		if (roomItem.length) {
 			const price = roomItem.find('.room_price').text().trim()
-			tgLinkUrl += `|cost=${parseInt(price)}`
+			tgLinkUrl += `${separator}cost=${parseInt(price)}`
 
 			const roomTitle = roomItem.find('.room_title').text().trim()
 			const latRoomText = rusToLat(roomTitle).split(' ').join('-').toLowerCase()
-			tgLinkUrl += `|room_name=${latRoomText}`
+			tgLinkUrl += `${separator}room_name=${latRoomText}`
 		}
 
 		const cookie = readCookie('_deco_utmz')
 
 		if (cookie) {
 			const arr = cookie.split('|')
-			tgLinkUrl = `${tgLinkUrl}|utm_source=${arr[0]}|utm_medium=${arr[1]}|utm_campaign=${arr[3]}`
+			tgLinkUrl = `${tgLinkUrl}${separator}utm_source=${arr[0]}${separator}utm_medium=${arr[1]}${separator}utm_campaign=${arr[3]}`
 		}
 
 		link.attr('href', tgLinkUrl)
@@ -96,3 +102,5 @@ function rusToLat(str) {
 		})
 		.join('')
 }
+
+

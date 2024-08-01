@@ -1,6 +1,10 @@
 .camp-gallery {
 	.camp-gallery-item-wrapper {
-		height: 720px;
+		height: 1100px;
+
+		@media (max-width: 1920px) {
+			height: 720px;
+		}
 
 		@media (max-width: $md) {
 			height: 250px;
@@ -13,7 +17,7 @@
 	}
 
 	.slick-dots {
-		bottom: -30px;
+		bottom: -35px;
 	}
 }
 
@@ -42,13 +46,15 @@
 }
 
 .gallery__prev-arr,
-.gallery__prev-arr-admin, .slick-prev{
+.gallery__prev-arr-admin,
+.slick-prev {
 	left: 40px;
 	background-image: url(../../img/gallery-arr-left.svg);
 }
 
 .gallery__next-arr,
-.gallery__next-arr-admin, .slick-next {
+.gallery__next-arr-admin,
+.slick-next {
 	right: 40px;
 	background-image: url(../../img/gallery-arr-right.svg);
 }

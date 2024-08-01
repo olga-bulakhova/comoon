@@ -24,9 +24,13 @@
       <?php if (carbon_get_the_post_meta('event_places_left') != 0) : ?>
         <a href="#camp-rooms" class="btn btn-secondary btn-large"><?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?></a>
 
-      <?php else : ?>
+      <?php else :
 
-        <a href="<?php echo  carbon_get_theme_option('wait_list_link' . carbon_lang_prefix()) . '|camp=' . $post->post_name . get_urm_to_tg() ?>" class="btn btn-secondary btn-large" target="_blank"> <?php echo carbon_get_theme_option('sign_up_for_the_list_btn' . carbon_lang_prefix()) ?></a>
+        $separator = ICL_LANGUAGE_CODE === 'pl' ? '_' : '|';
+
+      ?>
+
+        <a href="<?php echo  carbon_get_theme_option('wait_list_link' . carbon_lang_prefix()) . $separator . 'camp=' . $post->post_name . get_urm_to_tg() ?>" class="btn btn-secondary btn-large" target="_blank"> <?php echo carbon_get_theme_option('sign_up_for_the_list_btn' . carbon_lang_prefix()) ?></a>
 
       <?php endif; ?>
     </div>

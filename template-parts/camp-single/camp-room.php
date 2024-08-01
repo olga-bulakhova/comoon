@@ -88,14 +88,16 @@ if (!empty($room_complex)) : ?>
             <?php if (!$item['room_is_sold']) : ?>
               <div class="rooms-action">
                 <div class="rooms-price-list">
-                  <div class="rooms-price-item">
-                    <div class="rooms-price color-dark camp__info room_price"><?php echo $item['room_price']; ?></div>
 
-                    <?php if ($item['room_price_text']) : ?>
-                      <div class="rooms-price-text"><?php echo $item['room_price_text'] ?></div>
-                    <?php endif; ?>
+                  <?php if ($item['room_price']) : ?>
+                    <div class="rooms-price-item">
+                      <div class="rooms-price color-dark camp__info room_price"><?php echo $item['room_price']; ?></div>
 
-                  </div>
+                      <?php if ($item['room_price_text']) : ?>
+                        <div class="rooms-price-text"><?php echo $item['room_price_text'] ?></div>
+                      <?php endif; ?>
+                    </div>
+                  <?php endif; ?>
 
                   <?php if ($item['room_price_2']) : ?>
                     <div class="rooms-price-item">

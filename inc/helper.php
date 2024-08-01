@@ -101,11 +101,12 @@ function add_social_cemps_image()
 function get_urm_to_tg()
 {
   $url = '';
+  $separator = ICL_LANGUAGE_CODE === 'pl' ? '_' : '|';
 
   if (isset($_COOKIE['_deco_utmz'])) {
     $cookies = $_COOKIE['_deco_utmz'];
     $all_utm = explode("|", $cookies);
-    $url = '|source=' . $all_utm[0] . '|medium=' . $all_utm[1] . '|campaign=' . $all_utm[3];
+    $url = $separator . 'source=' . $all_utm[0] . $separator . 'medium=' . $all_utm[1] . $separator . 'campaign=' . $all_utm[3];
   }
 
   return $url;
@@ -116,14 +117,14 @@ function get_slug()
   $slug = '';
 
   if (is_front_page()) {
-    $slug = 'front_page';
+    $slug = 'front-page';
   } elseif (is_page() || is_single()) {
-    $slug = get_queried_object()->post_name . '_page';
+    $slug = get_queried_object()->post_name . '-page';
   } elseif (is_archive()) {
     $post_type = get_queried_object();
-    $slug = $post_type->rewrite['slug'] . '_list';
+    $slug = $post_type->rewrite['slug'] . '-list';
   } else {
-    $slug = 'posts_list';
+    $slug = 'posts-list';
   }
 
   return $slug;

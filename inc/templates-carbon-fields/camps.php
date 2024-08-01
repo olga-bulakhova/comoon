@@ -61,9 +61,6 @@ function crb_attach_post_meta()
 
       Field::make('textarea', 'description', 'Краткое описание'),
 
-      Field::make('separator', 'camp_info', 'Информация о кемпе'),
-      Field::make('image', 'camp_info_banner', 'Баннер'),
-
       Field::make('separator', 'camp_media_gallery_separator', 'Фотогалерея'),
       Field::make('media_gallery', 'camp_media_gallery')
         ->set_type(array('image')),
