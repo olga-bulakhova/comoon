@@ -26,7 +26,7 @@
               <div class="badge badge-place"><?php echo carbon_get_the_post_meta('event_place') ?></div>
 
               <?php if (!empty(carbon_get_the_post_meta('event_language'))) : ?>
-                <div class="badge badge-no-icon" style="text-transform: uppercase"><?php echo carbon_get_the_post_meta('event_language') ?></div>
+                <div class="badge badge-<?php echo carbon_get_the_post_meta('event_language') ?>" style="text-transform: uppercase"><?php echo carbon_get_the_post_meta('event_language') ?></div>
               <?php endif; ?>
 
 

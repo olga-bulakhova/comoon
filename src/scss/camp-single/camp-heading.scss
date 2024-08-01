@@ -7,7 +7,7 @@
 }
 
 .camp-heading-content {
-	padding: 120px 50px 94px;
+	padding: 86px 50px 60px;
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4));
 
 	h1 {
@@ -20,7 +20,14 @@
 
 	.badges-list {
 		justify-content: center;
+	}
+
+	.badge-list-container {
 		margin: 48px 0 86px;
+	}
+
+	.badges-list-bottom {
+		margin-top: 16px;
 	}
 
 	@media (max-width: $md) {
@@ -30,8 +37,12 @@
 			line-height: 1;
 		}
 
-		.badges-list {
-			margin: 90px 0;
+		.badge-list-container {
+			margin: 75px 0;
+		}
+
+		.badges-list-bottom {
+			margin-top: 8px;
 		}
 	}
 }

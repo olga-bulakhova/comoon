@@ -52,12 +52,10 @@ function crb_attach_post_meta()
       Field::make('select', 'event_language', 'Язык')
         ->add_options(array(
           '' => '',
-          'ru' => 'ru',
           'pl' => 'pl',
           'en' => 'en',
         ))
         ->set_width(10),
-
 
       Field::make('textarea', 'description', 'Краткое описание'),
 

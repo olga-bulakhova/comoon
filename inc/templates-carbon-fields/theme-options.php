@@ -220,5 +220,13 @@ function comoon_attach_theme_options()
       Field::make('text', 'thank_you_text_1' . carbon_lang_prefix(), 'Текст после заголовка'),
       Field::make('text', 'thank_you_text_2' . carbon_lang_prefix(), 'Текст после картинки'),
       Field::make('text', 'thank_you_iframe_src' . carbon_lang_prefix(), 'Iframe src'),
+    ])
+
+    ->add_tab('Кемпы', [
+      Field::make('separator', 'camp_lang', 'Язык кемпа'),
+      Field::make('text', 'camp_lang_pl' . carbon_lang_prefix(), 'Кемп на польском языке')
+        ->set_width(50),
+      Field::make('text', 'camp_lang_en' . carbon_lang_prefix(), 'Кемп на английском языке')
+        ->set_width(50),
     ]);
 }

@@ -50,6 +50,19 @@
 		background-image: url(../../img/badge-lightning.svg);
 		padding-left: 44px;
 	}
+
+	&.badge-pl {
+		background-image: url(../../img/badge-pl.svg);
+	}
+
+	&.badge-en {
+		background-image: url(../../img/badge-ru.svg);
+	}
+
+	&.badge-pl,
+	&.badge-en {
+		padding-left: 44px;
+	}
 }
 
 .badge-green-border {
