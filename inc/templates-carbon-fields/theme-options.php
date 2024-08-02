@@ -228,5 +228,10 @@ function comoon_attach_theme_options()
         ->set_width(50),
       Field::make('text', 'camp_lang_en' . carbon_lang_prefix(), 'Кемп на английском языке')
         ->set_width(50),
+      Field::make('separator', 'camp_list', 'Страница со списком кемпов'),
+      Field::make('rich_text', 'upcoming_camps_text' . carbon_lang_prefix(), 'Текст для предстоящих кемпов'),
+      Field::make('rich_text', 'past_camps_text' . carbon_lang_prefix(), 'Текст для прошедших кемпов'),
+      Field::make('rich_text', 'what_is_cammon' . carbon_lang_prefix(), 'Текст внизу страницы')
+        ->set_help_text('Цвет выделения 657838'),
     ]);
 }

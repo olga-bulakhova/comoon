@@ -1,3 +1,30 @@
+.post-type-archive-camps {
+	background-color: $color-light-background;
+}
+
+.camps-upcoming-info {
+	margin-bottom: 56px;
+	@media (max-width: $md) {
+		margin-bottom: 40px;
+	}
+}
+
+.camps-upcoming-text,
+.camps-past-text {
+	margin-top: 32px;
+	max-width: 986px;
+	p {
+		margin: 5px 0;
+	}
+}
+
+.camps-past-info {
+	margin-bottom: 40px;
+}
+.camps-list-container-past {
+	background-color: $color-white-background;
+}
+
 .upcoming-camps-list {
 	display: grid;
 	grid-template-columns: 1fr;

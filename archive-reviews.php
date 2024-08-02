@@ -15,9 +15,15 @@
       <?php
       global $post;
 
+      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+      $default_posts_per_page = get_option('posts_per_page');
+
+
       $query = new WP_Query([
         'post_type' => 'reviews',
-        'posts_per_page' => -1
+        // 'posts_per_page' => -1,
+        'posts_per_page' => $default_posts_per_page,
+        'paged' => $paged,
       ]);
 
 
@@ -29,10 +35,13 @@
           <?php endwhile; ?>
         </div>
 
+        <div class="pagination center">
+          <?php my_pagenavi(); ?>
+        </div>
+
     </section>
   <?php endif;
       wp_reset_postdata(); ?>
-
   </section>
   </div>
 </div>
