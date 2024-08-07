@@ -21,6 +21,12 @@ function convert_date_format($source)
   return $date->format('d/m');
 }
 
+function convert_date_to_month_year($source, $separator)
+{
+  $date = new DateTime($source);
+  return $date->format('m' . $separator . 'Y');
+}
+
 function get_url_path()
 
 {

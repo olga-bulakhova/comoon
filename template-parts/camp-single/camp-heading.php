@@ -11,7 +11,7 @@
         </div>
 
         <div class="badges-list badges-list-bottom">
-          <?php if (!empty(carbon_get_the_post_meta('event_language'))) : ?>
+          <?php if (!empty(carbon_get_the_post_meta('event_language')) && carbon_get_the_post_meta('event_language') !== 'ru') : ?>
             <div class="badge badge-<?php echo carbon_get_the_post_meta('event_language') ?>"><?php echo carbon_get_theme_option('camp_lang_' . carbon_get_the_post_meta('event_language') . carbon_lang_prefix()) ?> </div>
           <?php endif; ?>
 

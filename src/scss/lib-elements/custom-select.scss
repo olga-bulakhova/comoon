@@ -1,0 +1,155 @@
+.custom-select-wrapper {
+	position: relative;
+	display: inline-block;
+	user-select: none;
+}
+.custom-select-wrapper select {
+	display: none;
+}
+.custom-select,
+.custom-datepicker {
+	position: relative;
+	width: 100%;
+	display: inline-block;
+}
+.custom-select-trigger,
+.datepicker-trigger,
+.monthpicker_input,
+.reset-btn {
+	position: relative;
+	padding: 10px 32px 10px 16px;
+	display: block;
+	width: 100%;
+	color: #000;
+	background-color: $color-white-background;
+	border-radius: 8px;
+	cursor: pointer;
+	white-space: nowrap;
+	text-transform: none;
+	@include font-style(14px, 14px, 500);
+
+	&.selected {
+		background: $color-primary;
+		color: #fff;
+
+		&::after {
+			border-color: #fff;
+		}
+	}
+}
+
+.monthpicker.selected {
+	.monthpicker_input:after {
+		border-color: #fff;
+	}
+}
+
+.reset-btn {
+	border: none;
+	padding: 11px 16px 10px 16px;
+	font-family: inherit;
+}
+.custom-select-trigger:after,
+.monthpicker_input:after {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 6px;
+	height: 6px;
+	top: 55%;
+	right: 15px;
+	margin-top: -3px;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	transform: rotate(45deg) translateY(-50%);
+	transition: all 0.2s ease-in-out;
+	transform-origin: 50% 0;
+}
+.custom-select.opened .custom-select-trigger:after,
+.monthpicker_input.opened:after {
+	margin-top: 2px;
+	transform: rotate(-135deg) translateY(-50%);
+}
+.custom-options {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	top: 100%;
+	left: 0;
+	min-width: 100%;
+	margin: 15px 0;
+	background: #fff;
+	//	transition: all 0.2s ease-in-out;
+	padding: 5px 8px;
+	border-radius: 12px;
+	//opacity: 0;
+	display: none;
+	//visibility: hidden;
+	pointer-events: none;
+	transform: translateY(-15px);
+	box-shadow: 0px 25px 15px 0px rgba(0, 0, 0, 0.03),
+		0px 11px 11px 0px rgba(0, 0, 0, 0.04), 0px 3px 6px 0px rgba(0, 0, 0, 0.05);
+}
+.custom-select.opened .custom-options,
+.custom-datepicker.opened .custom-options {
+	opacity: 1;
+	display: block;
+	//visibility: visible;
+	pointer-events: all;
+	transform: translateY(0);
+}
+
+.option-hover:before {
+	background: #f9f9f9;
+}
+.custom-option {
+	position: relative;
+	display: block;
+	padding: 10px 12px;
+	margin: 3px 0;
+	@include font-style(14px, 14px, 400);
+	cursor: pointer;
+	//transition: all 0.2s ease-in-out;
+	white-space: nowrap;
+	border-radius: 8px;
+	color: $color-dark-text;
+	&:hover {
+		background-color: #f3f3f3;
+	}
+}
+
+//.custom-option.selection,
+.monthpicker.selected .placeholder,
+.monthpicker.selected .monthpicker_input,
+.reset-btn {
+	background: $color-primary;
+	color: #fff;
+}
+
+.custom-datepicker {
+	@include font-style(14px, 14px, 400);
+}
+
+@media (max-width: $md) {
+	.custom-select-wrapper,
+	.custom-select,
+	.custom-options {
+		width: 100%;
+		position: static;
+	}
+
+	.custom-select-trigger,
+	.datepicker-trigger,
+	.monthpicker_input {
+		background-color: #f3f3f3;
+	}
+
+	.custom-options {
+		box-shadow: none;
+		margin: 0;
+	}
+
+	.custom-option {
+		padding: 8px 12px;
+	}
+}

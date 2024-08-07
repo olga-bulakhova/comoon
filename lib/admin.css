@@ -6,3 +6,7 @@
 .interface-interface-skeleton__content {
 	overflow-x: hidden;
 }
+
+.inside .cf-radio-image__image {
+	width: 40px;
+}

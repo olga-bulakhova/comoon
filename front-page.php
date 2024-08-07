@@ -68,8 +68,35 @@ $front_page_heading_video_url = wp_get_attachment_url($front_page_heading_video_
   <a id="camps-list"></a>
   <div class="wrapper">
     <h2 class="title-48-600 color-dark mb-5_6 mb-4-mobile center-mobile"><?php echo carbon_get_theme_option('upcoming_camps' . carbon_lang_prefix()) ?></h2>
-    <?php get_template_part('template-parts/camps/upcoming-camps-list'); ?>
-  </div>
+
+    <div class="camps-list upcoming-camps-list">
+      <?php
+      global $post;
+
+      $query = new WP_Query([
+        'post_type' => 'camps',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+        'order' => 'ASC'
+      ]);
+
+      if ($query->have_posts()) {
+        while ($query->have_posts()) {
+          $query->the_post();
+
+          $event_date = carbon_get_the_post_meta('event_start');
+          if (is_future_date($event_date)) {
+            get_template_part('template-parts/camps/upcoming-camp');
+          }
+        }
+      }
+
+      wp_reset_postdata();
+
+      ?>
+    </div>
+</div>
 </section>
 
 <section class="home-find-friends mt-18 mt-6-mobile">

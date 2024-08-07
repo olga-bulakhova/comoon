@@ -52,6 +52,7 @@ function crb_attach_post_meta()
       Field::make('select', 'event_language', 'Язык')
         ->add_options(array(
           '' => '',
+          'ru' => 'ru',
           'pl' => 'pl',
           'en' => 'en',
         ))
@@ -77,6 +78,19 @@ function crb_attach_post_meta()
               'user' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'user.svg',
               'water' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'water.svg',
               'wifi' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'wifi.svg',
+              'archway' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'archway.svg',
+              'bath' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'bath.svg',
+              'compass' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'compass.svg',
+              'fire' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'fire.svg',
+              'high' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'high.svg',
+              'kayak' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'kayak.svg',
+              'laptop' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'laptop.svg',
+              'mountain' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'mountain.svg',
+              'neighbors' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'neighbors.svg',
+              'speaker' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'speaker.svg',
+              'swim' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'swim.svg',
+              'tree' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'tree.svg',
+              'water' => COMOON_DIR_URI . ADVANTAGES_ICON_URL . 'water.svg',
             )),
           Field::make('text', 'camp_advantages_text', 'Текст')
             ->set_width(50),

@@ -1,57 +1,94 @@
-<div class="camps-list upcoming-camps-list">
-  <?php
-  global $post;
+<?php
+get_template_part('template-parts/camps/filters');
+if (ICL_LANGUAGE_CODE === 'ru') {
+}
+?>
 
-  $query = new WP_Query([
-    'post_type' => 'camps',
-    'post_status' => 'publish',
-    'posts_per_page' => -1,
-    'orderby' => 'menu_order',
-    'order' => 'ASC'
-  ]);
+<section class="camps-list-container camps-list-container-filtered mb-14 mb-6-mobile">
+  <div class="wrapper">
+    <div class="camps-upcoming-info">
+      <h2 class="title-48-600 color-dark center-mobile"><?php echo carbon_get_theme_option('upcoming_camps' . carbon_lang_prefix()) ?></h2>
 
-  if ($query->have_posts()) {
-    while ($query->have_posts()) {
-      $query->the_post();
+      <?php if (carbon_get_theme_option('upcoming_camps_text' . carbon_lang_prefix())) : ?>
+        <div class="camps-upcoming-text">
+          <?php echo wpautop(carbon_get_theme_option('upcoming_camps_text' . carbon_lang_prefix()))  ?>
+        </div>
+      <?php endif; ?>
+    </div>
 
-      $event_date = carbon_get_the_post_meta('event_start');
-      if (is_future_date($event_date)) {
-  ?>
+    <div class="no-result text-18-500 hidden"><?php echo carbon_get_theme_option('filters_no_result' . carbon_lang_prefix())  ?></div>
 
-        <a class="camps-item" href="<?php echo get_the_permalink() ?>" style="background-image:url(<?php echo get_the_post_thumbnail_url() ?>)">
-          <div class="camps-content">
-            <div class="camps-header badges-list">
-              <div class="badge badge-calendar"><?php echo convert_date_format(carbon_get_the_post_meta('event_start'))  . '-' . convert_date_format(carbon_get_the_post_meta('event_end'))  ?></div>
-              <div class="badge badge-user"><?php echo carbon_get_the_post_meta('number_of_persons') ?></div>
-              <div class="badge badge-place"><?php echo carbon_get_the_post_meta('event_place') ?></div>
+    <div class="camps-list upcoming-camps-list">
 
-              <?php if (!empty(carbon_get_the_post_meta('event_language'))) : ?>
-                <div class="badge badge-<?php echo carbon_get_the_post_meta('event_language') ?>" style="text-transform: uppercase"><?php echo carbon_get_the_post_meta('event_language') ?></div>
-              <?php endif; ?>
+      <?php
+      global $post;
+
+      $tax_query = [];
+      $meta_query = [];
+      $date_query = null;
+
+      if (isset($_GET['vibe'])) {
+        $tax_query[] = [
+          'taxonomy' => 'vibe',
+          'field'    => 'slug',
+          'terms' => $_GET['vibe']
+        ];
+      }
+
+      if (isset($_GET['country'])) {
+        $tax_query[] = [
+          'taxonomy' => 'country',
+          'field'    => 'slug',
+          'terms' => $_GET['country']
+        ];
+      }
+
+      if (isset($_GET['language'])) {
+        $meta_query[] = [
+          'key' => 'event_language',
+          'value' => $_GET['language']
+        ];
+      }
 
 
-              <?php if (!empty(carbon_get_the_post_meta('event_places_left'))) : ?>
-                <div class="badge badge-blue badge-lightning"><?php echo carbon_get_theme_option('places_left' . carbon_lang_prefix()) . ' - ' . carbon_get_the_post_meta('event_places_left') ?></div>
-              <?php endif; ?>
+      if (isset($_GET['date'])) {
+        $date_query = $_GET['date'];
+      }
 
-              <?php if (carbon_get_the_post_meta('event_places_left') == 0) : ?>
-                <div class="badge badge-red badge-no-icon">SOLD OUT</div>
-              <?php endif; ?>
+      $query = new WP_Query([
+        'post_type' => 'camps',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+        'order' => 'ASC',
+        'tax_query' => $tax_query,
+        'meta_query' => $meta_query
+      ]);
 
-            </div>
+      if ($query->have_posts()) {
+        while ($query->have_posts()) {
+          $query->the_post();
 
-            <div class="camps-footer">
-              <h3 class="title-32-600 color-white"><?php the_title() ?></h3>
-              <div class="camps-description color-white-opacity text-18-400 mt-1_6"><?php echo carbon_get_the_post_meta('description') ?></div>
-            </div>
-          </div>
-        </a>
+          $event_date = carbon_get_the_post_meta('event_start');
+          if (is_future_date($event_date)) {
 
-  <?php }
-    }
-  }
+            $event_end_date = carbon_get_the_post_meta('event_end');
 
-  wp_reset_postdata();
+            if (
+              !isset($date_query)
+              || convert_date_to_month_year($event_date, '-') == $date_query
+              || convert_date_to_month_year($event_end_date, '-') == $date_query
+            ) {
+              get_template_part('template-parts/camps/upcoming-camp');
+            }
+          }
+        }
+      }
 
-  ?>
-</div>
+      wp_reset_postdata();
+
+      ?>
+    </div>
+
+  </div>
+</section>

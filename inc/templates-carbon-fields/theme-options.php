@@ -233,5 +233,21 @@ function comoon_attach_theme_options()
       Field::make('rich_text', 'past_camps_text' . carbon_lang_prefix(), 'Текст для прошедших кемпов'),
       Field::make('rich_text', 'what_is_cammon' . carbon_lang_prefix(), 'Текст внизу страницы')
         ->set_help_text('Цвет выделения 657838'),
+
+      Field::make('separator', 'filters', 'Фильтры'),
+      Field::make('text', 'filters_country' . carbon_lang_prefix(), 'Страна')
+        ->set_width(20),
+      Field::make('text', 'filters_month' . carbon_lang_prefix(), 'Месяц')
+        ->set_width(20),
+      Field::make('text', 'filters_vibe' . carbon_lang_prefix(), 'Вайб')
+        ->set_width(20),
+      Field::make('text', 'filters_language' . carbon_lang_prefix(), 'Язык кемпа')
+        ->set_width(20),
+      Field::make('text', 'filters_reset' . carbon_lang_prefix(), 'Сбросить')
+        ->set_width(20),
+      Field::make('text', 'filters_filters' . carbon_lang_prefix(), 'Фильтры')
+        ->set_width(20),
+      Field::make('text', 'filters_no_result' . carbon_lang_prefix(), 'Нет результатов')
+        ->set_width(20),
     ]);
 }

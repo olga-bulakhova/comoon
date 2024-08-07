@@ -10,6 +10,8 @@
 @import 'common/form';
 
 @import 'lib-elements/slick-slider';
+@import 'lib-elements/custom-select';
+@import 'lib-elements/monthpicker';
 
 @import 'blocks/header';
 @import 'blocks/footer';
@@ -22,6 +24,7 @@
 @import 'blocks/accordion';
 @import 'blocks/review';
 @import 'blocks/thank-you';
+@import 'blocks/filters';
 
 @import 'elements/badge.scss';
 @import 'elements/breadcrumbs';
