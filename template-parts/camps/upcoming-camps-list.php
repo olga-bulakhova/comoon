@@ -25,6 +25,7 @@ if (ICL_LANGUAGE_CODE === 'ru') {
 
       $tax_query = [];
       $meta_query = [];
+      $job_query = [];
       $date_query = null;
 
       if (isset($_GET['vibe'])) {
@@ -32,6 +33,14 @@ if (ICL_LANGUAGE_CODE === 'ru') {
           'taxonomy' => 'vibe',
           'field'    => 'slug',
           'terms' => $_GET['vibe']
+        ];
+      }
+
+      if (isset($_GET['job'])) {
+        $tax_query[] = [
+          'taxonomy' => 'job',
+          'field'    => 'slug',
+          'terms' => $_GET['job']
         ];
       }
 

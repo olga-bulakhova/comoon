@@ -10,6 +10,10 @@ export const readCookie = name => {
 }
 
 export const rusToLat = str => {
+	let letters
+
+	const lang = readCookie('pll_language')
+
 	let ru = {
 		а: 'a',
 		б: 'b',
@@ -45,11 +49,50 @@ export const rusToLat = str => {
 		ь: '',
 		й: 'i',
 	}
+
+	let pl = {
+		а: 'а',
+		ą: 'a',
+		b: 'b',
+		c: 'c',
+		ć: 'c',
+		d: 'd',
+		e: 'e',
+		ę: 'e',
+		f: 'f',
+		g: 'g',
+		h: 'h',
+		j: 'j',
+		l: 'l',
+		ł: 'l',
+		m: 'm',
+		n: 'n',
+		ń: 'n',
+		o: 'o',
+		ó: 'o',
+		p: 'p',
+		q: 'q',
+		r: 'r',
+		s: 's',
+		ś: 's',
+		t: 't',
+		u: 'u',
+		v: 'v',
+		w: 'w',
+		x: 'x',
+		y: 'y',
+		z: 'z',
+		ź: 'z',
+		ż: 'z',
+	}
+
+	letters = lang === 'pl' ? pl : ru
+
 	let newString = []
 
 	return [...str]
 		.map(l => {
-			let latL = ru[l.toLocaleLowerCase()]
+			let latL = letters[l.toLocaleLowerCase()]
 
 			if (l !== l.toLocaleLowerCase()) {
 				latL = latL.charAt(0).toLocaleUpperCase() + latL.slice(1)

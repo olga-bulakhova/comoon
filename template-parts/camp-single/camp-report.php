@@ -4,7 +4,7 @@ $gal_video_ids = carbon_get_the_post_meta('camp_video'); ?>
 
 
 <?php if (!empty($gal_img_ids) || !empty($gal_video_ids)) : ?>
-  <section class="camp-report pb-18 pb-6-mobile">
+  <section class="camp-report pb-8 pb-0-mobile mt-4">
     <div class="wrapper">
       <h2 class="title-48-600 color-dark mb-5_6 mb-4-mobile center-mobile"><?php echo carbon_get_theme_option('report_title' . carbon_lang_prefix()) ?></h2>
 
@@ -31,21 +31,6 @@ $gal_video_ids = carbon_get_the_post_meta('camp_video'); ?>
           <?php endforeach; ?>
         </div>
       <?php endif; ?>
-
-      <!-- <?php if (!empty($gal_video_ids)) : ?>
-        <div class="video-list">
-          <?php foreach ($gal_video_ids as $id) :  ?>
-
-            <div class="home-video">
-              <video src="<?php echo wp_get_attachment_url($id) ?>"></video>
-              <div class="overlay">
-                <div class="video-play"></div>
-              </div>
-            </div>
-
-          <?php endforeach; ?>
-        </div>
-      <?php endif; ?> -->
     </div>
   </section>
 

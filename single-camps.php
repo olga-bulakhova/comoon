@@ -25,18 +25,19 @@ $is_future_date = is_future_date(carbon_get_the_post_meta('event_start'));
   </div>
 <?php endif; ?>
 
+<?php if (!$is_future_date) : ?>
+  <?php get_template_part('template-parts/camp-single/camp-report'); ?>
+<?php endif; ?>
+
 <?php get_template_part('template-parts/camp-single/camp-info'); ?>
 
 <?php if ($is_future_date) :
   get_template_part('template-parts/camp-single/camp-gallery');
-
 ?>
 
   <div class="light-background" style="border: 1px solid transparent">
     <?php
-
-    get_template_part('template-parts/camp-single/camp-magnet');
-    // get_template_part('template-parts/camp-single/camp-advantages');
+    // get_template_part('template-parts/camp-single/camp-magnet');
     get_template_part('template-parts/camp-single/camp-entertainment');
     get_template_part('template-parts/camp-single/camp-available');
     get_template_part('template-parts/camp-single/camp-faq');
@@ -47,12 +48,9 @@ $is_future_date = is_future_date(carbon_get_the_post_meta('event_start'));
   get_template_part('template-parts/camp-single/camp-admin');
 
   ?>
-<?php else : ?>
-  <?php get_template_part('template-parts/camp-single/camp-report'); ?>
+
 <?php endif; ?>
 
-
 <?php get_template_part('template-parts/camp-single/camp-review'); ?>
-
 
 <?php get_footer(); ?>

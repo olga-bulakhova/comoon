@@ -245,6 +245,8 @@ function comoon_attach_theme_options()
         ->set_width(20),
       Field::make('text', 'filters_reset' . carbon_lang_prefix(), 'Сбросить')
         ->set_width(20),
+      Field::make('text', 'filters_job' . carbon_lang_prefix(), 'Занятость')
+        ->set_width(20),
       Field::make('text', 'filters_filters' . carbon_lang_prefix(), 'Фильтры')
         ->set_width(20),
       Field::make('text', 'filters_no_result' . carbon_lang_prefix(), 'Нет результатов')

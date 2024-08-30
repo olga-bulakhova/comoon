@@ -9,6 +9,11 @@ $country_tax = get_terms(array(
   'hide_empty' => true
 ));
 
+$job_tax = get_terms(array(
+  'taxonomy' => 'job',
+  'hide_empty' => true,
+));
+
 $languages = ['ru' => 'Ru', 'pl' => 'Pl', 'en' => 'En'];
 
 $data_min = null;
@@ -42,7 +47,7 @@ foreach ($camps as $camp) {
   <div class="filters">
     <div class="filters-container">
 
-      <div class=" filters-wrapper">
+      <div class="filters-wrapper">
         <div class="mobile">
           <div class="filters-mobile-heading">
             <div class="color-dark"><?php echo carbon_get_theme_option('filters_filters' . carbon_lang_prefix())  ?></div>
@@ -69,6 +74,16 @@ foreach ($camps as $camp) {
             <?php endforeach; ?>
           </select>
         </div>
+
+
+        <div class="filters-item">
+          <select name="job" id="job" class="custom-select" placeholder="<?php echo carbon_get_theme_option('filters_job' . carbon_lang_prefix())  ?>">
+            <?php foreach ($job_tax as $tax) : ?>
+              <option value="<?php echo $tax->slug ?>" data-selection="<?php if (isset($_GET['job']) &&  $_GET['job'] === $tax->slug) echo 'selection' ?>"><?php echo $tax->name ?></option>
+            <?php endforeach; ?>
+          </select>
+        </div>
+
 
         <div class="filters-item">
           <select name="language" id="language" class="custom-select" placeholder="<?php echo carbon_get_theme_option('filters_language' . carbon_lang_prefix())  ?>">

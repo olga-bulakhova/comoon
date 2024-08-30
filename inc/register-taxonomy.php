@@ -31,4 +31,18 @@ function camps_register_taxonomy()
     'show_admin_column' => true
   );
   register_taxonomy('country', 'camps', $args_country);
+
+
+  $args_job = array(
+    'labels' => array(
+      'menu_name' => 'Занятость',
+      'name' => 'Занятость',
+      'singular_name' => 'Занятость'
+    ),
+    'public' => true,
+    'show_in_rest' => true,
+    'hierarchical' => true,
+    'show_admin_column' => true
+  );
+  register_taxonomy('job', 'camps', $args_job);
 }

@@ -174,4 +174,13 @@ jQuery(document).ready(function ($) {
 		filters.slideUp('fast')
 		$('body').removeClass('overflow')
 	})
+
+	$(window).on('resize', function () {
+		$('body').removeClass('overflow')
+		if ($(window).width() > 768) {
+			filters.css('display', 'block')
+		} else {
+			filters.css('display', 'none')
+		}
+	})
 })
