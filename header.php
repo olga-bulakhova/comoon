@@ -47,10 +47,6 @@
                 <div class="header-logo color-primary">
                     <a href="<?php echo get_url_path(); ?>">COMOON</a>
                 </div>
-                <div>
-                    <!-- <?php pll_the_languages(array('show_flags' => 1, 'show_names' => 0)); ?> -->
-
-                </div>
                 <div class="heder-action">
                     <?php
                     wp_nav_menu([
@@ -64,8 +60,14 @@
                     ]);
 
                     ?>
-                    <a href="<?php echo carbon_get_theme_option('book_link' . carbon_lang_prefix()) ?>" data-slug="<?php echo get_slug() ?>" class="btn btn-primary tg-link" target="_blank"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></a>
+
+                    <div class="pll-languages">
+                        <?php pll_the_languages(array('show_flags' => 0, 'display_names_as' => 'slug')); ?>
+                    </div>
+
+                    <button data-slug="<?php echo get_slug() ?>" class="btn btn-primary open-modal-form"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></button>
                 </div>
+
                 <div class="header-burger toggle-menu">
 
                 </div>
@@ -78,7 +80,12 @@
                     <div class="header-logo color-primary">
                         <a href="<?php echo get_url_path(); ?>">COMOON</a>
                     </div>
-                    <div class="mobile-menu-close toggle-menu"></div>
+                    <div class="pll-languages">
+                        <?php pll_the_languages(array('show_flags' => 0, 'display_names_as' => 'slug')); ?>
+                    </div>
+                    <div>
+                        <div class="mobile-menu-close toggle-menu"></div>
+                    </div>
                 </div>
 
                 <div class="mobile-menu-body">
@@ -94,7 +101,7 @@
                     ]);
                     ?>
 
-                    <a href="<?php echo carbon_get_theme_option('book_link' . carbon_lang_prefix()) ?>" data-slug="<?php echo get_slug() ?>" class="btn btn-primary tg-link" target="_blank"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></a>
+                    <button data-slug="<?php echo get_slug() ?>" class="btn btn-primary open-modal-form"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></button>
 
                     <div class="mobile-menu-social">
 

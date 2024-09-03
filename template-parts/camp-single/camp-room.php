@@ -113,9 +113,9 @@ if (!empty($room_complex)) : ?>
                 </div>
 
                 <div class="rooms-button">
-                  <a href="<?php echo carbon_get_theme_option('book_link' . carbon_lang_prefix()) ?>" data-slug="<?php echo get_slug() ?>" class="btn btn-secondary tg-link" target="_blank">
+                  <button data-slug="<?php echo get_slug() ?>" class="btn btn-secondary open-modal-form">
                     <?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?>
-                  </a>
+                  </button>
                 </div>
               </div>
             <?php endif; ?>

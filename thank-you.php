@@ -13,8 +13,6 @@
     <div class="center thank-heading pb-8 pb-12-mobile">
       <h1 class="color-dark mb-4"><?php echo carbon_get_theme_option('thank_you_title' . carbon_lang_prefix()) ?></h1>
 
-      <!-- <div class="thank-image border-radius"></div> -->
-
       <div class="text-18-400 thank-text">
         <?php echo carbon_get_theme_option('thank_you_text_1' . carbon_lang_prefix()) ?>
       </div>

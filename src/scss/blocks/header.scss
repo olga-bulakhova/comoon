@@ -2,6 +2,36 @@
 	@include font-style(25px, 25px, 800);
 }
 
+.pll-languages {
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-right: 40px;
+	text-transform: uppercase;
+
+	@media (max-width: $menu-point) {
+		margin-right: 0;
+		font-size: 18px;
+
+		li {
+			margin: 0 9px !important;
+		}
+	}
+
+	li {
+		margin: 0 5px;
+
+		&.current-lang {
+			a {
+				font-weight: 500;
+				color: #000;
+				cursor: default;
+			}
+		}
+	}
+}
+
 .header {
 	padding: 12px 0;
 	background-color: $color-light-background;
@@ -57,7 +87,10 @@
 		}
 
 		.heder-action {
-			display: none;
+			.navbar-nav,
+			.btn-primary {
+				display: none;
+			}
 		}
 	}
 }
