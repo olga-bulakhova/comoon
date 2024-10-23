@@ -11,7 +11,7 @@
 
     ?>
 
-     <section class="camp-admin  wrapper-lg mt-14 mt-6-mobile <?php if (sizeof($admins) > 1) echo 'camp-admin-slider' ?>">
+     <section class="camp-admin  wrapper-lg  <?php if (sizeof($admins) > 1) echo 'camp-admin-slider' ?>">
        <div class="wrapper" style="position:relative">
 
          <?php if (sizeof($admins) > 1) : ?>

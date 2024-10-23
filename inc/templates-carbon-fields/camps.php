@@ -60,6 +60,9 @@ function crb_attach_post_meta()
 
       Field::make('textarea', 'description', 'Краткое описание'),
 
+      Field::make('checkbox', 'hide_blok_you_are_getting', 'Скрыть блок - Вы получаете'),
+
+
       Field::make('separator', 'camp_media_gallery_separator', 'Фотогалерея'),
       Field::make('media_gallery', 'camp_media_gallery')
         ->set_type(array('image')),

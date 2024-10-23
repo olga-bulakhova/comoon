@@ -7,7 +7,7 @@ $query = new WP_Query([
 ]);
 
 if ($query->have_posts()) : ?>
-  <section class="camp-review light-background pt-18 pt-6-mobile pb-18 pb-6-mobile">
+  <section class="camp-review light-background pt-14 pt-6-mobile pb-18 pb-6-mobile">
     <div class="wrapper">
       <h2 class="title-48-600 color-dark mb-5_6 mb-4-mobile center-mobile"><?php echo carbon_get_theme_option('reviews_title' . carbon_lang_prefix()) ?></h2>
       <div class="review-list">
