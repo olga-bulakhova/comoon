@@ -170,6 +170,9 @@ function comoon_attach_theme_options()
       Field::make('text', 'blog_title' . carbon_lang_prefix(), 'Блог')
         ->set_width(25),
 
+      Field::make('text', 'blog_shortcode_title' . carbon_lang_prefix(), 'Присоедениться к комьюнити удаленщиков')
+        ->set_width(75),
+
 
       Field::make('separator', 'faq_titles', 'Заголовки для FAQ'),
       Field::make('text', 'faq_accommodation' . carbon_lang_prefix(), 'Проживание')
