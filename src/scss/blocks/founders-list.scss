@@ -17,6 +17,22 @@
 	}
 }
 
+.founders-item-link-wrapper {
+	position: relative;
+
+	.founders-item-link {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: url(../../img/video-play.svg);
+		background-repeat: no-repeat;
+		background-size: 80px;
+		background-position: center;
+	}
+}
+
 .founders-item-photo {
 	height: 460px;
 	border-radius: $border-radius;
@@ -68,9 +84,3 @@
 		padding: 0 5px;
 	}
 }
-
-// @media (max-width: $sm) {
-// 	.founders-item {
-// 		padding: 0;
-// 	}
-// }

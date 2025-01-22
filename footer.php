@@ -9,7 +9,7 @@
 
       <?php
       wp_nav_menu([
-        'theme_location'  => 'footer',
+        'theme_location'  => 'header',
         'container'       => false,
         'menu_class'      => 'navbar-nav',
         'menu_id'         => false,
@@ -35,6 +35,21 @@
 
     <div class="footer-copyright">
       <div>© Copyright <?php echo date("Y"); ?>, Comoon</div>
+
+      <?php
+      wp_nav_menu([
+        'theme_location'  => 'footer',
+        'container'       => false,
+        'menu_class'      => 'navbar-nav navbar-nav-sm',
+        'menu_id'         => false,
+        'echo'            => true,
+        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+        'depth'           => 0,
+      ]);
+
+      ?>
+
+
       <a href="<?php echo carbon_get_theme_option('footer_url' . carbon_lang_prefix()) ?>"><?php echo carbon_get_theme_option('footer_text' . carbon_lang_prefix()) ?></a>
     </div>
   </div>

@@ -79,7 +79,8 @@ if (ICL_LANGUAGE_CODE === 'ru') {
           $query->the_post();
 
           $event_date = carbon_get_the_post_meta('event_start');
-          if (is_future_date($event_date)) {
+
+          if (is_future_date($event_date) || is_current_date($event_date)) {
 
             $event_end_date = carbon_get_the_post_meta('event_end');
 

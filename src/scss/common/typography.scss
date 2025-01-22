@@ -38,6 +38,10 @@
 .text-lg-bold {
 	@include font-style(48px, 24px, 800);
 	line-height: 0.95;
+
+	@media (max-width: $md) {
+		line-height: 1;
+	}
 }
 
 .text-18-500 {

@@ -58,3 +58,24 @@
 	right: 40px;
 	background-image: url(../../img/gallery-arr-right.svg);
 }
+
+.comoonity-camps-list {
+	.slick-prev,
+	.slick-next {
+		height: 100%;
+		width: 90px;
+		background-size: 48px !important;
+
+		cursor: initial;
+	}
+
+	.slick-prev {
+		left: 0;
+		background-position: top 260px right;
+	}
+
+	.slick-next {
+		right: 0;
+		background-position: top 260px left;
+	}
+}

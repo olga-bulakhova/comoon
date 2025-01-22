@@ -1,5 +1,6 @@
 .footer {
-	background-image: url(../../img/footer-bg-mobile.jpg);
+	background-image: url(../../img/footer-bg.jpg);
+
 	.footer-container {
 		padding: 80px 0;
 		display: flex;
@@ -28,6 +29,11 @@
 		display: flex;
 		justify-content: center;
 		gap: 16px;
+
+		&.navbar-nav-sm a {
+			font-size: 14px;
+			color: rgba(235, 235, 235, 0.8);
+		}
 
 		@media (max-width: $sm) {
 			flex-direction: column;

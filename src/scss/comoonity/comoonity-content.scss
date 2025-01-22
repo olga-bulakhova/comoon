@@ -1,0 +1,153 @@
+.comoonity-content {
+	.content-container {
+		max-width: 900px;
+		margin: auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 40px;
+
+		@media (max-width: 910px) {
+			grid-template-columns: 1fr;
+			row-gap: 60px;
+		}
+	}
+
+	.chart-container {
+		margin-top: 36px;
+		max-width: 280px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media (max-width: $md) {
+			margin-top: 28px;
+		}
+	}
+
+	.chart-item {
+		display: flex;
+		column-gap: 6px;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+
+	.chart-progress {
+		height: 16px;
+	}
+
+	.chart-progress-fill {
+		width: 0;
+		height: 100%;
+	}
+
+	.chart-progress-large {
+		width: 148px;
+
+		.chart-progress-fill {
+			background-color: $color-primary;
+		}
+	}
+
+	.chart-progress-middle {
+		width: 88px;
+		.chart-progress-fill {
+			background-color: $color-secondary;
+		}
+	}
+
+	.chart-progress-small {
+		width: 37px;
+		.chart-progress-fill {
+			background-color: $color-light-green;
+		}
+	}
+
+	.chart-text {
+		@include font-style(16px, 14px, 400);
+	}
+
+	.dem-container {
+		margin: 30px 0 26px;
+		column-gap: 10px;
+
+		@media (max-width: $md) {
+			margin: 22px 0 22px;
+		}
+	}
+
+	.dem-container,
+	.dem-icons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.dem-icon {
+		height: 40px;
+		width: 30px;
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center;
+		opacity: 0;
+
+		@media (max-width: $md) {
+			height: 32px;
+			width: 24px;
+		}
+	}
+
+	.dem-icon-man {
+		background-image: url(../../img/man.svg);
+	}
+
+	.dem-icon-woman {
+		background-image: url(../../img/woman.svg);
+	}
+
+	.dem-number {
+		width: 39px;
+	}
+}
+
+.comoonity-marque {
+	margin-top: 60px;
+	.marque-wrapper {
+		display: flex;
+		white-space: nowrap;
+
+		&.marque-wrapper-green {
+			background-color: rgba(187, 219, 137, 0.5);
+			margin-bottom: 24px;
+		}
+
+		&.marque-wrapper-yellow {
+			background-color: #f5dab0;
+		}
+	}
+
+	.marque-box {
+		padding: 6px 25px;
+		font-size: 16px;
+	}
+}
+
+.comoonity-heading-video {
+	border-radius: $border-radius;
+}
+
+@media (max-width: $md) {
+	.comoonity-camps {
+		background-color: $color-light-background;
+	}
+
+	.comoonity-heading-video {
+		border-radius: 0;
+	}
+
+	.comoonity-page-video {
+		position: relative;
+		left: -15px;
+		width: calc(100% + 30px);
+	}
+}

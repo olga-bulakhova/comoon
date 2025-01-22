@@ -10,10 +10,30 @@
 	padding: 86px 50px 60px;
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4));
 
+	&.camp-heading-content-comoonity {
+		padding-top: 180px;
+		min-height: 540px;
+
+
+
+		@media (max-width: $md) {
+			padding-top: 48px;
+			padding-bottom: 48px;
+			min-height: 560px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			.badge-list-container {
+				margin: 0;
+			}
+		}
+	}
+
 	h1 {
 		@include font-style(48px, 32px, 800);
 		text-transform: uppercase;
-		max-width: 720px;
+		max-width: 920px;
 		line-height: 1.1;
 		margin: 0 auto;
 	}

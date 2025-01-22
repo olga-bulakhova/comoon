@@ -8,6 +8,7 @@ module.exports = {
 		global: ['./src/js/global.js', './src/scss/index.scss'],
 		campSingle: ['./src/js/camp-single.js'],
 		camps: ['./src/js/camps.js'],
+		comoonity: ['./src/js/comoonity.js'],
 	},
 	output: {
 		path: path.resolve(__dirname, './dist'),

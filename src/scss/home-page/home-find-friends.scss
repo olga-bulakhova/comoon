@@ -5,11 +5,23 @@
 	background-size: cover;
 	background-position: center;
 
+	&.comoonity-events {
+		background-image: url(../../img/com-event.jpg);
+	}
+
+	&.comoonity-signup {
+		background-image: url(../../img/com-signup.jpg);
+	}
+
 	h2 {
 		@include font-style(48px, 28px, 600);
 		margin-bottom: 64px;
 		max-width: 520px;
 		line-height: 1.1;
+
+		&.width-100 {
+			max-width: 100%;
+		}
 	}
 
 	.home-find-friends-content {
@@ -19,6 +31,14 @@
 	@media (max-width: $md) {
 		background-image: url(../../img/friends-mobile.jpg);
 		padding: 180px 0 80px;
+
+		&.comoonity-events {
+			background-image: url(../../img/com-event-mobile.jpg);
+		}
+
+		&.comoonity-signup {
+			background-image: url(../../img/com-signup-mobile.jpg);
+		}
 
 		h2 {
 			margin-bottom: 160px;

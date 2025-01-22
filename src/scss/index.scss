@@ -25,6 +25,7 @@
 @import 'blocks/review';
 @import 'blocks/thank-you';
 @import 'blocks/filters';
+@import 'blocks/table';
 
 @import 'elements/badge.scss';
 @import 'elements/breadcrumbs';
@@ -48,3 +49,6 @@
 @import 'blog/posts-list';
 @import 'blog/pagination';
 @import 'blog/post-single';
+
+@import 'comoonity/comoonity-numbers.scss';
+@import 'comoonity/comoonity-content.scss';

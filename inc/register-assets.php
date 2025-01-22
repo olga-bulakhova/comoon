@@ -23,10 +23,12 @@ function register_scripts()
   }
 
   if (is_archive('camps')) {
-
-     wp_enqueue_script('monthpicker', COMOON_DIR_URI . '/lib/monthpicker.js', array('jquery'));
-
+    wp_enqueue_script('monthpicker', COMOON_DIR_URI . '/lib/monthpicker.js', array('jquery'));
     wp_enqueue_script('camps', COMOON_DIR_URI . '/dist/js/camps.bundle.js', ['jquery', 'monthpicker'], filemtime(COMOON_DIR_PATH . '/dist/js/camps.bundle.js'), true);
+  }
+
+  if (is_page_template('comoonity.php')) {
+    wp_enqueue_script('comoonity', COMOON_DIR_URI . '/dist/js/comoonity.bundle.js', ['jquery'], filemtime(COMOON_DIR_PATH . '/dist/js/comoonity.bundle.js'), true);
   }
 
   wp_enqueue_script('global', COMOON_DIR_URI . '/dist/js/global.bundle.js', ['jquery'], filemtime(COMOON_DIR_PATH . '/dist/js/global.bundle.js'), true);

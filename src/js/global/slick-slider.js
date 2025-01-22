@@ -64,4 +64,23 @@ jQuery(document).ready(function ($) {
 			],
 		})
 	}
+
+	$('.comoonity-camps-list').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: true,
+		lazyLoad: 'progressive',
+		adaptiveHeight: true,
+
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+				},
+			},
+		],
+	})
 })
