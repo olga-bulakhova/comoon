@@ -27,9 +27,9 @@ if ($query->have_posts()) : ?>
           <div class="founders-item ">
             <div class="founders-item-photo" style="position: relative">
               <div class="home-video border-radius" style="margin: 0; height: 100%; position: absolute; top:0; right:0; bottom:0; left:0;">
-                <video src="<?php echo wp_get_attachment_url($id) ?>" class="border-radius" poster="<?php echo wp_get_attachment_url(carbon_get_the_post_meta('review_video_poster')) ?>" style="object-fit:cover; overflow:hidden;width:100%; height:100%;"></video>
-                <div class="overlay border-radius" style="background-color: transparent">
-                  <div class="video-play" style="width: 80px; height: 80px"></div>
+                <video src="<?php echo wp_get_attachment_url($id) ?>" class="border-radius" poster="<?php echo wp_get_attachment_url(carbon_get_the_post_meta('review_video_poster')) ?>" preload="none" style="object-fit:cover; overflow:hidden;width:100%; height:100%;"></video>
+                <div class="overlay border-radius">
+                  <div class="video-play video-play-transparent" style="width: 80px; height: 80px"></div>
                 </div>
               </div>
 

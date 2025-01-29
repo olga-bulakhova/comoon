@@ -8,14 +8,21 @@
     </div>
 
     <div>
-      <div class="review-author">
-        <div class="review-avatar border-radius" style="background-image: url(<?php echo the_post_thumbnail_url('thumbnail'); ?>);">
+      <div class="review-info">
+        <div class="review-author">
+          <div class="review-avatar border-radius" style="background-image: url(<?php echo the_post_thumbnail_url('thumbnail'); ?>);">
+          </div>
+          <div>
+            <div class="name dark-text"><?php echo carbon_get_the_post_meta('review_name') ?></div>
+            <div class="job"><?php echo carbon_get_the_post_meta('review_job') ?></div>
+          </div>
         </div>
-        <div>
-          <div class="name dark-text"><?php echo carbon_get_the_post_meta('review_name') ?></div>
-          <div class="job"><?php echo carbon_get_the_post_meta('review_job') ?></div>
-        </div>
+
+        <?php if (!empty(carbon_get_the_post_meta('review_insta'))): ?>
+          <a href="<?php echo carbon_get_the_post_meta('review_insta')  ?>" class="review-insta" target="_blank"></a>
+        <?php endif; ?>
       </div>
+
       <?php $camp_id = $post->post_parent; ?>
 
       <?php if (!is_singular('camps')) : ?>

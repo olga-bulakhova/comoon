@@ -114,6 +114,10 @@ video {
 	margin-top: -78px;
 }
 
+.light-green-bg {
+	background-color: rgba(187, 219, 137, 0.5);
+}
+
 .hidden {
 	display: none;
 }
@@ -124,6 +128,11 @@ video {
 
 .border-radius {
 	border-radius: $border-radius;
+}
+
+.delayed-display {
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
 }
 
 .mobile {

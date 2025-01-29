@@ -124,6 +124,13 @@ function comoon_polylang_strings()
   );
 
   pll_register_string(
+    'comoonity_join',
+    'Присоединяйся к COMOONity!',
+    'Комьюнити',
+    false
+  );
+
+  pll_register_string(
     'comoonity_events_title',
     'Предстоящие ивенты',
     'Ивенты',
@@ -169,6 +176,34 @@ function comoon_polylang_strings()
     'comoonity_event_no_place',
     'Мест нет',
     'Ивенты',
+    false
+  );
+
+  pll_register_string(
+    'comoonity_insta_title',
+    'Следи за нами в Instagram',
+    'Инста',
+    false
+  );
+
+  pll_register_string(
+    'comoonity_insta_text',
+    'Следи за нашими COMOONity в инсте, если еще не готов присоедениться.',
+    'Инста',
+    false
+  );
+
+  pll_register_string(
+    'reviews_title_1',
+    'Видео отзывы',
+    'Отзывы',
+    false
+  );
+
+  pll_register_string(
+    'reviews_title_2',
+    'Больше отзывов',
+    'Отзывы',
     false
   );
 }

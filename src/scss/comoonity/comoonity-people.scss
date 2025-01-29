@@ -1,0 +1,149 @@
+.comoonity-people {
+	.comoonity-people-list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		row-gap: 30px;
+		width: calc(100% + 20px);
+		position: relative;
+		left: -10px;
+
+		.slick-prev {
+			left: 26px;
+		}
+
+		.slick-next {
+			right: 26px;
+		}
+
+		.comoonity-people-item {
+			padding: 0 10px;
+		}
+
+		&.desktop-slider {
+			display: block;
+
+			@media (max-width: $md) {
+				width: 100%;
+				left: 0;
+
+				.comoonity-people-item {
+					padding: 0;
+				}
+			}
+		}
+
+		@media (max-width: 1100px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	.people-item-photo {
+		position: relative;
+		height: 460px;
+		border-radius: $border-radius;
+		padding: 26px;
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 24px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+
+		&.people-item-reviews {
+			height: auto;
+			padding: 16px;
+			margin-bottom: 16px;
+
+			&::before {
+				content: '';
+				display: block;
+				padding-top: 200%;
+			}
+		}
+	}
+
+	.people-item-overlay {
+		//background-color: rgba(0, 0, 0, 0.4);
+		background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.1) 0%,
+			rgba(0, 0, 0, 0.1) 100%
+		);
+
+		background-blend-mode: soft-light, normal, normal;
+	}
+
+	.people-item-info {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 26px;
+		z-index: 10;
+	}
+
+	.people-item-review-info {
+		width: 100%;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 16px;
+		z-index: 10;
+	}
+
+	.people-item-review-first {
+		display: flex;
+		justify-content: space-between;
+		color: $color-white-text;
+		@include font-style(24px, 24px, 800);
+	}
+
+	.people-item-review-second {
+		color: $color-white-text;
+		@include font-style(14px, 14px, 500);
+		margin: 8px 0;
+	}
+
+	.people-item-review-third {
+		color: $color-white-text-opacity;
+		@include font-style(14px, 14px, 500);
+	}
+
+	.people-item-name {
+		color: $color-white-text;
+		@include font-style(32px, 32px, 600);
+	}
+
+	.people-item-insta {
+		width: 28px;
+		height: 28px;
+		background-image: url(../../img/insta-white.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.people-item-text {
+		line-height: 1.3;
+	}
+
+	@media (max-width: $md) {
+		.comoonity-people-list {
+			display: block;
+
+			&.desktop-slider {
+				.comoonity-people-item {
+					padding: 0 5px;
+				}
+			}
+		}
+
+		.comoonity-people-item {
+			padding: 0 5px;
+		}
+	}
+}

@@ -24,6 +24,10 @@
 		background-size: cover;
 		cursor: pointer;
 
+		&.video-play-transparent {
+			background-image: url(../../img/video-play-tr.svg);
+		}
+
 		&.video-play-white {
 			background-image: url(../../img/video-play-white.svg);
 			@media (max-width: $md) {

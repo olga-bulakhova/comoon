@@ -29,17 +29,16 @@ get_header();
   get_template_part('template-parts/comoonity/comoonity-content');
   get_template_part('template-parts/comoonity/comoonity-events');
   get_template_part('template-parts/comoonity/comoonity-camps');
+  get_template_part('template-parts/comoonity/comoonity-insta');
   ?>
 </div>
 
 <div class="light-background pb-9 pb-6-mobile">
 
-  <?php echo do_shortcode('[instagram-feed]') ?>
-
   <section class="home-find-friends comoonity-signup">
     <div class="wrapper">
       <div class="home-find-friends-content">
-        <h2 class="color-white width-100"><?php echo carbon_get_theme_option('find_friends_title' . carbon_lang_prefix()) ?></h2>
+        <h2 class="color-white width-100"><?php pll_e('Присоединяйся к COMOONity!')  ?></h2>
         <button data-slug="<?php echo get_slug() ?>" class="btn btn-secondary open-modal-form">
           <?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?>
         </button>

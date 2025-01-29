@@ -8,7 +8,7 @@
 	}
 
 	@media (max-width: $md) {
-		display: block;
+		//display: block;
 	}
 }
 
@@ -34,15 +34,28 @@
 	}
 }
 
-.review-author {
+.review-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	margin-top: 40px;
+	@media (max-width: $md) {
+		margin-top: 60px;
+	}
+}
+
+.review-insta {
+	width: 24px;
+	height: 24px;
+	background-image: url(../../img/insta-green.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.review-author {
 	display: flex;
 	column-gap: 24px;
 	align-items: center;
-
-	@media (max-width: $md) {
-		margin-top: 24px;
-	}
 
 	.name {
 		@include font-style(16px, 16px, 600);
