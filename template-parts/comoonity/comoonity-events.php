@@ -4,8 +4,11 @@
     $query = new WP_Query([
       'post_type' => 'events',
       'posts_per_page' => -1,
+      'orderby' => [
+        'event_date' => 'ASC',
+      ],
       'meta_query' => [
-        [
+        'event_date' => [
           'key' => 'event_date_time',
           'value' => date("Y-m-d"),
           'compare' => '>=',

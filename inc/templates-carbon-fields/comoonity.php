@@ -28,6 +28,17 @@ function comoonity_attach_post_meta()
 
         ]),
 
+      Field::make('separator', 'comoonity_numbers_separator', 'COMOONity в цифрах'),
+      Field::make('text', 'comoonity_numbers_1', 'Количество проведенных кемпов')
+        ->set_attribute('type', 'number')
+        ->set_width(30),
+      Field::make('text', 'comoonity_numbers_2', 'Количество участников')
+        ->set_attribute('type', 'number')
+        ->set_width(30),
+      Field::make('text', 'comoonity_numbers_3', 'Количество стран')
+        ->set_attribute('type', 'number')
+        ->set_width(30),
+
       Field::make('separator', 'comoonity_insta_separator', 'Лента инстаграм'),
 
       Field::make('complex', 'comoonity_insta', 'Рилсы')

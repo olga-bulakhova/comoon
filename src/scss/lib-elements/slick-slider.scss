@@ -36,7 +36,6 @@
 	.camp-magnet-slider,
 	.camp-info .advantages-list,
 	.comoonity-camps-list,
-	.comoonity-insta-list,
 	.comoonity-people-list.desktop-slider,
 	.comoonity-people-list.mobile-slider {
 		position: relative;
@@ -48,6 +47,15 @@
 
 		.slick-slide {
 			padding: 0 8px;
+		}
+	}
+
+	.comoonity-insta-list {
+		position: relative;
+		width: calc(100% + 24px);
+		left: -12px;
+		.slick-list {
+			padding: 0 92px 0 0;
 		}
 	}
 }

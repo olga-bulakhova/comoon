@@ -16,7 +16,6 @@ function events_attach_post_meta()
     ->where('post_type', '=', 'events')
     ->add_fields(array(
       Field::make('date_time', 'event_date_time', 'Дата и время')
-        // ->set_storage_format('d/m/Y H:i')
         ->set_input_format('d M Y H:i', 'd M Y H:i')
         ->set_width(30),
       Field::make('text', 'event_location', 'Место проведения')

@@ -1,7 +1,5 @@
 <?php
 get_template_part('template-parts/camps/filters');
-if (ICL_LANGUAGE_CODE === 'ru') {
-}
 ?>
 
 <section class="camps-list-container camps-list-container-filtered mb-14 mb-6-mobile">
@@ -24,7 +22,7 @@ if (ICL_LANGUAGE_CODE === 'ru') {
       global $post;
 
       $tax_query = [];
-      $meta_query = [];
+      $language_query = [];
       $job_query = [];
       $date_query = null;
 
@@ -53,7 +51,7 @@ if (ICL_LANGUAGE_CODE === 'ru') {
       }
 
       if (isset($_GET['language'])) {
-        $meta_query[] = [
+        $language_query = [
           'key' => 'event_language',
           'value' => $_GET['language']
         ];
@@ -71,7 +69,15 @@ if (ICL_LANGUAGE_CODE === 'ru') {
         'orderby' => 'menu_order',
         'order' => 'ASC',
         'tax_query' => $tax_query,
-        'meta_query' => $meta_query
+        'meta_query' => [
+          [
+            'key' => 'event_start',
+            'value' => date("Y-m-d"),
+            'compare' => '>=',
+            'type' => 'DATE'
+          ],
+          $language_query
+        ]
       ]);
 
       if ($query->have_posts()) {
@@ -79,18 +85,14 @@ if (ICL_LANGUAGE_CODE === 'ru') {
           $query->the_post();
 
           $event_date = carbon_get_the_post_meta('event_start');
+          $event_end_date = carbon_get_the_post_meta('event_end');
 
-          if (is_future_date($event_date) || is_current_date($event_date)) {
-
-            $event_end_date = carbon_get_the_post_meta('event_end');
-
-            if (
-              !isset($date_query)
-              || convert_date_to_month_year($event_date, '-') == $date_query
-              || convert_date_to_month_year($event_end_date, '-') == $date_query
-            ) {
-              get_template_part('template-parts/camps/upcoming-camp');
-            }
+          if (
+            !isset($date_query)
+            || convert_date_to_month_year($event_date, '-') == $date_query
+            || convert_date_to_month_year($event_end_date, '-') == $date_query
+          ) {
+            get_template_part('template-parts/camps/upcoming-camp');
           }
         }
       }

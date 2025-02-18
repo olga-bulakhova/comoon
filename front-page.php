@@ -78,17 +78,21 @@ $front_page_heading_video_url = wp_get_attachment_url($front_page_heading_video_
         'post_status' => 'publish',
         'posts_per_page' => -1,
         'orderby' => 'menu_order',
-        'order' => 'ASC'
+        'order' => 'ASC',
+        'meta_query' => [
+          [
+            'key' => 'event_start',
+            'value' => date("Y-m-d"),
+            'compare' => '>=',
+            'type' => 'DATE'
+          ],
+        ]
       ]);
 
       if ($query->have_posts()) {
         while ($query->have_posts()) {
           $query->the_post();
-
-          $event_date = carbon_get_the_post_meta('event_start');
-          if (is_future_date($event_date)) {
-            get_template_part('template-parts/camps/upcoming-camp');
-          }
+          get_template_part('template-parts/camps/upcoming-camp');
         }
       }
 

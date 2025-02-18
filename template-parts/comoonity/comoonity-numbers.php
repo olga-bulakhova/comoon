@@ -4,19 +4,19 @@
     <div class="numbers-list color-dark">
       <div class="numbers-item">
         <span class="icon icon-home"></span>
-        <span class="number">15</span>
+        <span class="number"><?php echo carbon_get_the_post_meta('comoonity_numbers_1') ?></span>
         <span class="text"><?php echo pll__('проведенных кемпов')  ?></span>
       </div>
 
       <div class="numbers-item">
         <span class="icon icon-smile"></span>
-        <span class="number">100</span>
+        <span class="number"><?php echo carbon_get_the_post_meta('comoonity_numbers_2') ?></span>
         <span class="text"><?php echo pll__('классных участников') ?></span>
       </div>
 
       <div class="numbers-item">
         <span class="icon icon-location"></span>
-        <span class="number">5</span>
+        <span class="number"><?php echo carbon_get_the_post_meta('comoonity_numbers_3') ?></span>
         <span class="text"><?php echo pll__('стран, где живут наши ребята') ?></span>
       </div>
     </div>
