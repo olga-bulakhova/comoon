@@ -37,6 +37,52 @@ function convert_date_to_month_year($source, $separator)
   return $date->format('m' . $separator . 'Y');
 }
 
+function convert_date_time($source)
+{
+  $date = new DateTime($source);
+  return $date->format('d/m H:i');
+}
+
+
+function convert_date_time_with_month_text($source)
+{
+  $month_labels = [
+    'ru' => [
+      1  => 'января',
+      2  => 'февраля',
+      3  => 'марта',
+      4  => 'апреля',
+      5  => 'мая',
+      6  => 'июня',
+      7  => 'июля',
+      8  => 'августа',
+      9  => 'сентября',
+      10 => 'октября',
+      11 => 'ноября',
+      12 => 'декабря'
+    ],
+    'en' => [
+      1  => 'January',
+      2  => 'February',
+      3  => 'March',
+      4  => 'April',
+      5  => 'May',
+      6  => 'June',
+      7  => 'July',
+      8  => 'August',
+      9  => 'September',
+      10 => 'October',
+      11 => 'November',
+      12 => 'December'
+    ]
+  ];
+
+  $timestamp = strtotime($source);
+  $months = ICL_LANGUAGE_CODE === 'ru' ? $month_labels['ru'] : $month_labels['en'];
+
+  return date('d', $timestamp) . ' ' . $months[date('n', $timestamp)] . ' ' . date('H', $timestamp) . ':' . date('i', $timestamp);
+}
+
 function get_url_path()
 
 {
@@ -54,8 +100,8 @@ function get_form_shortcode()
   } else if (ICL_LANGUAGE_CODE === 'pl') {
     return '[contact-form-7 id="1a89f33" title="Contact Form pl"]';
   } else {
-    return '[contact-form-7 id="6b291bb" title="Контактная форма 1"]';
-    // return '[contact-form-7 id="b20e59f" title="Contact Form en"]';
+    // return '[contact-form-7 id="6b291bb" title="Контактная форма 1"]';
+    return '[contact-form-7 id="b20e59f" title="Contact Form en"]';
   }
 }
 
@@ -145,4 +191,18 @@ function get_slug()
   }
 
   return $slug;
+}
+
+if (! function_exists('pll__')) {
+  function pll__($string)
+  {
+    return $string;
+  }
+}
+
+if (! function_exists('pll_e')) {
+  function pll_e($string)
+  {
+    echo $string;
+  }
 }

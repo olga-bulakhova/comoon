@@ -1,6 +1,11 @@
 <?php
 $room_complex = carbon_get_the_post_meta('room_complex');
 
+usort($room_complex, function ($a, $b) {
+  return ($a['room_is_sold'] - $b['room_is_sold']);
+});
+
+
 if (!empty($room_complex)) : ?>
 
   <section class="camp-rooms mt-14 mt-6-mobile mb-14 mb-6-mobile">

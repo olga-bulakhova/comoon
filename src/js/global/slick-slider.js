@@ -10,9 +10,10 @@ jQuery(document).ready(function ($) {
 	}
 
 	$(
-		'.you-are-getting-list, .entertainments-list, .camp-report .img-list'
+		'.you-are-getting-list, .entertainments-list, .camp-report .img-list , .comoonity-events .events-list'
 	).slick({
 		...options,
+		adaptiveHeight: true,
 		responsive: [
 			{
 				breakpoint: 768,
@@ -50,7 +51,7 @@ jQuery(document).ready(function ($) {
 					breakpoint: 1100,
 					settings: {
 						slidesToShow: 4,
-						slidesToScroll: 3,
+						slidesToScroll: 4,
 					},
 				},
 				{
@@ -64,7 +65,7 @@ jQuery(document).ready(function ($) {
 		})
 	}
 
-	$('.comoonity-camps-list').slick({
+	$('.comoonity-camps-list, .event-gallery').slick({
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,

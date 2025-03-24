@@ -1,0 +1,28 @@
+.event-gallery {
+	.event-gallery-item {
+		position: relative;
+		background-repeat: no-repeat;
+		background-size: cover;
+		&::before {
+			content: '';
+			display: block;
+			padding-top: 56%;
+
+			@media (max-width: $md) {
+				padding-top: 76%;
+			}
+		}
+	}
+
+	.slick-dots {
+		bottom: -32px;
+		@media (min-width: $md) {
+			bottom: auto;
+			top: 20px;
+		}
+	}
+
+	@media (max-width: $md) {
+		margin-bottom: 80px !important;
+	}
+}

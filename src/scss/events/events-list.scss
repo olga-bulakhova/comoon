@@ -1,0 +1,59 @@
+.events-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 30px;
+	row-gap: 40px;
+
+	@media (max-width: $lg) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: $md) {
+		grid-template-columns: 1fr;
+		row-gap: 24px;
+	}
+
+	.event {
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		background-color: #fff;
+	}
+
+	.event-image {
+		position: relative;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: linear-gradient(
+			to top left,
+			$color-primary,
+			$color-light-green
+		);
+		&::before {
+			content: '';
+			display: block;
+			padding-top: 56%;
+		}
+	}
+
+	.event-content {
+		padding: 16px 16px 0;
+	}
+
+	.event-badge {
+		padding: 0 16px 16px;
+	}
+
+	.event-date,
+	.event-location {
+		margin-top: 8px;
+		margin-bottom: 8px;
+		@include font-style(16px, 14px, 400);
+	}
+
+	.slick-dots {
+		bottom: -35px;
+	}
+}

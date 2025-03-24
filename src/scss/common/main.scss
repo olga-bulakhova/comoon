@@ -142,3 +142,15 @@ video {
 		display: block;
 	}
 }
+
+body.single-events {
+	background-color: $color-light-background;
+
+	@media (max-width: $md) {
+		background-color: $color-white-background;
+	}
+}
+
+body.post-type-archive-events {
+	background-color: $color-light-background;
+}

@@ -99,11 +99,6 @@ function crb_attach_post_meta()
             ->set_width(50),
         ]),
 
-      Field::make('separator', 'camp_magnet_separator', 'Лид магнит'),
-      Field::make('text', 'camp_magnet_title', 'Заголовок')
-        ->set_width(30),
-      Field::make('media_gallery', 'room_photos')
-        ->set_type(array('image')),
 
       Field::make('separator', 'camp_entertainment_separator', 'Развлечения'),
       Field::make('complex', 'camp_entertainment', 'Блоки - Развлечения')
@@ -190,23 +185,22 @@ function crb_attach_post_meta()
             ->set_width(80),
           Field::make('image', 'room_video_preview', 'Превью для видео')
             ->set_width(20),
-          Field::make('image', 'room_photo', 'Фото')
-            ->set_width(20),
-          Field::make('text', 'room_title', 'Тип номера')
-            ->set_width(16),
-          Field::make('text', 'room_price', 'Цена')
-            ->set_width(16),
-          Field::make('text', 'room_price_text', 'Надпись под ценой')
-            ->set_width(16),
 
+          Field::make('text', 'room_title', 'Тип номера')
+            ->set_width(17),
+          Field::make('text', 'room_price', 'Цена')
+            ->set_width(17),
+          Field::make('text', 'room_price_text', 'Надпись под ценой')
+            ->set_width(17),
           Field::make('text', 'room_price_2', 'Вторая цена')
-            ->set_width(16),
+            ->set_width(17),
           Field::make('text', 'room_price_text_2', 'Надпись под второй ценой')
-            ->set_width(16),
+            ->set_width(17),
 
 
           Field::make('checkbox', 'room_is_sold', 'Места проданы')
-            ->set_width(20),
+            ->set_width(15),
+
           Field::make('textarea', 'room_text', 'Описание')
             ->set_width(40),
           Field::make('text', 'room_additional_info', 'Дополнительная информация')

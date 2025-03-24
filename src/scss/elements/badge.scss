@@ -28,7 +28,7 @@
 
 	&.badge-sm {
 		display: inline-block;
-		padding: 8px 16px !important;
+		padding: 10px 16px !important;
 		font-size: 14px;
 	}
 
@@ -55,6 +55,13 @@
 	&.badge-lightning {
 		background-image: url(../../img/badge-lightning.svg);
 		padding-left: 44px;
+
+		&.badge-lightning-sm {
+			display: inline-block;
+			font-size: 14px;
+			padding: 10px 16px 10px 34px;
+			background-size: 16px;
+		}
 	}
 
 	&.badge-pl {

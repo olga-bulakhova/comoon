@@ -180,6 +180,21 @@ function comoon_polylang_strings()
   );
 
   pll_register_string(
+    'comoonity_events',
+    'Ивенты',
+    'Ивенты',
+    false
+  );
+
+  pll_register_string(
+    'register_events',
+    'Записаться на ивент',
+    'Ивенты',
+    false
+  );
+
+
+  pll_register_string(
     'comoonity_insta_title',
     'Следи за нами в Instagram',
     'Инста',

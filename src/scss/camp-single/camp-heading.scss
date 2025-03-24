@@ -14,8 +14,6 @@
 		padding-top: 180px;
 		min-height: 540px;
 
-
-
 		@media (max-width: $md) {
 			padding-top: 48px;
 			padding-bottom: 48px;
@@ -26,6 +24,29 @@
 
 			.badge-list-container {
 				margin: 0;
+			}
+		}
+	}
+
+	&.event-heading-content {
+		padding-top: 140px;
+		padding-bottom: 110px;
+
+		@media (max-width: $md) {
+			padding-top: 48px;
+			padding-bottom: 48px;
+
+			.badge-list-container {
+				margin: 100px 0;
+			}
+
+			.badges-list {
+				display: block;
+				text-align: center;
+				.badge {
+					width: fit-content;
+					margin: 8px auto;
+				}
 			}
 		}
 	}
