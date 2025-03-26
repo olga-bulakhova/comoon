@@ -1,0 +1,38 @@
+.camp-program {
+	.program-list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 30px;
+
+		& > div {
+			&:last-child {
+				&:nth-child(3n + 1) {
+					grid-column-end: 3;
+
+					@media (max-width: $lg) {
+						grid-column-end: 2;
+					}
+				}
+			}
+		}
+
+		@media (max-width: $lg) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media (max-width: $md) {
+			display: block;
+		}
+	}
+
+	.program-item {
+		height: 100%;
+		background-color: #fff;
+		border-radius: 8px;
+		padding: 16px;
+
+		h3 {
+			margin-bottom: 16px;
+		}
+	}
+}

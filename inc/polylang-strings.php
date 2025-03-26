@@ -221,4 +221,18 @@ function comoon_polylang_strings()
     'Отзывы',
     false
   );
+
+  pll_register_string(
+    'camp_more_location',
+    'Больше о локации',
+    'Страница кемпа',
+    false
+  );
+
+  pll_register_string(
+    'program',
+    'Программа',
+    'Страница кемпа',
+    false
+  );
 }

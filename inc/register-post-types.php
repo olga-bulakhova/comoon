@@ -118,7 +118,7 @@ function register_post_types()
     'menu_position'       => 5,
     'menu_icon'           => 'dashicons-calendar',
     'hierarchical'        => false,
-    'supports'            => ['title', 'thumbnail', 'editor'],
+    'supports'            => ['title', 'thumbnail', 'editor', 'excerpt'],
     'has_archive'         => true,
     'rewrite'             => true,
     'query_var'           => true,

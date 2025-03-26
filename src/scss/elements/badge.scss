@@ -3,6 +3,10 @@
 	flex-wrap: wrap;
 	gap: 16px;
 
+	&.justify-center {
+		justify-content: center;
+	}
+
 	@media (max-width: $md) {
 		gap: 8px;
 
@@ -84,6 +88,7 @@
 	border: 1px solid $color-primary;
 	white-space: nowrap;
 	@include font-style(18px, 16px, 400);
+	background-size: 24px;
 
 	@media (max-width: $md) {
 		background-size: 20px;

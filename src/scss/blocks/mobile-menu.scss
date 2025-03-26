@@ -21,11 +21,9 @@
 	}
 }
 
-.mobile-menu-content {
-	padding: 12px 15px;
-}
-
 .mobile-menu-header {
+	padding: 13px 15px;
+	background-color: $color-black;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -34,6 +32,7 @@
 
 .mobile-menu-body {
 	text-align: center;
+	padding: 12px 15px;
 }
 
 .mobile-menu-close {
@@ -41,7 +40,7 @@
 	width: 32px;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url(../../img/green-cross.svg);
+	background-image: url(../../img/yellow-cross.svg);
 }
 
 .mobile-menu-social {

@@ -27,6 +27,10 @@
 	background-color: $color-secondary;
 	@include font-style(16px, 14px, 700);
 
+	&.btn-secondary-md {
+		padding: 16px 24px;
+	}
+
 	&:hover {
 		background-color: $color-secondary-button-hover;
 	}
@@ -53,4 +57,31 @@
 
 .btn-secondary {
 	@include btn-secondary;
+}
+
+.btn-toggle {
+	padding-right: 55px;
+	position: relative;
+	&::after {
+		position: absolute;
+		display: block;
+		content: '';
+		width: 6px;
+		height: 6px;
+		top: 55%;
+		right: 30px;
+		margin-top: -3px;
+		border-bottom: 2px solid #fff;
+		border-right: 2px solid #fff;
+		transform: rotate(45deg) translateY(-50%);
+		transition: all 0.2s ease-in-out;
+		transform-origin: 50% 0;
+	}
+
+	&.opend {
+		&::after {
+			margin-top: 2px;
+			transform: rotate(-135deg) translateY(-50%);
+		}
+	}
 }

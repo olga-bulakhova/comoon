@@ -9,11 +9,22 @@ jQuery(document).ready(function ($) {
 		mobileFirst: true,
 	}
 
-	$(
-		'.you-are-getting-list, .entertainments-list, .camp-report .img-list , .comoonity-events .events-list'
-	).slick({
+	$('.camp-report .img-list , .comoonity-events .events-list').slick({
 		...options,
 		adaptiveHeight: true,
+
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: 'unslick',
+			},
+		],
+	})
+
+	$('.you-are-getting-list, .entertainments-list, .program-list').slick({
+		...options,
+		adaptiveHeight: true,
+		dots: false,
 		responsive: [
 			{
 				breakpoint: 768,
@@ -79,6 +90,7 @@ jQuery(document).ready(function ($) {
 				breakpoint: 768,
 				settings: {
 					arrows: false,
+					dots: false,
 				},
 			},
 		],

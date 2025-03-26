@@ -68,9 +68,9 @@ function crb_attach_post_meta()
         ->set_type(array('image')),
 
 
-      Field::make('separator', 'camp_advantages_separator', 'Преимущества'),
+      Field::make('separator', 'camp_advantages_separator', 'Информация о кемпе'),
 
-      Field::make('complex', 'camp_advantages', 'Блоки - Преимущества')
+      Field::make('complex', 'camp_advantages', 'Преимущества и что доступно в кемпе')
         ->add_fields([
           Field::make('radio_image', 'camp_advantages_icon', 'Иконка')
             ->set_width(50)
@@ -97,6 +97,17 @@ function crb_attach_post_meta()
             )),
           Field::make('text', 'camp_advantages_text', 'Текст')
             ->set_width(50),
+        ]),
+
+      Field::make('separator', 'camp_program_separator', 'Программа'),
+      Field::make('textarea', 'camp_program_description', 'Подзаголовок'),
+      Field::make('complex', 'camp_program', 'Блоки - Программа')
+        ->add_fields([
+          Field::make('text', 'camp_program_title', 'Заголовок')
+            ->set_width(20),
+          Field::make('textarea', 'camp_program_text', 'Текст')
+            ->set_width(80),
+
         ]),
 
 
@@ -180,10 +191,16 @@ function crb_attach_post_meta()
       Field::make('separator', 'room_separator', 'Стоимость и размещение'),
       Field::make('complex', 'room_complex', 'Блоки - стоимость и размещение')
         ->add_fields([
+
+
+
           Field::make('media_gallery', 'room_gallery', 'Галерея')
             ->set_type(array('image', 'video'))
             ->set_width(80),
           Field::make('image', 'room_video_preview', 'Превью для видео')
+            ->set_width(20),
+
+          Field::make('image', 'room_photo', 'Фото')
             ->set_width(20),
 
           Field::make('text', 'room_title', 'Тип номера')
@@ -206,15 +223,10 @@ function crb_attach_post_meta()
           Field::make('text', 'room_additional_info', 'Дополнительная информация')
             ->set_width(40),
 
-
-
-
           Field::make('complex', 'room_mw_complex', 'Для кого')
             ->add_fields([
               Field::make('text', 'room_mw', 'Пол')
             ]),
-
-
 
         ]),
 

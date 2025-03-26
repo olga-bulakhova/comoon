@@ -4,7 +4,6 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php wp_head(); ?>
 
@@ -45,7 +44,9 @@
         <header class="header">
             <div class="wrapper">
                 <div class="header-logo color-primary">
-                    <a href="<?php echo get_url_path(); ?>">COMOON</a>
+                    <a href="<?php echo get_url_path(); ?>">
+                        <img src="<?php echo COMOON_DIR_URI . '/img/logo-white.svg' ?>" alt="">
+                    </a>
                 </div>
                 <div class="heder-action">
                     <?php
@@ -65,7 +66,7 @@
                         <?php pll_the_languages(array('show_flags' => 0, 'display_names_as' => 'slug')); ?>
                     </div>
 
-                    <button data-slug="<?php echo get_slug() ?>" class="btn btn-primary open-modal-form"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></button>
+                    <button data-slug="<?php echo get_slug() ?>" class="btn btn-secondary btn-secondary-md open-modal-form"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></button>
                 </div>
 
                 <div class="header-burger toggle-menu">
@@ -78,7 +79,9 @@
             <div class="mobile-menu-content light-background">
                 <div class="mobile-menu-header">
                     <div class="header-logo color-primary">
-                        <a href="<?php echo get_url_path(); ?>">COMOON</a>
+                        <a href="<?php echo get_url_path(); ?>">
+                            <img src="<?php echo COMOON_DIR_URI . '/img/logo-white.svg' ?>" alt="">
+                        </a>
                     </div>
                     <div class="pll-languages">
                         <?php pll_the_languages(array('show_flags' => 0, 'display_names_as' => 'slug')); ?>
