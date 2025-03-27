@@ -1,21 +1,26 @@
+@mixin gallery-item {
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	&::before {
+		content: '';
+		display: block;
+		padding-top: 56%;
+
+		@media (max-width: $md) {
+			padding-top: 76%;
+		}
+	}
+}
+
 .event-gallery {
 	.event-gallery-item {
-		position: relative;
-		background-repeat: no-repeat;
-		background-size: cover;
-		&::before {
-			content: '';
-			display: block;
-			padding-top: 56%;
-
-			@media (max-width: $md) {
-				padding-top: 76%;
-			}
-		}
+		@include gallery-item;
 	}
 
 	.slick-dots {
 		bottom: -32px;
+
 		@media (min-width: $md) {
 			bottom: auto;
 			top: 20px;
@@ -24,5 +29,41 @@
 
 	@media (max-width: $md) {
 		margin-bottom: 40px !important;
+	}
+}
+
+#content {
+	.wp-block-gallery {
+		width: 100%;
+		display: block;
+		position: relative !important;
+
+		@media (max-width: $md) {
+			width: calc(100% + 24px);
+		}
+
+		.wp-block-image {
+			@media (min-width: $md) {
+				@include gallery-item;
+
+				img {
+					object-fit: cover;
+					position: absolute;
+				}
+			}
+		}
+
+		.slick-dots {
+			bottom: -32px;
+			max-width: 100% !important;
+
+			li {
+				margin: 0 5px !important;
+			}
+			@media (min-width: $md) {
+				bottom: auto;
+				top: 20px;
+			}
+		}
 	}
 }

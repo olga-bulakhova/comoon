@@ -85,3 +85,23 @@
 		}
 	}
 }
+
+@mixin mail-link {
+	display: block;
+	@include font-style(16px, 16px, 700);
+	color: #fff;
+
+	span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.icon {
+		width: 20px;
+		height: 20px;
+		background-image: url(../../img/insta-white.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-right: 10px;
+	}
+}

@@ -34,7 +34,8 @@
 		@include dots-top-large;
 	}
 
-	&.dots-top-large-desktop {
+	&.dots-top-large-desktop,
+	&.wp-block-gallery {
 		@media (min-width: $md) {
 			@include dots-top-large;
 		}
@@ -53,7 +54,9 @@
 	.comoonity-people-list.mobile-slider,
 	.comoonity-events .events-list,
 	.event-gallery,
-	.program-list {
+	.program-list,
+	.wp-block-gallery,
+	.camps-list-mobile-slider {
 		position: relative;
 		width: calc(100% + 24px);
 		left: -8px;

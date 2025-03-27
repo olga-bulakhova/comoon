@@ -254,5 +254,19 @@ function comoon_attach_theme_options()
         ->set_width(20),
       Field::make('text', 'filters_no_result' . carbon_lang_prefix(), 'Нет результатов')
         ->set_width(20),
-    ]);
+    ])
+
+    ->add_tab(
+      'Лента инстаграм',
+      [
+        Field::make('complex', 'instagram' . carbon_lang_prefix(), 'Рилсы')
+          ->add_fields([
+            Field::make('file', 'instagram_video', 'Видео')
+              ->set_type(['video'])
+              ->set_width(20),
+            Field::make('text', 'instagram_url', 'Url видео в инстаграм')
+              ->set_width(30),
+          ]),
+      ]
+    );
 }

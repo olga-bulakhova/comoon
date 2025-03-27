@@ -21,7 +21,9 @@ jQuery(document).ready(function ($) {
 		],
 	})
 
-	$('.you-are-getting-list, .entertainments-list, .program-list').slick({
+	$(
+		'.you-are-getting-list, .entertainments-list, .program-list, .camps-list-mobile-slider'
+	).slick({
 		...options,
 		adaptiveHeight: true,
 		dots: false,

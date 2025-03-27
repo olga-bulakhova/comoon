@@ -235,4 +235,25 @@ function comoon_polylang_strings()
     'Страница кемпа',
     false
   );
+
+  pll_register_string(
+    'instagram_title',
+    'Взгляни на прошлые кемпы',
+    'Страница кемпа',
+    false
+  );
+
+  pll_register_string(
+    'more_review',
+    'Больше отзывов',
+    'Страница кемпа',
+    false
+  );
+
+  pll_register_string(
+    'events_list',
+    'Список оффлайн ивенов',
+    'Страница кемпа',
+    false
+  );
 }

@@ -79,7 +79,8 @@
 
 	.wp-block-image,
 	.wp-block-embed,
-	.wp-block-video {
+	.wp-block-video,
+	.wp-block-gallery {
 		margin-top: 56px;
 		margin-bottom: 90px;
 		display: block;
@@ -156,7 +157,8 @@
 	@media (max-width: $md) {
 		.wp-block-image,
 		.wp-block-embed,
-		.wp-block-video {
+		.wp-block-video,
+		.wp-block-gallery {
 			margin-top: 32px;
 			margin-bottom: 32px;
 		}

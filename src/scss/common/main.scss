@@ -110,6 +110,16 @@ video {
 	background-color: $color-white-background;
 }
 
+@media (max-width: $md) {
+	.green-image-background-mobile {
+		background-image: url(../../img/green-bg.jpg);
+	}
+
+	.color-white-mobile {
+		color: #fff;
+	}
+}
+
 .light-bg-overlay {
 	padding-top: 80px;
 	margin-top: -78px;

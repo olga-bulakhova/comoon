@@ -67,5 +67,10 @@
 		.border-radius {
 			border-radius: 2.5px;
 		}
+
+		.comoonity-insta-link {
+			background: transparent;
+			@include mail-link;
+		}
 	}
 }
