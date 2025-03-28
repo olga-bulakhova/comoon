@@ -1,3 +1,5 @@
 import './camp-single/gallery'
 import './camp-single/toggle-content'
 import './comoonity/comoonity-insta'
+import './camp-single/fix-button'
+import './camp-single/show-offer'

@@ -1,0 +1,93 @@
+.camp-offer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 80;
+	background-color: rgba(0, 0, 0, 0.7);
+	overflow-y: auto;
+
+	.offer-container {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: calc(100% - 32px);
+		max-width: 920px;
+		background-color: $color-white-background;
+		padding: 24px;
+	}
+
+	h3 {
+		@include font-style(24px, 24px, 600);
+	}
+
+	.offer-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 16px;
+	}
+
+	.offer-item {
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		min-height: 280px;
+	}
+
+	.offer-content {
+		padding: 24px 16px;
+	}
+
+	.offer-description {
+		font-size: 16px;
+		margin-top: 16px;
+		color: rgba(255, 255, 255, 0.7);
+	}
+
+	h3 {
+		line-height: 1.1;
+		padding-right: 35px;
+	}
+
+	.offer-close {
+		position: absolute;
+		top: 24px;
+		right: 24px;
+		cursor: pointer;
+		width: 20px;
+		height: 20px;
+	}
+
+	.badges-list {
+		gap: 8px;
+	}
+}
+
+@media (max-width: $md) {
+	.camp-offer {
+		.offer-list {
+			grid-template-columns: 1fr;
+		}
+
+		.offer-description {
+			display: none;
+		}
+
+		.badges-list {
+			display: block;
+			.badge {
+				margin-bottom: 8px;
+			}
+		}
+
+		.offer-item {
+			min-height: 184px;
+
+			h4 {
+				margin-top: 16px;
+			}
+		}
+	}
+}

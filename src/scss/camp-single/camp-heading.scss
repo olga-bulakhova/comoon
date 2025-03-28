@@ -87,3 +87,9 @@
 		}
 	}
 }
+
+@media (max-width: $menu-point) {
+	.camp-heading-actions {
+		min-height: 58px;
+	}
+}

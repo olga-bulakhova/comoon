@@ -9,7 +9,7 @@ $query = new WP_Query([
 ]);
 
 if ($query->have_posts()) : ?>
-  <section class="camp-review light-background  green-image-background-mobile pb-9 pb-6-mobile">
+  <section class="camp-review light-background  green-image-background-mobile pb-9 pb-6-mobile pt-2">
     <div class="wrapper">
 
       <div class="review-list">

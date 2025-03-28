@@ -38,17 +38,5 @@ function comoonity_attach_post_meta()
       Field::make('text', 'comoonity_numbers_3', 'Количество стран')
         ->set_attribute('type', 'number')
         ->set_width(30),
-
-      Field::make('separator', 'comoonity_insta_separator', 'Лента инстаграм'),
-
-      Field::make('complex', 'comoonity_insta', 'Рилсы')
-        ->add_fields([
-          Field::make('file', 'comoonity_insta_video', 'Видео')
-            ->set_type(['video'])
-            ->set_width(20),
-          Field::make('text', 'comoonity_insta_url', 'Url видео в инстаграм')
-            ->set_width(30),
-
-        ]),
     ));
 }

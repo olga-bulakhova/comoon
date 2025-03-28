@@ -36,4 +36,6 @@ if ($query->have_posts()): ?>
       </div>
     </div>
   </section>
-<?php endif; ?>
+<?php endif;
+wp_reset_postdata();
+?>

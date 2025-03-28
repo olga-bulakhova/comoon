@@ -105,3 +105,13 @@
 		margin-right: 10px;
 	}
 }
+
+.btn-camp-heading {
+	&.btn-camp-heading-fixed {
+		position: fixed;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 65;
+	}
+}

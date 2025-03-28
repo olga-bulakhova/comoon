@@ -256,4 +256,25 @@ function comoon_polylang_strings()
     'Страница кемпа',
     false
   );
+
+  pll_register_string(
+    'offer_title',
+    'Не подходят даты этого кемпа?',
+    'Страница кемпа попап',
+    false
+  );
+
+  pll_register_string(
+    'offer_text',
+    'Взгляни на другие предложения, они не менее классные!',
+    'Страница кемпа попап',
+    false
+  );
+
+  pll_register_string(
+    'offer_button',
+    'Все кемпы COMOON',
+    'Страница кемпа попап',
+    false
+  );
 }

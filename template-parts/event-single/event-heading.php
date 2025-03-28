@@ -4,7 +4,7 @@
 
     <div class="badge-list-container">
       <div class="badges-list badges-list-top">
-        <div class="badge badge-calendar"><?php echo convert_date_time(carbon_get_the_post_meta('event_date_time'))  ?></div>
+        <div class="badge badge-calendar" style="white-space: nowrap"><?php echo convert_date_time(carbon_get_the_post_meta('event_date_time'))  ?></div>
         <div class="badge badge-place"><?php echo carbon_get_the_post_meta('event_location') ?></div>
 
         <?php if (!empty(carbon_get_the_post_meta('number_of_seats')) && carbon_get_the_post_meta('number_of_seats') <= 5) : ?>

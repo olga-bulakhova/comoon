@@ -48,5 +48,6 @@ $is_future_date = is_future_date(carbon_get_the_post_meta('event_start'));
 
 <?php get_template_part('template-parts/camp-single/camp-review'); ?>
 <?php get_template_part('template-parts/camp-single/camp-comoonity'); ?>
+<?php get_template_part('template-parts/camp-single/camp-offer'); ?>
 
 <?php get_footer(); ?>

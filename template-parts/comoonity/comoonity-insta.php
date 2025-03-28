@@ -1,6 +1,6 @@
 <?php
-$comoonity_insta = carbon_get_the_post_meta('comoonity_insta');
-if (!empty($comoonity_insta)) : ?>
+$instagram = carbon_get_theme_option('instagram' . carbon_lang_prefix());
+if (!empty($instagram)) : ?>
 
   <section class="comoonity-insta pt-9 pb-9 pt-6-mobile pb-6-mobile">
     <div class="wrapper">
@@ -11,10 +11,10 @@ if (!empty($comoonity_insta)) : ?>
       </div>
 
       <div class="comoonity-insta-list mb-5_6 mb-4-mobile">
-        <?php foreach ($comoonity_insta as $item) : ?>
-          <a href="<?php echo $item['comoonity_insta_url'] ?>" class="comoonity-insta-item border-radius" target="_blank">
+        <?php foreach ($instagram as $item) : ?>
+          <a href="<?php echo $item['instagram_url'] ?>" class="comoonity-insta-item border-radius" target="_blank">
             <div class="insta-item-container border-radius">
-              <video src="<?php echo wp_get_attachment_url($item['comoonity_insta_video']) ?>" class="border-radius" preload="none" autoplay loop muted playsinline></video>
+              <video src="<?php echo wp_get_attachment_url($item['instagram_video']) ?>" class="border-radius" preload="none" autoplay loop muted playsinline></video>
 
               <div class="insta-item-top">
                 <span class="icon"></span>

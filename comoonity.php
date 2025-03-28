@@ -4,7 +4,7 @@ get_header();
 
 ?>
 
-<div class="light-background pt-4 pb-9 pb-6-mobile">
+<div class="light-background pt-4">
   <?php
   get_template_part('template-parts/comoonity/comoonity-heading');
   get_template_part('template-parts/comoonity/comoonity-values');
@@ -33,7 +33,7 @@ get_header();
   ?>
 </div>
 
-<div class="light-background pb-9 pb-6-mobile">
+<div class="light-background">
 
   <section class="home-find-friends comoonity-signup">
     <div class="wrapper">

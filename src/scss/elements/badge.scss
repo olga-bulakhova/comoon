@@ -36,6 +36,12 @@
 		font-size: 14px;
 	}
 
+	&.badge-sm-icon {
+		display: inline-block;
+		padding: 10px 14px 10px 36px !important;
+		font-size: 14px;
+	}
+
 	@media (max-width: $md) {
 		padding: 10px 16px 10px 38px;
 	}
