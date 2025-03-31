@@ -34,3 +34,4 @@ require_once COMOON_DIR_PATH . '/inc/templates-carbon-fields/camps.php';
 require_once COMOON_DIR_PATH . '/inc/templates-carbon-fields/reviews.php';
 require_once COMOON_DIR_PATH . '/inc/templates-carbon-fields/events.php';
 require_once COMOON_DIR_PATH . '/inc/templates-carbon-fields/comoonity.php';
+require_once COMOON_DIR_PATH . '/inc/templates-carbon-fields/coliving.php';

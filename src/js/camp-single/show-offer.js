@@ -5,7 +5,7 @@ jQuery(document).ready(function ($) {
 	let idleTimer
 	const resetIdleTimer = () => {
 		clearTimeout(idleTimer)
-		idleTimer = setTimeout(() => offer.removeClass('hidden'), 40 * 1000)
+		idleTimer = setTimeout(() => offer.removeClass('hidden'), 300 * 1000)
 	}
 	;['mousemove', 'keypress', 'touchmove'].forEach(event =>
 		document.addEventListener(event, resetIdleTimer)
