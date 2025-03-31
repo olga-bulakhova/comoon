@@ -15,12 +15,14 @@ function comoon_attach_theme_options()
 
   Container::make('theme_options', __('Theme Options'))
     ->add_tab('Главная страница', [
-      Field::make('file', 'front_heading_video' . carbon_lang_prefix(), 'Видео в шапке')
+      Field::make('file', 'front_heading_video' . carbon_lang_prefix(), 'Видео в шапке (десктоп)')
         ->set_type(['video'])
         ->set_width(50),
 
-      Field::make('text', 'front_page_h1' . carbon_lang_prefix(), 'Заголовок h1')
+      Field::make('file', 'front_heading_video_mobile' . carbon_lang_prefix(), 'Видео в шапке (мобайл)')
+        ->set_type(['video'])
         ->set_width(50),
+
       Field::make('separator', 'what_is_block', 'Что такое Comoon'),
 
       Field::make('text', 'what_is_title' . carbon_lang_prefix(), 'Заголовок')

@@ -17,6 +17,12 @@
 	}
 }
 
+.form-modal-description {
+	color: #bfd292;
+	font-size: 14px;
+	margin-bottom: 24px;
+}
+
 .form-modal-content {
 	background-color: $color-primary;
 	max-width: 544px;
@@ -38,7 +44,7 @@
 
 	h2 {
 		@include font-style(24px, 24px, 600);
-		margin-bottom: 32px;
+		margin-bottom: 24px;
 	}
 }
 

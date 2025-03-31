@@ -7,8 +7,8 @@
 
 get_header();
 
-$front_page_heading_video_id = carbon_get_theme_option('front_heading_video' . carbon_lang_prefix());
-$front_page_heading_video_url = wp_get_attachment_url($front_page_heading_video_id);
+$video_slug = COMOON_IS_MOBILE ? 'front_heading_video_mobile' : 'front_heading_video';
+$front_page_heading_video_url = wp_get_attachment_url(carbon_get_theme_option($video_slug . carbon_lang_prefix()));
 
 ?>
 
