@@ -4,7 +4,7 @@ $category = get_queried_object();
 ?>
 <div class="wrapper">
   <div class="breadcrumbs">
-    <a class="home-page-link" href="<?php echo get_url_path(); ?>"></a>
+    <a class="home-page-link" href="<?php echo get_home_url(); ?>"></a>
     <span>/</span>
     <a href="<?php echo get_permalink(get_option('page_for_posts')) ?>"><?php echo carbon_get_theme_option('blog_title' . carbon_lang_prefix()) ?></a>
     <span>/</span>

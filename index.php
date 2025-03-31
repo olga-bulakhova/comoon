@@ -5,7 +5,7 @@
 
 <div class="wrapper">
    <div class="breadcrumbs">
-      <a class="home-page-link" href="<?php echo get_url_path(); ?>"></a>
+      <a class="home-page-link" href="<?php echo get_home_url(); ?>"></a>
       <span>/</span>
       <span><?php echo carbon_get_theme_option('blog_title' . carbon_lang_prefix()) ?></span>
    </div>

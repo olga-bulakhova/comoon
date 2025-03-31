@@ -2,9 +2,9 @@
 
 <div class="wrapper">
   <div class="breadcrumbs">
-    <a class="home-page-link" href="<?php echo get_url_path(); ?>"></a>
+    <a class="home-page-link" href="<?php echo get_home_url(); ?>"></a>
     <span>/</span>
-    <a href="<?php echo get_url_path() . 'events'; ?>"><?php pll_e('Ивенты')  ?></a>
+    <a href="<?php echo get_post_type_archive_link('events'); ?>"><?php pll_e('Ивенты')  ?></a>
     <span>/</span>
     <span><?php the_title(); ?></span>
   </div>

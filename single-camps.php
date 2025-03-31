@@ -7,9 +7,9 @@ $is_future_date = is_future_date(carbon_get_the_post_meta('event_start'));
 <div class="<?php echo $is_future_date ? 'light-background pt-4-mobile' : ''; ?>">
   <div class="wrapper">
     <div class="breadcrumbs">
-      <a class="home-page-link" href="<?php echo get_url_path(); ?>"></a>
+      <a class="home-page-link" href="<?php echo get_home_url(); ?>"></a>
       <span>/</span>
-      <a href="<?php echo get_url_path() . 'camps'; ?>"><?php echo carbon_get_theme_option('camps' . carbon_lang_prefix()) ?></a>
+      <a href="<?php echo get_post_type_archive_link('camps'); ?>"><?php echo carbon_get_theme_option('camps' . carbon_lang_prefix()) ?></a>
       <span>/</span>
       <span><?php the_title(); ?></span>
     </div>

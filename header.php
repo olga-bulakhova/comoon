@@ -44,7 +44,7 @@
         <header class="header">
             <div class="wrapper">
                 <div class="header-logo color-primary">
-                    <a href="<?php echo get_url_path(); ?>">
+                    <a href="<?php echo get_home_url(); ?>">
                         <img src="<?php echo COMOON_DIR_URI . '/img/logo-white.svg' ?>" alt="">
                     </a>
                 </div>
@@ -79,7 +79,7 @@
             <div class="mobile-menu-content light-background">
                 <div class="mobile-menu-header">
                     <div class="header-logo color-primary">
-                        <a href="<?php echo get_url_path(); ?>">
+                        <a href="<?php echo get_home_url(); ?>">
                             <img src="<?php echo COMOON_DIR_URI . '/img/logo-white.svg' ?>" alt="">
                         </a>
                     </div>

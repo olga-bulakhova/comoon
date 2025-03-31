@@ -3,7 +3,7 @@
   <div class="wrapper">
 
     <div class="footer-container">
-      <a class="footer-logo" href="<?php echo get_url_path(); ?>">
+      <a class="footer-logo" href="<?php echo get_home_url(); ?>">
         Comoon
       </a>
 

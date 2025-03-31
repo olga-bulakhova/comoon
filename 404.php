@@ -2,7 +2,7 @@
 
 <div class="wrapper">
   <div class="breadcrumbs">
-    <a class="home-page-link" href="<?php echo get_url_path(); ?>"></a>
+    <a class="home-page-link" href="<?php echo get_home_url(); ?>"></a>
     <span>/</span>
   </div>
 
