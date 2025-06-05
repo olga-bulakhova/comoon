@@ -285,4 +285,18 @@ function comoon_polylang_strings()
     'Форма',
     false
   );
+
+  pll_register_string(
+    'coliving_info',
+    'Информация о коливинге',
+    'Коливинг',
+    false
+  );
+
+  pll_register_string(
+    'coliving_more',
+    'Больше о коливинге',
+    'Коливинг',
+    false
+  );
 }

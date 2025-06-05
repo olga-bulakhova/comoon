@@ -22,7 +22,7 @@ get_template_part('template-parts/camps/filters');
       global $post;
 
       $tax_query = [];
-      $language_query = [];
+     // $language_query = [];
       $job_query = [];
       $date_query = null;
 
@@ -50,12 +50,12 @@ get_template_part('template-parts/camps/filters');
         ];
       }
 
-      if (isset($_GET['language'])) {
-        $language_query = [
-          'key' => 'event_language',
-          'value' => $_GET['language']
-        ];
-      }
+      // if (isset($_GET['language'])) {
+      //   $language_query = [
+      //     'key' => 'event_language',
+      //     'value' => $_GET['language']
+      //   ];
+      // }
 
 
       if (isset($_GET['date'])) {
@@ -76,7 +76,7 @@ get_template_part('template-parts/camps/filters');
             'compare' => '>=',
             'type' => 'DATE'
           ],
-          $language_query
+         // $language_query
         ]
       ]);
 

@@ -7,6 +7,7 @@ module.exports = {
 	entry: {
 		global: ['./src/js/global.js', './src/scss/index.scss'],
 		campSingle: ['./src/js/camp-single.js'],
+		colivingSingle: ['./src/js/coliving-single.js'],
 		camps: ['./src/js/camps.js'],
 		comoonity: ['./src/js/comoonity.js'],
 	},

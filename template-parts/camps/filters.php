@@ -14,7 +14,7 @@ $job_tax = get_terms(array(
   'hide_empty' => true,
 ));
 
-$languages = ['ru' => 'Ru', 'pl' => 'Pl', 'en' => 'En'];
+// $languages = ['ru' => 'Ru', 'pl' => 'Pl', 'en' => 'En'];
 
 $data_min = null;
 
@@ -85,13 +85,13 @@ foreach ($camps as $camp) {
         </div>
 
 
-        <div class="filters-item">
+        <!-- <div class="filters-item">
           <select name="language" id="language" class="custom-select" placeholder="<?php echo carbon_get_theme_option('filters_language' . carbon_lang_prefix())  ?>">
             <?php foreach ($languages as $key => $value) : ?>
               <option value="<?php echo $key ?>" data-selection="<?php if (isset($_GET['language']) &&  $_GET['language'] === $key) echo 'selection' ?>"><?php echo $value ?></option>
             <?php endforeach; ?>
           </select>
-        </div>
+        </div> -->
 
         <div class="filters-item">
           <button class="reset-btn reset-filters-btn"><?php echo carbon_get_theme_option('filters_reset' . carbon_lang_prefix())  ?></button>

@@ -1,11 +1,17 @@
 jQuery(document).ready(function ($) {
 	const widthPoint = 1220
 
-	if ($(window).width() > widthPoint) return
-
 	const btn = $('.btn-camp-heading')
 	const heading = document.querySelector('.camp-heading')
 	const rooms = document.querySelector('.camp-rooms .rooms-list')
+	const footer = document.querySelector('.footer')
+
+	if (!rooms) {
+		btn.css({ opacity: '0', cursor: 'initial' })
+		return
+	}
+
+	if ($(window).width() > widthPoint) return
 
 	const options = {
 		root: null,
@@ -23,6 +29,7 @@ jQuery(document).ready(function ($) {
 		}
 	}, options)
 
-	observer.observe(rooms)
 	observer.observe(heading)
+	observer.observe(rooms)
+	//observer.observe(footer)
 })

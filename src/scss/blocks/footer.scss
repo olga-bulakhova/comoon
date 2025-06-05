@@ -87,4 +87,8 @@
 		align-items: center;
 		gap: 24px;
 	}
+
+	@media (max-width: $menu-point) {
+		padding-bottom: 110px;
+	}
 }

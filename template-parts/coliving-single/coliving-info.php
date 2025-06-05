@@ -2,9 +2,9 @@
 $is_future_date = is_future_date(carbon_get_the_post_meta('event_start'));
 ?>
 
-<section class="camp-info mb-6-mobile <?php echo $is_future_date ? 'pt-7  pt-6-mobile' : 'pt-8 pb-8  pt-6-mobile'; ?> ">
+<section class="camp-info mb-7 mb-6-mobile <?php echo $is_future_date ? 'pt-7  pt-6-mobile' : 'pt-8 pb-8  pt-6-mobile'; ?> ">
   <div class="wrapper">
-    <h2 class="center color-dark title-48-600"><?php echo carbon_get_theme_option('camps_info' . carbon_lang_prefix()) ?></h2>
+    <h2 class="center color-dark title-48-600"><?php echo pll__('Информация о коливинге') ?></h2>
 
     <?php
     $camp_advantages = carbon_get_the_post_meta('camp_advantages');
@@ -80,7 +80,7 @@ $is_future_date = is_future_date(carbon_get_the_post_meta('event_start'));
 
     <div class="center mt-7 mb-7 mb-6-mobile mt-4-mobile">
       <button class="btn btn-primary btn-toggle btn-toggle-content">
-        <?php echo pll__('Больше о локации') ?>
+        <?php echo pll__('Больше о коливинге') ?>
       </button>
     </div>
 

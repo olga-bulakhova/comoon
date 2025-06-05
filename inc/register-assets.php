@@ -22,6 +22,10 @@ function register_scripts()
     wp_enqueue_script('camp-single', COMOON_DIR_URI . '/dist/js/campSingle.bundle.js', ['jquery'], filemtime(COMOON_DIR_PATH . '/dist/js/campSingle.bundle.js'), true);
   }
 
+  if (is_singular('coliving')) {
+    wp_enqueue_script('coliving-single', COMOON_DIR_URI . '/dist/js/colivingSingle.bundle.js', ['jquery'], filemtime(COMOON_DIR_PATH . '/dist/js/colivingSingle.bundle.js'), true);
+  }
+
   if (is_archive('camps')) {
     wp_enqueue_script('monthpicker', COMOON_DIR_URI . '/lib/monthpicker.js', array('jquery'));
     wp_enqueue_script('camps', COMOON_DIR_URI . '/dist/js/camps.bundle.js', ['jquery', 'monthpicker'], filemtime(COMOON_DIR_PATH . '/dist/js/camps.bundle.js'), true);

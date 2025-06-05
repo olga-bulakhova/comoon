@@ -19,7 +19,11 @@ if (!empty($camp_program)) : ?>
           <div>
             <div class="program-item">
               <h3 class="title-24-600"><?php echo $item['camp_program_title'] ?></h3>
-              <div><?php echo $item['camp_program_text'] ?></div>
+              <div>
+               
+                <?php echo wpautop($item['camp_program_text'])  ?>
+               
+              </div>
             </div>
           </div>
 

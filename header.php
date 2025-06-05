@@ -45,7 +45,7 @@
             <div class="wrapper">
                 <div class="header-logo color-primary">
                     <a href="<?php echo get_home_url(); ?>">
-                        <img src="<?php echo COMOON_DIR_URI . '/img/logo-white.svg' ?>" alt="">
+                        <img src="<?php echo COMOON_DIR_URI . '/img/logo.svg' ?>" alt="">
                     </a>
                 </div>
                 <div class="heder-action">
@@ -62,9 +62,7 @@
 
                     ?>
 
-                    <div class="pll-languages">
-                        <?php pll_the_languages(array('show_flags' => 0, 'display_names_as' => 'slug')); ?>
-                    </div>
+            
 
                     <button data-slug="<?php echo get_slug() ?>" class="btn btn-secondary btn-secondary-md open-modal-form"><?php echo carbon_get_theme_option('sign_up_btn' . carbon_lang_prefix()) ?></button>
                 </div>
@@ -80,12 +78,10 @@
                 <div class="mobile-menu-header">
                     <div class="header-logo color-primary">
                         <a href="<?php echo get_home_url(); ?>">
-                            <img src="<?php echo COMOON_DIR_URI . '/img/logo-white.svg' ?>" alt="">
+                            <img src="<?php echo COMOON_DIR_URI . '/img/logo.svg' ?>" alt="">
                         </a>
                     </div>
-                    <div class="pll-languages">
-                        <?php pll_the_languages(array('show_flags' => 0, 'display_names_as' => 'slug')); ?>
-                    </div>
+            
                     <div>
                         <div class="mobile-menu-close toggle-menu"></div>
                     </div>

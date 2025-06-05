@@ -27,7 +27,7 @@
 
       <div class="camp-heading-actions">
         <?php if (carbon_get_the_post_meta('event_places_left') != 0) : ?>
-          <button class="btn btn-secondary btn-large open-modal-form btn-camp-heading"><?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?></button>
+          <a href="#camp-rooms" class="btn btn-secondary btn-large btn-camp-heading"><?php echo carbon_get_theme_option('book_btn' . carbon_lang_prefix()) ?></a>
 
         <?php else :
 
