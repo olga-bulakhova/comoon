@@ -2,6 +2,8 @@
   <div class="wrapper">
     <div class="camps-upcoming-info">
       <h2 class="title-48-600 color-dark center-mobile">Коливинг</h2>
+
+      <div class="camps-upcoming-text"><?php echo pll__('Коливинг текст'); ?></div>
     </div>
 
     <div class="camps-list upcoming-camps-list">

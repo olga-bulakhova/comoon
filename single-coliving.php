@@ -15,6 +15,7 @@
 <?php
 get_template_part('template-parts/coliving-single/coliving-heading');
 get_template_part('template-parts/coliving-single/coliving-info');
+get_template_part('template-parts/coliving-single/coliving-program');
 get_template_part('template-parts/coliving-single/coliving-entertainment');
 get_template_part('template-parts/coliving-single/coliving-room');
 get_template_part('template-parts/coliving-single/coliving-faq');

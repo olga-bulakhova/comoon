@@ -57,6 +57,11 @@
 		color: $color-primary;
 		font-weight: 600;
 	}
+
+	ul,
+	ol {
+		padding-left: 20px;
+	}
 }
 
 @media (max-width: $md) {

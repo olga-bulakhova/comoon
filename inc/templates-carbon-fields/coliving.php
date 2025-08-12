@@ -77,6 +77,17 @@ function coliving_attach_post_meta()
             ->set_width(50),
         ]),
 
+      Field::make('separator', 'camp_program_separator', 'Программа'),
+      Field::make('textarea', 'camp_program_description', 'Подзаголовок'),
+      Field::make('complex', 'camp_program', 'Блоки - Программа')
+        ->add_fields([
+          Field::make('text', 'camp_program_title', 'Заголовок')
+            ->set_width(20),
+          Field::make('textarea', 'camp_program_text', 'Текст')
+            ->set_width(80),
+
+        ]),
+
       Field::make('separator', 'camp_entertainment_separator', 'Развлечения'),
       Field::make('complex', 'camp_entertainment', 'Блоки - Развлечения')
         ->add_fields([

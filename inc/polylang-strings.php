@@ -299,4 +299,12 @@ function comoon_polylang_strings()
     'Коливинг',
     false
   );
+
+
+  pll_register_string(
+    'coliving_text',
+    'Коливинг текст',
+    'Коливинг',
+    false
+  );
 }
